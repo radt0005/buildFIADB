@@ -1,0 +1,18 @@
+ INVASIVE_SUBPLOT_SPP (SUBP and SUBP are different data types)
+ alter table FS_FIADB.INVASIVE_SUBPLOT_SPP
+  add constraint ISS_SCD_FK foreign key (PLT_CN, SUBP, CONDID)
+  references FS_FIADB.SUBP_COND (PLT_CN, SUBP, CONDID);
+  
+  
+ P2_VEG_SUBPLOT_SPP (SUBP and SUBP are different data types)
+ alter table FS_FIADB.P2VEG_SUBPLOT_SPP
+  add constraint P2VSSP_SCD_FK foreign key (PLT_CN, SUBP, CONDID)
+  references FS_FIADB.SUBP_COND (PLT_CN, SUBP, CONDID);
+  
+ P2_VEG_SUBP_STRUCTURE
+  alter table FS_FIADB.P2VEG_SUBP_STRUCTURE
+  add constraint P2VSS_SCD_FK foreign key (PLT_CN, SUBP, CONDID)
+  references FS_FIADB.SUBP_COND (PLT_CN, SUBP, CONDID);
+  
+  
+  TREE.spcd is number in Oracle which converts to double precision in Postgres
