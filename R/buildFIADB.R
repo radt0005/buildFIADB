@@ -19,7 +19,7 @@ library(RPostgreSQL)
 # 4.0 copy all ref and data tables to target directory
 # 4.1 upload csv to database
 
-setwd('/mnt/Main/FIADB/testdb/')
+setwd('/mnt/Main/FIADB/buildfiadb/')
 
 # 1.1 - make a database--------------------------------------------------------
 dbname <- 'testdb'
@@ -39,17 +39,17 @@ if (FALSE) {
 
 #
 # 2.0 download ref tables------------------------------------------------------
-# ref_loc <- "https://apps.fs.usda.gov/fia/datamart/CSV/FIADB_REFERENCE.zip"
+ref_loc <- "https://apps.fs.usda.gov/fia/datamart/CSV/FIADB_REFERENCE.zip"
 
-# dir.create('FIADB_REFERENCE')
+dir.create('FIADB_REFERENCE')
 
-# file.remove(list.files('FIADB_REFERENCE', full.names= TRUE))
+file.remove(list.files('FIADB_REFERENCE', full.names= TRUE))
 
-# download.file(url= ref_loc,
-#               destfile= 'FIADB_REFERENCE.zip')
+download.file(url= ref_loc,
+              destfile= 'FIADB_REFERENCE.zip')
 #
 # 2.1 extract ref tables-------------------------------------------------------
-# unzip('FIADB_REFERENCE.zip', exdir= 'FIADB_REFERENCE')
+unzip('FIADB_REFERENCE.zip', exdir= 'FIADB_REFERENCE')
 #
 # 2.2 force correct data types-------------------------------------------------
 
@@ -59,7 +59,7 @@ if (FALSE) {
 # 3.0 download data tables (entire or state)-----------------------------------
 # use the state postal abbreviation or 'ENTIRE' for all states
 # tested for VA and DE
-state_abbr <- 'VA'
+state_abbr <- 'ENTIRE'
 
 dir.create('FIADB_DATA')
 
@@ -101,11 +101,89 @@ dbDisconnect(sqlite_con); rm(sqlite_con)
 
 dir.create('CSV_DATA')
 
-# file.copy(list.files("FIADB_REFERENCE/", full.names= TRUE), "CSV_DATA/")
+file.copy(list.files("FIADB_REFERENCE/", full.names= TRUE), "CSV_DATA/")
 file.copy(list.files("FIADB_DATA/", full.names= TRUE),
           "CSV_DATA/",
           overwrite= TRUE)
 #
+# 3.2 force correct data types-------------------------------------------------
+data_guide <- read.csv("files/table_column_types.csv")
+
+data_guide <- data_guide[!(data_guide$table_name %in% c('BOUNDARY',
+                                                        'DATAMART_TABLES',
+                                                        'FIA_REPORTING_TOOLS',
+                                                        'EVALIDATOR_LOG')),]
+
+table_list <- sort(unique(data_guide$table_name))
+
+tbl= 'REF_LICHEN_SPP_COMMENTS'
+updateCSV <- function(tbl) {
+  
+  cat(tbl, "\n")
+  
+  # table variables and their types
+  sql_recs <- data_guide[data_guide$table_name == tbl,]
+  
+  # field order
+  var_ord <- dbGetQuery(con, paste0("SELECT * FROM fs_fiadb.",
+                                    tbl,
+                                    " LIMIT 1;"))
+  var_ord <- toupper(names(var_ord))
+  
+  trans <- c("integer64",
+             "character",
+             "character",
+             "double",
+             "double",
+             "double",
+             "double",
+             "IDate")
+  
+  names(trans) <- c("bigint",
+                    "character",
+                    "character varying",
+                    "double precision",
+                    "integer",
+                    "numeric",
+                    "smallint",
+                    "timestamp without time zone")
+  
+  var_types <- as.vector(trans[sql_recs$data_type])
+  names(var_types) <- toupper(sql_recs$column_name)
+  
+  # read, update and write the files
+  file <- file.path("CSV_DATA", paste0(tbl, ".csv"))
+  
+  if (!file.exists(file)) return(NULL)
+  
+  d <- fread(file= file,
+             data.table= FALSE,
+             colClasses= var_types)
+  
+  if (tbl == 'REF_LICHEN_SPP_COMMENTS') {
+    
+    d$YEAREND <- as.integer(d$YEAREND)
+    d$YEARSTART <- as.integer(d$YEARSTART)
+    
+  }
+  
+  if (any(names(d) == 'modified_date')) {
+    
+    d$modified_date <- as.IDate("2004-03-10 12:05:53 UTC")
+    
+  }
+  
+  fwrite(d,
+         file,
+         quote = TRUE,
+         na= "")
+  
+  return(NULL)
+  
+}
+
+lapply(table_list, updateCSV)
+
 # loading to postgres----------------------------------------------------------
 con <- dbConnect(drv= dbDriver("PostgreSQL"),
                  dbname= dbname)
