@@ -2968,7 +2968,7 @@
 "REF_NVCS_LEVEL_7_CODES","MODIFIED_IN_INSTANCE","character varying","character"
 "REF_TREE_DECAY_PROP","CN","character varying","character"
 "REF_TREE_DECAY_PROP","DECAYCD","smallint","double"
-"REF_TREE_DECAY_PROP","STDWD_HRDWD","character varying","character"
+"REF_TREE_DECAY_PROP","SFTWD_HRDWD","character varying","character"
 "REF_TREE_DECAY_PROP","DENSITY_PROP","numeric","double"
 "REF_TREE_DECAY_PROP","BARK_LOSS_PROP","numeric","double"
 "REF_TREE_DECAY_PROP","BRANCH_LOSS_PROP","numeric","double"
