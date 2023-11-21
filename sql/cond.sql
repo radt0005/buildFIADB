@@ -1,4 +1,5 @@
-SELECT cond.plt_cn,
+SELECT peg.eval_grp,
+       cond.plt_cn,
        cond.condid,
        cond.condprop_unadj,
        CASE cond.prop_basis
@@ -18,5 +19,5 @@ JOIN fs_fiadb.cond ON (cond.plt_cn = plot.cn)
 WHERE cond.cond_status_cd = 1
   AND cond.condprop_unadj IS NOT NULL
   AND pet.eval_typ = 'EXPCURR'
-  AND peg.eval_grp = &EVAL_GRP
+  AND peg.eval_grp IN (&EVAL_GRP)
   AND 1=1

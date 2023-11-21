@@ -1,4 +1,5 @@
-SELECT tree.plt_cn,
+SELECT peg.eval_grp,
+       tree.plt_cn,
        tree.condid,
        tree.cn tre_cn,
        tree.tpa_unadj,
@@ -27,5 +28,5 @@ JOIN fs_fiadb.tree ON (tree.plt_cn = cond.plt_cn
 WHERE tree.statuscd = 1
   AND cond.cond_status_cd = 1
   AND pet.eval_typ = 'EXPVOL'
-  AND peg.eval_grp = &eval_grp
+  AND peg.eval_grp IN (&EVAL_GRP)
   AND 1=1
