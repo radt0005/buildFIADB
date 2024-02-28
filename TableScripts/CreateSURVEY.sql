@@ -64,4 +64,4 @@ comment on column FS_FIADB.SURVEY.prj_cn
 alter table FS_FIADB.SURVEY
   add constraint SRV_PK primary key (CN);
 alter table FS_FIADB.SURVEY
-  add constraint SRV_UK unique (STATECD, INVYR, P3_OZONE_IND, CYCLE);
+  add constraint SRV_UK unique (STATECD, INVYR, P3_OZONE_IND, CYCLE, SUBCYCLE);

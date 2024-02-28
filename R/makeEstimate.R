@@ -66,7 +66,7 @@ makeEstimate <- function(nbr, eval_grp= 012020, latest= FALSE) {
 
 # example runs
 # area of forest land in Virginia, 2020
-makeEstimate(2, 512020)
+makeEstimate(208, 412019)
 
 # net volume of growing stock trees on timberland in Tennessee, 2019
 makeEstimate(18, 472019)

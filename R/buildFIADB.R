@@ -101,11 +101,57 @@ dbDisconnect(sqlite_con); rm(sqlite_con)
 
 dir.create('CSV_DATA')
 
-file.copy(list.files("FIADB_REFERENCE/", full.names= TRUE), "CSV_DATA/")
+file.copy(list.files("FIADB_REFERENCE/", full.names= TRUE), "CSV_DATA/", overwrite= TRUE)
 file.copy(list.files("FIADB_DATA/", full.names= TRUE),
           "CSV_DATA/",
           overwrite= TRUE)
 #
+# 3.1.1 check variable names---------------------------------------------------
+# this section checks the variable names in the current fiadb against
+# what's in the new csvs
+# the goal is to identify any variables that have been added/dropped
+tbl_list <- read.csv("files/fs_fiadb_table_list.csv")
+tbl_list$table_name <- toupper(tbl_list$table_name)
+
+file_list <- data.frame(file= list.files("CSV_DATA",
+                                         full.names= TRUE))
+
+file_list$table <- tstrsplit(file_list$file, "\\/")[[2]]
+file_list$table <- gsub(".csv", "", file_list$table)
+
+tables_to_update <- intersect(tbl_list$table_name, file_list$table)
+
+tbl= 'PLOTSNAP'
+checkNames <- function(tbl) {
+  
+  cat(tbl, "\n")
+  
+  sql_fields <- toupper(dbListFields(con, c("fs_fiadb", tolower(tbl))))
+  
+  fn <- file_list[file_list$table == tbl,][1,]$file
+  
+  csv_fields <- toupper(names(fread(fn, nrow= 1)))
+  
+  diff1 <- data.frame(Field= setdiff(csv_fields, sql_fields))
+  diff2 <- data.frame(Field= setdiff(sql_fields, csv_fields))
+
+  if (nrow(diff1) < 1 & nrow(diff2) < 1) return(NULL)
+  
+  if (nrow(diff1) >= 1) diff1$Source <- 'CSV'
+  if (nrow(diff2) >= 1) diff2$Source <- 'SQL'
+  
+  diff <- rbind(diff1, diff2)
+  
+  diff$Table <- tbl
+  
+  return(diff)
+  
+}
+
+var_check <- lapply(tables_to_update, checkNames)
+var_check <- do.call(rbind, var_check)
+var_check
+
 # 3.2 force correct data types-------------------------------------------------
 data_guide <- read.csv("files/table_column_types.csv")
 
@@ -116,19 +162,13 @@ data_guide <- data_guide[!(data_guide$table_name %in% c('BOUNDARY',
 
 table_list <- sort(unique(data_guide$table_name))
 
-tbl= 'REF_LICHEN_SPP_COMMENTS'
+tbl= 'LICHEN_SPECIES_SUMMARY'
 updateCSV <- function(tbl) {
   
   cat(tbl, "\n")
   
   # table variables and their types
   sql_recs <- data_guide[data_guide$table_name == tbl,]
-  
-  # field order
-  var_ord <- dbGetQuery(con, paste0("SELECT * FROM fs_fiadb.",
-                                    tbl,
-                                    " LIMIT 1;"))
-  var_ord <- toupper(names(var_ord))
   
   trans <- c("integer64",
              "character",
@@ -159,6 +199,13 @@ updateCSV <- function(tbl) {
   d <- fread(file= file,
              data.table= FALSE,
              colClasses= var_types)
+  
+  # file currently has duplicate rows
+  if (tbl == 'LICHEN_SPECIES_SUMMARY') {
+    
+    d <- d[!duplicated(d$CN),]
+    
+  }
   
   if (tbl == 'REF_LICHEN_SPP_COMMENTS') {
     
