@@ -1,15 +1,12 @@
-create table fs_fiadb.REF_FVS_LOC_NAME
+CREATE TABLE fs_fiadb.ref_fvs_loc_name
 (
- CN                   VARCHAR(34) not null,
- FVS_LOC_CD           INTEGER not null,
- FVS_LOC_CD_NAME      VARCHAR(3000),
- MANUAL_START         VARCHAR(30),
- MANUAL_END           VARCHAR(30),
- ALLOWED_IN_FIELD     VARCHAR(30),
- CREATED_BY           VARCHAR(30),
- CREATED_DATE         TIMESTAMP(0),
- CREATED_IN_INSTANCE  VARCHAR(30),
- MODIFIED_BY          VARCHAR(30),
- MODIFIED_DATE        TIMESTAMP(0),
- MODIFIED_IN_INSTANCE VARCHAR(30)
+cn               VARCHAR(34) NOT NULL,
+fvs_loc_cd       INTEGER NOT NULL,
+fvs_loc_cd_name  VARCHAR(70),
+manual_start     DECIMAL(3,1),
+manual_end       DECIMAL(3,1),
+allowed_in_field VARCHAR(1),
+created_date     TIMESTAMP(0),
+modified_date    TIMESTAMP(0)
 );
+alter table FS_FIADB.REF_FVS_LOC_NAME add constraint RFLN_PK primary key (FVS_LOC_CD);

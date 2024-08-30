@@ -1,14 +1,12 @@
-create table fs_fiadb.REF_SIEQN
+CREATE TABLE fs_fiadb.ref_sieqn
 (
- CN                   VARCHAR(34) not null,
- SIEQN_REF_CD         VARCHAR(6),
- SIEQN_REF_NOTES      VARCHAR(1000),
- SIEQN_LOC_DESC_FSVEG VARCHAR(500),
- SIEQN_AGE_BASIS      VARCHAR(10),
- CREATED_BY           VARCHAR(30),
- CREATED_DATE         TIMESTAMP(0),
- CREATED_IN_INSTANCE  VARCHAR(6),
- MODIFIED_BY          VARCHAR(30),
- MODIFIED_DATE        TIMESTAMP(0),
- MODIFIED_IN_INSTANCE VARCHAR(6)
+cn                   VARCHAR(34) NOT NULL,
+sieqn_ref_cd         VARCHAR(10),
+sieqn_ref_notes      VARCHAR(540),
+sieqn_loc_desc_fsveg VARCHAR(100),
+sieqn_age_basis      VARCHAR(10),
+created_date         TIMESTAMP(0),
+modified_date        TIMESTAMP(0)
 );
+alter table FS_FIADB.REF_SIEQN add constraint REF_SIEQN_PK primary key (CN);
+alter table FS_FIADB.REF_SIEQN add constraint REF_SIEQN_UK unique (SIEQN_REF_CD);

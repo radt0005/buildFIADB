@@ -1,12 +1,9 @@
-create table fs_fiadb.REF_INTL_TO_DOYLE_FACTOR
+CREATE TABLE fs_fiadb.ref_intl_to_doyle_factor
 (
- DIA_2INCH_CLASS      INTEGER,
- SOFTWOOD             VARCHAR(1),
- FACTOR               DECIMAL(8,5),
- CREATED_BY           VARCHAR(30),
- CREATED_DATE         TIMESTAMP(0),
- CREATED_IN_INSTANCE  VARCHAR(6),
- MODIFIED_BY          VARCHAR(30),
- MODIFIED_DATE        TIMESTAMP(0),
- MODIFIED_IN_INSTANCE VARCHAR(6)
+dia_2inch_class INTEGER NOT NULL,
+softwood        VARCHAR(1) NOT NULL,
+factor          DECIMAL(5,4),
+created_date    TIMESTAMP(0),
+modified_date   TIMESTAMP(0)
 );
+alter table FS_FIADB.REF_INTL_TO_DOYLE_FACTOR add constraint RIDF_PK primary key (DIA_2INCH_CLASS, SOFTWOOD);

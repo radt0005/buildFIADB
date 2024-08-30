@@ -1,10 +1,7 @@
-create table FS_FIADB.DATAMART_MOST_RECENT_INV
+CREATE TABLE fs_fiadb.datamart_most_recent_inv
 (
-  statecd   SMALLINT not null,
-  eval_grps VARCHAR(32) not null,
-  comments  VARCHAR(64) not null,
-  stateab   VARCHAR(2)
+statecd   INTEGER NOT NULL,
+eval_grps VARCHAR(32) NOT NULL,
+comments  VARCHAR(64) NOT NULL,
+stateab   VARCHAR(2)
 );
--- Add comments to the table 
-comment on table FS_FIADB.DATAMART_MOST_RECENT_INV
-  is '6.0';

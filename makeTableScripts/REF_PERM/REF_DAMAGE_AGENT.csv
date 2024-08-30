@@ -1,0 +1,966 @@
+"CODE","COMMON_NAME","SCIENTIFIC_NAME","THRESHOLD","CREATED_BY","CREATED_DATE","CREATED_IN_INSTANCE","MODIFIED_BY","MODIFIED_DATE","MODIFIED_IN_INSTANCE","DAG_CODE"
+25005,"needlecast","needlecast",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:49,"798795",25000
+25006,"powdery mildew","powdery mildew",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:49,"798795",25000
+25007,"tobacco mosaic virus","tobacco mosaic virus",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:50,"798795",25000
+25008,"tobacco ringspot virus of ash","Nepovirus TRSV",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:50,"798795",25000
+25009,"true fir needlecast","true fir needlecast",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:50,"798795",25000
+25010,"sycamore anthracnose","Apiognomonia veneta",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",25000
+25011,"Cercospora blight of juniper","Cercospora sequoiae",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:51,"798795",25000
+25013,"large-spored spruce-laborador tea rust","Chrysomyxa ledicola","Damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",25000
+25014,"ink spot of aspen","Ciborinia whetzelii",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:52,"798795",25000
+25015,"pine needle rust","Coleosporium spp.",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",25000
+25016,"anthracnose on Russian olive","Colletotrichum spp.",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:52,"798795",25000
+25017,"Coronado limb rust","Cronartium arizonicum",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:53,"798795",25000
+25018,"leaf shothole","Cylindrosporium spp.",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:53,"798795",25000
+25019,"cedar leaf blight","Didymascella thujina",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:53,"798795",25000
+25020,"dogwood anthracnose","Discula spp.",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",25000
+25021,"mango scab","Elsinoe magiferae",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:54,"798795",25000
+25022,"Elytroderma needle blight","Elytroderma deformans","Damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",25000
+25023,"fire blight","Erwinia amylovora",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:55,"798795",25000
+25024,"walnut anthracnose","Gnomonia leptostyla",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",25000
+25025,"anthracnose","Gnomonia spp.",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:55,"798795",25000
+25027,"brown felt blight","Herpotrichia juniperi",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:56,"798795",25000
+25028,"larch needle blight","Hypodermella laricis",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:56,"798795",25000
+25029,"hardwood anthracnose","Kabatiella apocrypta",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:56,"798795",25000
+25030,"Lasiodiplodia cone damage","Lasiodiplodia spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:57,"798795",25000
+25031,"spruce needle cast","Lirula macrospora",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:57,"798795",25000
+25032,"fir needle cast","Lirula spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:57,"798795",25000
+25033,"white pine needle cast","Lophodermella arcuata",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:58,"798795",25000
+25034,"Lophodermella needle cast","Lophodermella spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:58,"798795",25000
+25036,"Marssonina blight","Marssonina populi",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:58,"798795",25000
+25037,"Douglas-fir rust","Melampsora medusae",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:59,"798795",25000
+25039,"larch needle cast","Meria laricis",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:59,"798795",25000
+25040,"Dothistroma needle blight","Mycosphaerella pini",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:17:59,"798795",25000
+25041,"brown felt blight of pines","Neopeckia coulteri",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:00,"798795",25000
+25042,"snow blight","Phacidum abietis",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:00,"798795",25000
+25043,"Swiss needle cast","Phaeocryptopus gaumannii",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:01,"798795",25000
+25044,"Phoma blight","Phoma spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:01,"798795",25000
+25045,"Phyllosticta leaf spot","Phyllosticta spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:01,"798795",25000
+25046,"bud rot","Phytophthora palmivora",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:01,"798795",25000
+25047,"Ploioderma needle cast","Ploioderma spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:02,"798795",25000
+25048,"ash rust","Puccinia sparganioides",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:02,"798795",25000
+25049,"fir and hemlock needle rusts","Pucciniastrum spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:02,"798795",25000
+25050,"Rhabdocline needle cast","Rhabdocline spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:03,"798795",25000
+25051,"Rhizoctonia needle blight","Rhizoctonia spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:03,"798795",25000
+25052,"Rhizophaeria needle cast","Rhizophaeria spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:06,"798795",25000
+25053,"Rhizopus rot","Rhizopus artocarpi",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:06,"798795",25000
+25054,"brown spot needle blight","Scirrhia acicola",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:07,"798795",25000
+25055,"Septoria leaf spot","Septoria alnifolia",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:07,"798795",25000
+25056,"Septoria leaf spot and canker","Septoria musiva",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:08,"798795",25000
+25057,"Sirococcus tip blight","Sirococcus conigenus","Damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",25000
+25058,"Diplodia canker","Sphaeropsis sapinea",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:08,"798795",25000
+25059,"leaf blister of oak","Taphrina caerulescens",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:08,"798795",25000
+25060,"Venturia leaf blight of maple","Venturia acerina",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:09,"798795",25000
+25061,"shepherd's crook","Venturia tremulae",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:10,"798795",25000
+25062,"Dothistroma needle blight","Dothistroma septospora",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:10,"798795",25000
+25063,"yellow-cedar shoot blight","Apostrasseria spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:10,"798795",25000
+25065,"spruce needle rust","Chrysomyxa weirii",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:11,"798795",25000
+25066,"cedar leaf blight","Gymnosporangium nootkatense",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:11,"798795",25000
+25067,"spruce needle cast","Lophodermium picea",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:11,"798795",25000
+25068,"hardwood leaf rusts","Melampsora spp.",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:11,"798795",25000
+25070,"hemlock needle rust","Pucciniastrum vaccinii","Damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",25000
+25071,"spruce needle cast","Rhizosphaera pini",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:12,"798795",25000
+25072,"sirococcus shoot blight","Sirococcus strobilinus","Damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",25000
+25073,"shepherds crook","Venturia populina",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:13,"798795",25000
+25074,"Delphinella shoot blight","Delphinella abietis",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:13,"798795",25000
+25075,"tar spot","Rhytisma acerinum",,"FS_NIMS_NRS",2013-07-31 11:48:18,"440","FS_NIMS",2016-02-17 12:18:14,"798795",25000
+25076,"birch leaf fungus","Septoria betulae",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:14,"798795",25000
+25077,"Septoria leaf spot of maple","Septoria aceris",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:14,"798795",25000
+25800,"other /shoot disease (known)","other /shoot disease (known)",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:15,"798795",25000
+25900,"unknown foliage /shoot disease","Unknown foliage /shoot disease",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:15,"798795",25000
+26000,"Stem Rusts",,"Any occurrence on the bole or stems (on multi-stemmed woodland species), or on branches <1 foot from boles or stems; damage to >20% of branches","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",26000
+26001,"white pine blister rust","Cronartium ribicola","Any occurrence on the bole or stems (on multi-stemmed woodland species), or on branches <1 foot from boles or stems; damage to >20% of branches","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",26000
+26002,"western gall rust","Peridermium harknessii","Any occurrence on the bole or stems (on multi-stemmed woodland species), or on branches <1 foot from boles or stems; damage to >20% of branches","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",26000
+26003,"stalactiform blister rust","Cronartium coleosporioides",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:16,"798795",26000
+26004,"comandra blister rust","Cronartium comandrae","Any occurrence on the bole or stems (on multi-stemmed woodland species), or on branches <1 foot from boles or stems; damage to >20% of branches","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",26000
+26005,"pinyon rust","Cronartium occidentale",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:17,"798795",26000
+26006,"eastern gall rust","Cronartium quercuum","Any occurrence on the bole or stems (on multi-stemmed woodland species), or on branches <1 foot from boles or stems; damage to >20% of branches","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",26000
+26007,"gall rust of jack pine","Cronartium quercuum f. sp. banksignae",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:18,"798795",26000
+26008,"gall rust of shortleaf pine","Cronartium quercuum f. sp. echinatae",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:18,"798795",26000
+26009,"fusiform rust","Cronartium quercuum f. sp. fusiforme","Any occurrence on the bole or stems (on multi-stemmed woodland species), or on branches <1 foot from boles or stems; damage to >20% of branches","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",26000
+26010,"gall rust of virginia pine","Cronartium quercuum f. sp. virginianae",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:19,"798795",26000
+26011,"Bethuli rust","Peridermium bethuli",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:19,"798795",26000
+26012,"limb rust","Peridermium filamentosum",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:19,"798795",26000
+26013,"southern cone rust","Cronartium strobilinum",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:20,"798795",26000
+26800,"other stem rust (known)","other stem rust (known)",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:20,"798795",26000
+26900,"unknown stem rust","unknown stem rust",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:20,"798795",26000
+27000,"Broom Rusts",,">50% of crown area affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:50,"67572",27000
+27001,"spruce broom rust","Chrysomyxa arctostaphyli",">50% of crown area affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",27000
+27002,"Incense cedar broom rust","Gymnosporangium libocedri",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:22,"798795",27000
+27003,"juniper broom rust","Gymnosporangium nidus-avis",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:22,"798795",27000
+27004,"fir broom rust","Melampsorella caryophyllacearum",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:22,"798795",27000
+27800,"other broom rust (known)","other broom rust (known)",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:22,"798795",27000
+27900,"unknown broom rust","unknown broom rust",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:23,"798795",27000
+30000,"Fire",,"Damage >20% of bole circumference; >20% of stems on multi-stemmed woodland species affected; >20% of crown affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",30000
+30001,"wild fire",,,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:23,"798795",30000
+30002,"human caused fire",,,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:24,"798795",30000
+30003,"crown fire damage",,,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:25,"798795",30000
+30004,"ground fire damage",,,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:25,"798795",30000
+41000,"Wild Animals",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",41000
+41001,"bears","Ursus spp.","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",41000
+41002,"beavers","Castor canadensis","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",41000
+41003,"big game","big game","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",41000
+41004,"mice or voles","mice or voles","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",41000
+41005,"pocket gophers","Geomyidae spp.","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",41000
+41006,"porcupines","Erethizon dorsatum","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",41000
+41007,"rabbits or hares","Sylvilagus spp.","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",41000
+41008,"sapsuckers","Sphyrapicus spp.","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",41000
+41009,"squirrels","Sciuridae spp.","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",41000
+41010,"woodpeckers","Piciformes spp.",,"FS_NIMS_NRS",2013-07-31 11:48:19,"440","FS_NIMS",2016-02-17 12:18:29,"798795",41000
+41011,"moose","Alces alces","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",41000
+41012,"elk","Cervus elaphus",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:18:29,"798795",41000
+41013,"deer","Odocoileus spp.","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",41000
+41014,"feral pigs","Sus scrofa","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",41000
+41015,"mountain beaver","Aplodontia rufa","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",41000
+41017,"earthworms","Lumbricidae",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:18:31,"798795",41000
+41800,"other wild animals (known)","other wild animals (known)",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:18:31,"798795",41000
+41900,"unknown wild animals","unknown wild animals",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:18:31,"798795",41000
+42000,"Domestic Animals",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",42000
+42001,"cattle","Bos taurus",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:18:32,"798795",42000
+42002,"goats","Capra hircus",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:18:33,"798795",42000
+42003,"horses","Equus caballus",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:01,"798795",42000
+42004,"sheep","Ovis aries",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:01,"798795",42000
+42800,"other domestic animal (unknown)","other domestic animal (unknown)",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:01,"798795",42000
+42900,"unknown domestic animals","unknown domestic animals",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:02,"798795",42000
+50000,"Abiotic Damage",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50001,"air pollutants",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50002,"chemical",,"Any damage to the terminal leader; damage >20% of the roots, stems, or branches; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:03,"798795",50000
+50003,"drought",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50004,"flooding/high water",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50005,"frost",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50006,"hail",,,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:04,"798795",50000
+50007,"heat",,,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:04,"798795",50000
+50008,"lightning",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50009,"nutrient imbalances",,,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:05,"798795",50000
+50010,"radiation",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50011,"snow/ice",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50013,"wind",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50014,"winter injury",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50015,"avalanche",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",50000
+50016,"mud-land slide",,,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:07,"798795",50000
+50017,"volcano",,,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:07,"798795",50000
+50018,"other geologic event",,,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:08,"798795",50000
+50019,"mechanical (non-human caused)",,,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:08,"798795",50000
+50020,"saltwater injury - flooding/hurricane",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",50000
+50800,"other abiotic damage (known)","other abiotic damage (known)",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:09,"798795",50000
+50900,"unknown abiotic damage","unknown abiotic damage",,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:09,"798795",50000
+60000,"Competition",,"Overtopped shade intolerant trees that are not expected to survive for 5 years or saplings not expected to reach tree size (5.0 inches DBH/DRC)","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:10,"798795",60000
+60001,"Suppression",,"Overtopped shade intolerant trees that are not expected to survive for 5 years or saplings not expected to reach tree size (5.0 inches DBH/DRC)","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:10,"798795",60000
+70000,"Human Activities",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",70000
+70001,"herbicides",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",70000
+70003,"imbedded objects",,"Any occurrence on the bole","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:50,"67572",70000
+70004,"improper planting technique",,,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:11,"798795",70000
+70005,"land clearing",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",70000
+70006,"land use conversion",,,"FS_NIMS_NRS",2013-07-31 11:48:20,"440","FS_NIMS",2016-02-17 12:19:12,"798795",70000
+70007,"logging damage",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",70000
+70008,"mechanical",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:13,"798795",70000
+70009,"pesticides",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:13,"798795",70000
+70010,"roads",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:13,"798795",70000
+70011,"soil compaction",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:14,"798795",70000
+70013,"vehicle damage",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:14,"798795",70000
+70014,"road salt",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:14,"798795",70000
+71000,"Harvest",,"Removal of >10% cubic volume","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:52,"67572",71000
+71001,"Woodland cutting",,"Removal of >10% cubic volume","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:52,"67572",71000
+80000,"Multi-Damage (Insect/Disease)",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:15,"798795",80000
+80001,"aspen defoliation (caused by 12037, 12096, 25036 and 25037)",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:16,"798795",80000
+80002,"subalpine fir mortality",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:16,"798795",80000
+80003,"five-needle pine decline",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:16,"798795",80000
+80004,"pinyon pine mortality",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:17,"798795",80000
+85000,"Invasive Plants",,,"FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:18,"798795",85000
+90000,"Other Damages and Symptoms",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",90000
+0,"No Damage",,,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:10:01,"798795",0
+10000,"General Insects",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",10000
+10001,"thrips",,,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:27,"798795",10000
+10002,"Pine tip moth",,,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:28,"798795",10000
+10003,"wasp",,,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:28,"798795",10000
+10004,"Chinese rose beetle","Adoretus sinicus",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:28,"798795",10000
+10005,"rose beetle","Adoretus versutus",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:29,"798795",10000
+10006,"coconut hispid beetle","Brontispa longissima",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:29,"798795",10000
+10007,"clerid beetle","Cleridae",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:29,"798795",10000
+10008,"weevil","Curculionidae",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:30,"798795",10000
+10009,"green rose chafer","Dichelonyx backi",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:30,"798795",10000
+10010,"Allegheny mound ant","Formica exsectoides",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:30,"798795",10000
+10011,"ant","Formicidae",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:31,"798795",10000
+10012,"stick insect","Graeffea crovanii",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:31,"798795",10000
+10013,"Hulodes cranea","Hulodes cranea",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:31,"798795",10000
+10014,"conifer swift moth","Korsheltellus gracilis",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:32,"798795",10000
+10015,"Caroline shortnosed weevil","Lophothetes spp.",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:32,"798795",10000
+10016,"coconut rhinoceros beetle","Oryctes rhinoceros","Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",10000
+10017,"bagworm moth","Psychidae","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",10000
+10018,"coconut palm weevil","Rhobdoscelus asperipennis",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:33,"798795",10000
+10019,"scarab","Scarabaeidae",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:33,"798795",10000
+10020,"ash white fly","Siphoninus phillyreae",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:34,"798795",10000
+10021,"conifer seedling weevil","Steremnius carinatus",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:34,"798795",10000
+10022,"pyralid moth","Thliptoceras octoquttale",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:34,"798795",10000
+10023,"wood wasps","Siricidae spp.",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:35,"798795",10000
+11000,"Bark Beetles",,"Any evidence of a successful attack (successful attacks generally exhibit boring dust, many pitch tubes and/or fading crowns)","FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:35,"798795",11000
+11001,"roundheaded pine beetle","Dendroctonus adjunctus",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:36,"798795",11000
+11002,"western pine beetle","Dendroctonus brevicomis",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:36,"798795",11000
+11003,"southern pine beetle","Dendroctonus frontalis",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",11000
+11004,"Jeffrey pine beetle","Dendroctonus jeffreyi",,"FS_NIMS_NRS",2013-07-31,"440","FS_NIMS_PNWRS",2021-07-29,"67572",11000
+11005,"lodgepole pine beetle","Dendroctonus murrayanae",,"FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:38,"798795",11000
+11006,"mountain pine beetle","Dendroctonus ponderosae","Any evidence of a successful attack","FS_NIMS_NRS",2013-07-31 11:48:00,"440","FS_NIMS",2016-02-17 12:11:39,"798795",11000
+11007,"Douglas-fir beetle","Dendroctonus pseudotsugae",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:41,"798795",11000
+11008,"Allegheny spruce beetle","Dendroctonus punctatus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:41,"798795",11000
+11009,"spruce beetle","Dendroctonus rufipennis","Any evidence of a successful attack","FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:41,"798795",11000
+11010,"eastern larch beetle","Dendroctonus simplex",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:41,"798795",11000
+11011,"black turpentine beetle","Dendroctonus terebrans",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",11000
+11012,"red turpentine beetle","Dendroctonus valens","Any evidence of a successful attack","FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",11000
+11013,"Dryocoetes affaber","Dryocoetes affaber",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:42,"798795",11000
+11014,"Dryocoetes autographus","Dryocoetes autographus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:43,"798795",11000
+11015,"western balsam bark beetle","Dryocoetes confusus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:43,"798795",11000
+11016,"Dryocoetes sechelti","Dryocoetes sechelti",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:44,"798795",11000
+11017,"ash bark beetles","Hylesinus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:44,"798795",11000
+11018,"native elm bark beetle","Hylurgopinus rufipes",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:44,"798795",11000
+11019,"pinon ips","Ips confusus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:45,"798795",11000
+11020,"small southern pine engraver","Ips avulsus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:45,"798795",11000
+11021,"sixspined ips","Ips calligraphus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:45,"798795",11000
+11022,"emarginate ips","Ips emarginatus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:46,"798795",11000
+11023,"southern pine engraver beetle","Ips grandicollis",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:47,"798795",11000
+11024,"Orthotomicus latidens","Orthotomicus latidens",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:47,"798795",11000
+11025,"Arizona five-spined ips","Ips lecontei",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:48,"798795",11000
+11026,"Monterey pine ips","Ips mexicanus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:48,"798795",11000
+11027,"California fivespined ips","Ips paraconfusus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:48,"798795",11000
+11028,"northern spruce engraver beetle","Ips perturbatus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:48,"798795",11000
+11029,"pine engraver","Ips pini",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:49,"798795",11000
+11030,"Ips engraver beetles","Ips spp.","Any evidence of a successful attack","FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:49,"798795",11000
+11031,"Ips tridens","Ips tridens",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:50,"798795",11000
+11032,"western ash bark beetle","Leperisinus californicus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:50,"798795",11000
+11033,"Oregon ash bark beetle","Leperisinus oregonus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:50,"798795",11000
+11034,"Orthotomicus caelatus","Orthotomicus caelatus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:51,"798795",11000
+11035,"cedar bark beetles","Phloeosinus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:51,"798795",11000
+11036,"western cedar bark beetle","Phloeosinus punctatus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:51,"798795",11000
+11037,"tip beetles","Pityogenes spp.",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:52,"798795",11000
+11038,"Douglas-fir twig beetle","Pityophthorus pseudotsugae",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:52,"798795",11000
+11039,"twig beetles","Pityophthorus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:52,"798795",11000
+11040,"foureyed spruce bark beetle","Polygraphus rufipennis",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:53,"798795",11000
+11041,"fir root bark beetle","Pseudohylesinum granulatus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:53,"798795",11000
+11042,"Pseudohylesinus dispar","Pseudohylesinus dispar",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:53,"798795",11000
+11043,"Douglas-fir pole beetle","Pseudohylesinus nebulosus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:54,"798795",11000
+11044,"silver fir beetle","Pseudohylesinus sericeus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:54,"798795",11000
+11045,"small European elm bark beetle","Scolytus multistriatus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:55,"798795",11000
+11046,"spruce engraver","Scolytus piceae",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:55,"798795",11000
+11047,"hickory bark beetle","Scolytus quadrispinosus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:55,"798795",11000
+11048,"true fir bark beetles","Scolytus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:55,"798795",11000
+11049,"Douglas-fir engraver","Scolytus unispinosus",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:56,"798795",11000
+11050,"fir engraver","Scolytus ventralis",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:56,"798795",11000
+11051,"striped ambrosia beetle","Tryachykele lineatum",,"FS_NIMS_NRS",2013-07-31 11:48:01,"440","FS_NIMS",2016-02-17 12:11:56,"798795",11000
+11052,"Sitka spruce engraver beetle","Ips conncinnus",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:11:57,"798795",11000
+11053,"four-eyed bark beetle","Polygraphus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:11:57,"798795",11000
+11054,"hemlock beetle","Pseudohylesinus tsugae",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:11:58,"798795",11000
+11055,"spruce ips","Ips pilifrons",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:11:58,"798795",11000
+11056,"(smaller) Mexican pine beetle","Dendroctonus mexicanus",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:11:58,"798795",11000
+11057,"banded elm bark beetle","Scolytus schevyrewi",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:11:59,"798795",11000
+11058,"redbay ambrosia beetle","Xyleborus glabratus",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:11:59,"798795",11000
+11059,"southern cypress beetle","Phloeosinus taxodii",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:00,"798795",11000
+11060,"Mediterranean pine engraver","Orthotomicus erosus",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:00,"798795",11000
+11800,"other bark beetle (known)","other bark beetle (known)",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:00,"798795",11000
+11900,"unknown bark beetle","unknown bark beetle",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:02,"798795",11000
+11999,"western bark beetle complex","western bark beetle complex",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:03,"798795",11000
+12000,"Defoliators",,"Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",12000
+12001,"casebearer",,,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:08,"798795",12000
+12002,"leaftier",,,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:08,"798795",12000
+12003,"loopers",,,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:08,"798795",12000
+12004,"needleminers",,,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:09,"798795",12000
+12005,"sawflies",,"Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",12000
+12006,"skeletonizer",,,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:09,"798795",12000
+12007,"larger elm leaf beetle","Monocesta coryli",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:10,"798795",12000
+12008,"spanworm",,,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:10,"798795",12000
+12009,"webworm",,,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:11,"798795",12000
+12010,"pine false webworm","Acantholyda erythrocephala",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:11,"798795",12000
+12011,"western blackheaded budworm","Acleris gloverana",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:11,"798795",12000
+12012,"eastern blackheaded budworm","Acleris variana",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:12,"798795",12000
+12013,"whitefly","Aleyrodoidae",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:12,"798795",12000
+12014,"fall cankerworm","Alsophila pometaria",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:12,"798795",12000
+12015,"alder flea beetle","Altica ambiens",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:13,"798795",12000
+12016,"mountain mahogany looper","Anacamptodes clivinaria profanata",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:13,"798795",12000
+12017,"birch leaffolder","Ancylis disigerana",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:13,"798795",12000
+12018,"oak worms","Anisota spp.",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:14,"798795",12000
+12019,"orange-striped oakworm","Anisota senatoria",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:14,"798795",12000
+12020,"western larch sawfly","Anoplonyx occidens",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:14,"798795",12000
+12021,"fruittree leafroller","Archips argyrospila",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:15,"798795",12000
+12022,"uglynest caterpillar","Archips cerasivorana",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:15,"798795",12000
+12023,"boxelder defoliator","Archips negundanus",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:15,"798795",12000
+12024,"oak leafroller","Archips semiferana",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:16,"798795",12000
+12025,"birch sawfly","Arge pectoralis",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:16,"798795",12000
+12026,"arborvitae leafminer","Argyresthia thuiella",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:16,"798795",12000
+12027,"coconut scale","Aspidiotus destructor",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:17,"798795",12000
+12028,"texas leafcutting ant","Atta texana",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",12000
+12029,"oak skeletonizer","Bucculatrix ainsliella","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",12000
+12030,"pear sawfly","Caliroa cerasi",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:18,"798795",12000
+12031,"scarlet oak sawfly","Caliroa quercuscoccineae",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:18,"798795",12000
+12032,"elm calligrapha","Calligrapha scalaris",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:19,"798795",12000
+12033,"boxelder leafroller","Caloptilia negundella",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:19,"798795",12000
+12034,"maple petiole borer","Caulocampus acericaulis",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:19,"798795",12000
+12035,"spruce webspinning sawfly","Cephalcia fascipennis",,"FS_NIMS_NRS",2013-07-31 11:48:02,"440","FS_NIMS",2016-02-17 12:12:19,"798795",12000
+12036,"two-year budworm","Choristoneura biennis",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:20,"798795",12000
+12037,"large aspen tortrix","Choristoneura conflictana",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:20,"798795",12000
+12038,"spruce budworm","Choristoneura fumiferana","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",12000
+12039,"western pine budworm","Choristoneura lambertiana",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:21,"798795",12000
+12040,"western spruce budworm","Choristoneura occidentalis","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",12000
+12041,"jack pine budworm","Choristoneura pinus","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",12000
+12042,"Modoc budworm","Choristoneura retiniana",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:22,"798795",12000
+12043,"aspen leaf beetle","Chrysomela crotchi",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:22,"798795",12000
+12044,"cottonwood leaf beetle","Chrysomela scripta",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:23,"798795",12000
+12045,"leafhopper","Cicadellidae",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:23,"798795",12000
+12046,"poplar tentmaker","Clostera inclusa",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:23,"798795",12000
+12047,"larch casebearer","Coleophora laricella","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",12000
+12048,"birch casebearer","Coleophora serratella","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",12000
+12049,"lodgepole needleminer","Coleotechnites milleri",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:24,"798795",12000
+12050,"Gelechiid moths/ needleminers","Coleotechnites spp.",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:25,"798795",12000
+12051,"Black Hills pandora moth","Coloradia doris",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:25,"798795",12000
+12052,"pandora moth","Coloradia pandora",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:25,"798795",12000
+12053,"sycamore lace bug","Corythucha ciliata",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:26,"798795",12000
+12054,"lace bugs","Corythucha spp.",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:26,"798795",12000
+12055,"oak leaftier","Croesia semipurpurana",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:27,"798795",12000
+12056,"dusky birch sawfly","Croesus latitarsus",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:27,"798795",12000
+12057,"walnut caterpillar","Datana integerrima",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:27,"798795",12000
+12058,"yellownecked caterpillar","Datana ministra",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:28,"798795",12000
+12059,"walkingstick","Diapheromera femorata",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:28,"798795",12000
+12060,"spruce coneworm","Dioryctria reniculelloides",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:29,"798795",12000
+12061,"introduced pine sawfly","Diprion similis",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:29,"798795",12000
+12062,"greenstriped mapleworm","Dryocampa rubicunda",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:29,"798795",12000
+12063,"spruce needleminer (east)","Endothenia albolineana",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:30,"798795",12000
+12064,"elm spanworm","Ennomos subsignaris","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",12000
+12065,"maple trumpet skeletonizer","Epinotia aceriella",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:30,"798795",12000
+12066,"white fir needleminer","Epinotia meritana",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:31,"798795",12000
+12067,"linden looper","Erannis tiliaria",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:31,"798795",12000
+12068,"browntail moth","Euproctis chrysorrhoea","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS_SRS",2021-05-05 10:00:47,"67572",12000
+12069,"pine needleminer","Exoteleia pinifoliella",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:32,"798795",12000
+12070,"birch leafminer","Fenusa pusilla",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:32,"798795",12000
+12071,"elm leafminer","Fenusa ulmi",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:33,"798795",12000
+12072,"geometrid moth","Geometridae",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:33,"798795",12000
+12073,"leafblotch miner","Gracillariidae",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:33,"798795",12000
+12074,"spotted tussock moth","Halisidota maculata",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:33,"798795",12000
+12075,"pale tussock moth","Halysidota tessellaris",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:34,"798795",12000
+12076,"hesperiid moth","Hasora choromus",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:34,"798795",12000
+12077,"brown day moth","Hemileuca eglanterina",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:50,"798795",12000
+12078,"buck moth","Hemileuca maia",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:51,"798795",12000
+12079,"saddled prominent","Heterocampa guttivitta",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:51,"798795",12000
+12080,"variable oakleaf caterpillar","Heterocampa manteo",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:51,"798795",12000
+12081,"cherry scallop shell moth","Hydria prunivorata","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",12000
+12082,"fall webworm","Hyphantria cunea",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",12000
+12083,"hemlock looper","Lambdina fiscellaria",,"FS_NIMS_NRS",2013-07-31 11:48:03,"440","FS_NIMS",2016-02-17 12:12:53,"798795",12000
+12084,"oak looper","Lambdina punctat",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:20,"798795",12000
+12085,"tent caterpillar moth","Lasiocampidae",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:20,"798795",12000
+12086,"satin moth","Leucoma salicis","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",12000
+12087,"willow leafblotch miner","Lithocolletis spp.",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:21,"798795",12000
+12088,"aspen blotchminer","Lithocolletis tremuloidiella",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:22,"798795",12000
+12089,"gypsy moth","Lymantria dispar","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:22,"798795",12000
+12090,"cottonwood leafminers","Lyonetia spp.",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:23,"798795",12000
+12091,"dogwood sawfly","Macremphytus tarsatus",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:23,"798795",12000
+12092,"rose chafer","Macrodactylus subspinosus",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:23,"798795",12000
+12093,"eastern tent caterpillar","Malacosoma americanum","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",12000
+12094,"western tent caterpillar","Malacosoma californicum",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:24,"798795",12000
+12095,"Pacific tent caterpillar","Malacosoma constrictum",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:25,"798795",12000
+12096,"forest tent caterpillar","Malacosoma disstria","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",12000
+12097,"southwestern tent caterpillar","Malacosoma incurvum",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:26,"798795",12000
+12098,"leafcutting bees","Megachilidae",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:26,"798795",12000
+12099,"blister beetle","Meloidae",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:27,"798795",12000
+12100,"early birch leaf edgeminer","Messa nana",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:27,"798795",12000
+12101,"juniper sawfly","Monoctenus fulvus",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:28,"798795",12000
+12102,"common sawflies","Nematus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:28,"798795",12000
+12103,"balsam fir sawfly","Neodiprion abietis",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:28,"798795",12000
+12104,"lodgepole sawfly","Neodiprion burkei",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:29,"798795",12000
+12105,"blackheaded pine sawfly","Neodiprion excitans",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:30,"798795",12000
+12106,"pine infesting sawflies","Neodiprion fulviceps",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:30,"798795",12000
+12107,"redheaded pine sawfly","Neodiprion lecontei",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:30,"798795",12000
+12109,"ponderosa pine sawfly","Neodiprion mundus",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:31,"798795",12000
+12110,"white pine sawfly","Neodiprion pinetum",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:31,"798795",12000
+12111,"jack pine sawfly","Neodiprion pratti banksianae",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:32,"798795",12000
+12112,"Virginia pine sawfly","Neodiprion pratti pratti",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:41,"798795",12000
+12113,"European pine sawfly","Neodiprion sertifer",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:42,"798795",12000
+12114,"loblolly pine sawfly","Neodiprion taedae linearis",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:42,"798795",12000
+12115,"hemlock sawfly","Neodiprion tsugae",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:43,"798795",12000
+12116,"pine butterfly","Neophasia menapia",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:43,"798795",12000
+12117,"false hemlock looper","Nepytia canosaria",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:43,"798795",12000
+12118,"California tortoiseshell","Nymphalis californica",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:44,"798795",12000
+12119,"locust leafminer","Odontota dorsalis",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:44,"798795",12000
+12120,"Bruce spanworm","Operophtera bruceata",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:45,"798795",12000
+12121,"rusty tussock moth","Orgyia antiqua",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:45,"798795",12000
+12122,"whitemarked tussock moth","Orgyia leucostigma",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:46,"798795",12000
+12123,"Douglas-fir tussock moth","Orgyia pseudotsugata",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:46,"798795",12000
+12124,"western tussock moth","Orgyia vetusta",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:47,"798795",12000
+12125,"spring cankerworm","Paleacrita vernata",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:47,"798795",12000
+12126,"black citrus swallowtail butterfly","Papilio polytes",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:48,"798795",12000
+12127,"maple leafcutter","Paraclemensia acerifoliella",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:48,"798795",12000
+12128,"pine tussock moth","Parorgyia grisefacta",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:49,"798795",12000
+12129,"poinciana looper","Pericyma cruegeri",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:49,"798795",12000
+12130,"half-wing geometer","Phigalia titea",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:52,"798795",12000
+12131,"Phoberia moth","Phoberia atomaris",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:52,"798795",12000
+12132,"California oakworm","Phryganidia californica",,"FS_NIMS_NRS",2013-07-31 11:48:04,"440","FS_NIMS",2016-02-17 12:13:52,"798795",12000
+12133,"European snout beetle","Phyllobius oblongus",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:53,"798795",12000
+12134,"citrus leafminer","Phyllocnistis citrella",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:53,"798795",12000
+12135,"aspen leafminer","Phyllocnistis populiella","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",12000
+12136,"yellowheaded spruce sawfly","Pikonema alaskensis","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",12000
+12137,"tenlined June beetle","Polyphylla decemlineata",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:55,"798795",12000
+12138,"Japanese beetle","Popillia japonica",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:55,"798795",12000
+12139,"larch sawfly","Pristiphora erichsonii",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:56,"798795",12000
+12140,"mountain-ash sawfly","Pristiphora geniculata",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:56,"798795",12000
+12141,"elm leaf beetle","Pyrrhalta luteola",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:56,"798795",12000
+12142,"spearmarked black moth","Rheumaptera hastata",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:57,"798795",12000
+12143,"giant silkworm moth","Saturniidae",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:57,"798795",12000
+12144,"redhumped caterpillar","Schizura concinna",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:58,"798795",12000
+12145,"redbanded thrips","Selenothrips rubrocinctus",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:58,"798795",12000
+12146,"green larch looper","Semiothisa sexmaculata",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:59,"798795",12000
+12147,"maple leafroller","Sparganothis acerivorana",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:13:59,"798795",12000
+12148,"redhumped oakworm","Symmerista canicosta",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:00,"798795",12000
+12149,"orangehumped mapleworm","Symmerista leucitys",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:00,"798795",12000
+12150,"spruce needleminer (west)","Taniva albolineana",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:00,"798795",12000
+12151,"maple webworm","Tetralopha asperatella",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:01,"798795",12000
+12152,"pine webworm","Tetralopha robustella",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:01,"798795",12000
+12153,"introduced basswood thrips","Thrips calcaratus",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:02,"798795",12000
+12154,"bagworm","Thyridopteryx ephemeraeformis",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",12000
+12155,"leafroller/seed moth","Tortricidae",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:03,"798795",12000
+12156,"willow defoliation","Tortricidae",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:03,"798795",12000
+12157,"euonymus caterpillar","Yponomeuta spp.",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:04,"798795",12000
+12158,"spruce bud moth","Zeiraphera canadensis",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:04,"798795",12000
+12159,"larch bud moth","Zeiraphera improbana",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:04,"798795",12000
+12160,"pine needle sheathminer","Zelleria haimbachi",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:05,"798795",12000
+12161,"cypress looper","Anacamptodes pergracilis",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:06,"798795",12000
+12162,"Chrysomela leaf beetle","Chrysomela spp.",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:07,"798795",12000
+12163,"pine colaspis","Colaspis pini",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:07,"798795",12000
+12164,"saddleback looper","Ectropis crepuscularia",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:08,"798795",12000
+12165,"birch leaf roller","Epinotia solandriana","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",12000
+12166,"New Mexico fir looper","Galenara consimilis",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:08,"798795",12000
+12167,"striped alder sawfly","Hemichroa crocea",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:09,"798795",12000
+12168,"greenstriped looper","Melanoplophia imitata",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:10,"798795",12000
+12169,"willow leaf blotchminer","Micrurapteryx salicifoliella",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:10,"798795",12000
+12170,"pine sawfly","Neodiprion autmnalis",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:10,"798795",12000
+12171,"pinon sawfly","Neodiprion edulicolus",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:11,"798795",12000
+12172,"Neodiprion gilletti","Neodiprion gilletti",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:11,"798795",12000
+12173,"Neodiprion ventralis","Neodiprion ventralis",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:12,"798795",12000
+12174,"pine looper","Phaeoura mexicanaria",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:12,"798795",12000
+12175,"Zadiprion rohweri","Zadiprion rohweri",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:12,"798795",12000
+12176,"bull pine sawfly","Zadiprion townsendi",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:13,"798795",12000
+12177,"Douglas-fir budmoth","Zeiraphera hesperiana",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:13,"798795",12000
+12178,"western oak looper","Lambdina fiscellaria somniaria",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:13,"798795",12000
+12179,"phantom hemlock looper","Nepytia phantasmaria",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:14,"798795",12000
+12180,"tent caterpillar","Malacosoma spp.",,"FS_NIMS_NRS",2013-07-31 11:48:05,"440","FS_NIMS",2016-02-17 12:14:14,"798795",12000
+12181,"Abbot's sawfly","Neodiprion abbotii",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:14,"798795",12000
+12182,"slash pine sawfly","Neodiprion merkeli",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:14,"798795",12000
+12183,"sand pine sawfly","Neodiprion pratti",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:15,"798795",12000
+12184,"melalueca leaf weevil","Oxyops vitiosa",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:15,"798795",12000
+12185,"cypress leaf beetle","Systena marginalis",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:16,"798795",12000
+12186,"Nepytia janetae","Nepytia janetae",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:16,"798795",12000
+12187,"agromyzid fly","Agromyza viridula",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:16,"798795",12000
+12188,"elm sawfly","Cimbex americana",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:17,"798795",12000
+12189,"june beetle","Phyllophaga spp.",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:17,"798795",12000
+12190,"hickory tussock moth","Halisidota caryae",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:17,"798795",12000
+12191,"pin oak sawfly","Caliroa lineata",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:18,"798795",12000
+12192,"palmerworm","Dichomeris ligulella",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:18,"798795",12000
+12193,"pitch pine looper","Lambdina athasaria pellucidaria",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:18,"798795",12000
+12194,"red pine sawfly","Neodiprion nanulus nanulus",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:18,"798795",12000
+12195,"pine tube moth","Argyrotaenia pinatubana",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:19,"798795",12000
+12196,"baldcypress leafroller","Archips goyerana",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:19,"798795",12000
+12197,"winter moth","Operophtera brumata","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS_SRS",2021-05-05 10:00:47,"67572",12000
+12198,"basswood thrips","Neohydatothrips tiliae",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:20,"798795",12000
+12199,"noctuid moth","Xylomyges simplex (Walker)",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:20,"798795",12000
+12200,"pyralid moth","Palpita magniferalis","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",12000
+12201,"pacific silver fir budmoth","Zeiraphera spp.",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:21,"798795",12000
+12202,"red pine needle midge","Thecodiplosis piniresinosae",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:21,"798795",12000
+12203,"western hemlock looper","Lambdina fiscellaria lugubrosa",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:22,"798795",12000
+12204,"lodgepole pine sawfly","Neodiprion nanulus contortae",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:22,"798795",12000
+12205,"silverspotted tiger moth","Lophocampa argentata",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:22,"798795",12000
+12206,"green alder sawfly","Monsoma pulveratum",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:22,"798795",12000
+12207,"conifer sawflies","conifer sawflies",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:23,"798795",12000
+12208,"ambermarked birch leafminer","Profenusa thomsoni",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:23,"798795",12000
+12209,"cycad blue butterfly","Chilades pandava",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:24,"798795",12000
+12300,"budworm","budworms","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",12000
+12800,"other defloiater (known)","other defloiater (known) ",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:24,"798795",12000
+12900,"unknown defoliator","unknown defoliator",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:25,"798795",12000
+13000,"Chewing Insects",,"Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",13000
+13001,"grasshopper",,,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:25,"798795",13000
+13002,"shorthorn grasshoppers","Acrididae",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:26,"798795",13000
+13003,"black cutworm","Agrotis ipsilon",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:26,"798795",13000
+13004,"Palau coconut beetle","Brontispa palauenis",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:26,"798795",13000
+13005,"clearwinged grasshopper","Camnula pellucida",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:27,"798795",13000
+13006,"cicadas","Cicadidae",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",13000
+13007,"eurytomids","Eurytoma spp.",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:27,"798795",13000
+13008,"cutworms","Euxoa excellens",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:31,"798795",13000
+13009,"whitefringed beetles","Graphognathus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:31,"798795",13000
+13010,"pales weevil","Hylobius pales",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",13000
+13011,"vegetable weevil","Listroderes difficilis",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:32,"798795",13000
+13012,"periodical cicada","Magicicada septendecim",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:33,"798795",13000
+13013,"migratory grasshopper","Melanoplus sanguinipes",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:33,"798795",13000
+13014,"valley grasshopper","Oedaleonotus enigma",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:34,"798795",13000
+13015,"strawberry root weevil","Otiorhyhchus ovatus",,"FS_NIMS_NRS",2013-07-31 11:48:06,"440","FS_NIMS",2016-02-17 12:14:34,"798795",13000
+13016,"black vine weevil","Otiorhynchus sulcatus",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:34,"798795",13000
+13017,"pandanus beetle","Oxycephala pandani",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:35,"798795",13000
+13018,"spaeth pandanus","Oxycephala spaethi",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:35,"798795",13000
+13019,"agamemnon butterfly","Papilio agememnon",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:35,"798795",13000
+13020,"northern pitch twig moth","Petrova albicapitana",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:36,"798795",13000
+13021,"ponderosa pine tip moth","Rhyacionia zozana",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:36,"798795",13000
+13022,"pine needle weevil","Scythropus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:37,"798795",13000
+13023,"coconut longhorned grasshopper","Segestes unicolor",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:37,"798795",13000
+13024,"clover root curculio","Sitona hispidulus",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:37,"798795",13000
+13025,"Madron thrips","Thrips madronii",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:38,"798795",13000
+13026,"ash plant bug","Tropidosteptes amoenus",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:38,"798795",13000
+13027,"shorthorned grasshopper","Valanga nigricornis",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:39,"798795",13000
+13028,"pitch-eating weevil","Pachylobius picivorus",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:39,"798795",13000
+13029,"eastern pine weevil","Pissodes nemorensis",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:40,"798795",13000
+13030,"adana tip moth","Rhyacionia adana",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:40,"798795",13000
+13800,"other chewing insect (known)","other chewing insect (known)",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:41,"798795",13000
+13900,"unknown chewing insect","unknown chewing insect",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:41,"798795",13000
+14000,"Sucking Insects",,"Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",14000
+14001,"scale insects",,"Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",14000
+14002,"western larch woolly aphid","Adelges oregonensis",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:42,"798795",14000
+14003,"balsam woolly adelgid","Adelges piceae","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:43,"798795",14000
+14004,"hemlock woolly adelgid","Adelges tsugae","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:43,"798795",14000
+14005,"spiraling whitefly","Aleurodicus dispersus",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:44,"798795",14000
+14006,"aphid","Aphididae",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:44,"798795",14000
+14007,"pine spittlebug","Aphrophora parallela",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:45,"798795",14000
+14008,"western pine spittlebug","Aphrophora permutata",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:45,"798795",14000
+14009,"Saratoga spittlebug","Aphrophora saratogensis",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:46,"798795",14000
+14010,"spittlebug","Cercopidae",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:46,"798795",14000
+14011,"wax scale","Ceroplastes spp.",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:46,"798795",14000
+14012,"pine needle scale","Chionaspis pinifoliae",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:47,"798795",14000
+14014,"giant conifer aphids","Cinara spp.",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:47,"798795",14000
+14015,"white pine aphid","Cinara strobi",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:48,"798795",14000
+14016,"beech scale","Cryptococcus fagisuga","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:48,"798795",14000
+14017,"spruce aphid","Elatobium abietinum",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:49,"798795",14000
+14018,"woolly apple aphid","Eriosoma lanigerum",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:49,"798795",14000
+14019,"striped mealybug","Ferrisia vergata",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:50,"798795",14000
+14020,"elongate hemlock scale","Fiorinia externa","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",14000
+14021,"coconut red scale","Furcaspis oceanica",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:51,"798795",14000
+14022,"pine thrips","Gnophothrips spp.",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:51,"798795",14000
+14023,"leucaena psyllid","Heteropsylla cubana",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:52,"798795",14000
+14024,"honeysuckle aphids","Hyadaphis tataricae",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:52,"798795",14000
+14025,"Egyptian fluted scale","Icerya aegyptiaca",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:52,"798795",14000
+14026,"Lecanium scale","Lecanium spp.",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:53,"798795",14000
+14027,"common falsepit scale","Lecanodiaspis prosopidis",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:53,"798795",14000
+14028,"oystershell scale","Lepidosaphes ulmi",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:54,"798795",14000
+14029,"pinyon needle scale","Matsucoccus acalyptus",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:54,"798795",14000
+14030,"ponderosa pine twig scale","Matsucoccus bisetosus",,"FS_NIMS_NRS",2013-07-31 11:48:07,"440","FS_NIMS",2016-02-17 12:14:55,"798795",14000
+14031,"pine twig scale","Matsucoccus californicus",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:14:55,"798795",14000
+14032,"ponderosa pine scale","Matsucoccus degeneratus",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:14:56,"798795",14000
+14033,"red pine scale","Matsucoccus resinosae","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS_SRS",2021-05-05 10:00:47,"67572",14000
+14034,"Prescott scale","Matsucoccus vexillorum",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:14:56,"798795",14000
+14035,"treehoopers","Membracidae",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:14:57,"798795",14000
+14036,"hibiscus psyllid","Mesohomotoma hibisci",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:14:57,"798795",14000
+14037,"balsam twig aphid","Mindarus abietinus",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:14:58,"798795",14000
+14038,"hibiscus mealybug","Nipaecoccus vastator",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:14:59,"798795",14000
+14039,"black pineleaf scale","Nuculaspis californica",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:14:59,"798795",14000
+14040,"spruce spider mite","Oligonychus ununquis",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:00,"798795",14000
+14041,"twig girdler","Oncideres cingulata",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",14000
+14042,"woolly alder aphid","Paraprociphilus tessellatus",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:01,"798795",14000
+14043,"maple aphids","Periphyllus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:01,"798795",14000
+14044,"spruce bud scale","Physokermes piceae",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:02,"798795",14000
+14045,"red pine adelgid","Pineus borneri",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:02,"798795",14000
+14046,"pine leaf adelgid","Pineus pinifoliae",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:03,"798795",14000
+14047,"white pine adelgid","Pineus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:04,"798795",14000
+14048,"pine bark adelgid","Pineus strobi",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:04,"798795",14000
+14049,"root aphid","Prociphilus americanus",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:04,"798795",14000
+14050,"mealybug","Pseudococcidae",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:05,"798795",14000
+14051,"cottony maple scale","Pulvinaria innumerabilis",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:05,"798795",14000
+14052,"fir mealybug","Puto cupressi",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:06,"798795",14000
+14053,"Douglas-fir mealybug","Puto profusus",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:06,"798795",14000
+14054,"spruce mealybug","Puto sandini",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:07,"798795",14000
+14055,"hemispherical scale","Saissetia coffeae",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:07,"798795",14000
+14056,"woolly pine needle aphid","Schizolachnus piniradiatae",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:08,"798795",14000
+14057,"steatococcus scale","Steatococcus samaraius",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:08,"798795",14000
+14058,"pear thrips","Taeniothrips inconsequens",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:09,"798795",14000
+14059,"mulberry whitefly","Tetraleurodes mori",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:10,"798795",14000
+14060,"tuliptree scale","Toumeyella liriodendri",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:10,"798795",14000
+14061,"pine tortoise scale","Toumeyella parvicornis",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:10,"798795",14000
+14062,"citrus snow scale","Unaspis citri",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:11,"798795",14000
+14063,"birch aphid","Euceraphis betulae",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:11,"798795",14000
+14064,"Kermes scale","Allokermes spp.",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:12,"798795",14000
+14065,"Casuarina spittlebug","Clastoptera undulata",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:12,"798795",14000
+14066,"giant bark aphid","Longistigma caryae",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:13,"798795",14000
+14067,"woolly pine scale","Pseudophilippia quaintancii",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:13,"798795",14000
+14068,"european elm scale","Gossyparia spuria",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:14,"798795",14000
+14069,"elm scurfy scale","Chionaspis americana",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:14,"798795",14000
+14070,"magnolia scale","Neolecanium cornuparvum",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:14,"798795",14000
+14071,"beech blight aphid","Grylloprociphilus imbricator",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:15,"798795",14000
+14072,"beech woolly aphid","Phyllaphis fagi",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:15,"798795",14000
+14073,"Asian cycad scale","Aulacaspis yasumatsui","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",14000
+14074,"European fruit lecanium scale","Parthenolecanium corni",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:16,"798795",14000
+14075,"lobate lac scale","Paratachardina lobata",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:17,"798795",14000
+14800,"other sucking insect (known)","other sucking insect (known)",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:17,"798795",14000
+14900,"unknown sucking insect","unknown sucking insect",,"FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS",2016-02-17 12:15:18,"798795",14000
+15000,"Boring Insects",,"Any damage to the terminal leader; damage >20% of the roots, stems, or branches","FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS_SRS",2021-05-05 10:00:54,"67572",15000
+15001,"shoot borer",,"Any damage to the terminal leader; damage >20% of the roots, stems, or branches","FS_NIMS_NRS",2013-07-31 11:48:08,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",15000
+15002,"termite",,,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:19,"798795",15000
+15003,"ponderosa pine bark borer","Acanthocinus princeps",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:19,"798795",15000
+15004,"bronze birch borer","Agrilus anxius","Any damage to the terminal leader; damage >20% of the roots, stems, or branches","FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",15000
+15005,"twolined chestnut borers","Agrilus bilineatus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:20,"798795",15000
+15006,"bronze poplar borer","Agrilus liragus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:21,"798795",15000
+15007,"carpenter bees","Apidae",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:21,"798795",15000
+15008,"flatheaded borer","Buprestidae",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:22,"798795",15000
+15009,"golden buprestid","Buprestis aurulenta",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:22,"798795",15000
+15010,"carpenter ants","Camponotus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:22,"798795",15000
+15011,"gouty pitch midge","Cecidomyia piniinopis",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:23,"798795",15000
+15012,"shootboring sawflies","Cephidae",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:23,"798795",15000
+15013,"roundheaded borer","Cerambycidae",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:24,"798795",15000
+15014,"flatheaded apple tree borer","Chrysobothris femorata",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:24,"798795",15000
+15015,"cranberry girdler","Chrysoteuchia topiaria",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:25,"798795",15000
+15016,"Columbian timber beetle","Corthylus columbianus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:25,"798795",15000
+15017,"pitted ambrosia beetle","Corthylus punctatissimus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:26,"798795",15000
+15018,"carpenterworm moths","Cossidae",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:26,"798795",15000
+15019,"poplar and willow borer","Cryptorphynchus lapathi",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:26,"798795",15000
+15020,"pine reproduction weevil","Cylindrocopturus eatoni",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:27,"798795",15000
+15021,"Douglas-fir twig weevil","Cylindrocopturus furnissi",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:28,"798795",15000
+15022,"Zimmerman pine moth","Dioryctria zimmermani",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:28,"798795",15000
+15023,"oak twig borers","Elaphidionoides spp.",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:29,"798795",15000
+15024,"twig pruner","Elaphidionoides villosus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:29,"798795",15000
+15025,"lesser cornstalk borer","Elasmopalpus lignosellus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:29,"798795",15000
+15026,"red oak borer","Enaphalodes rufulus","Damage to >10% of the bole circumference","FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS_SRS",2021-05-05 10:00:52,"67572",15000
+15027,"ponderous borer","Ergates spiculatus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:30,"798795",15000
+15028,"eastern pine shoot borer","Eucosma gloriola",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:31,"798795",15000
+15029,"western pine shoot borer","Eucosma sonomana",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:31,"798795",15000
+15030,"Eucosma shoot borers","Eucosma spp.",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:32,"798795",15000
+15031,"sugar maple borer","Glycobius speciosus","Any damage to the terminal leader; damage >20% of the roots, stems, or branches","FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",15000
+15032,"Goes borers","Goes spp.",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:33,"798795",15000
+15033,"pine root collar weevil","Hylobius radicis",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:33,"798795",15000
+15034,"Warren root collar weevil","Hylobius warreni",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:33,"798795",15000
+15035,"powderpost beetle","Lyctidae",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:34,"798795",15000
+15036,"tarnished plant bug","Lygus lineolaris",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:34,"798795",15000
+15037,"bark weevils","Magdalis spp.",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:35,"798795",15000
+15038,"white pine barkminer moth","Marmara fasciella",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:35,"798795",15000
+15039,"locust borer","Megacyllene robiniae",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:36,"798795",15000
+15040,"California flathead borer","Melanophila californica",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:36,"798795",15000
+15041,"flatheaded fir borer","Melanophila drummondi",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:37,"798795",15000
+15042,"whitespotted sawyer","Monochamus scutellatus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:37,"798795",15000
+15043,"redheaded ash borer","Neoclytus acuminutus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:37,"798795",15000
+15044,"western ash borer","Neoclytus conjunctus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:38,"798795",15000
+15045,"oberea shoot borers","Oberea spp.",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:38,"798795",15000
+15046,"eucalyptus longhorned borer","Phoracantha semipunctata",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:39,"798795",15000
+15047,"northern pine weevil","Pissodes approximatus",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:39,"798795",15000
+15048,"balsam bark weevil","Pissodes dubius",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:40,"798795",15000
+15049,"Monterey pine weevil","Pissodes radiatae",,"FS_NIMS_NRS",2013-07-31 11:48:09,"440","FS_NIMS",2016-02-17 12:15:40,"798795",15000
+15050,"Engelmann spruce weevil","Pissodes strobi",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:41,"798795",15000
+15051,"lodgepole terminal weevil","Pissodes terminalis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:41,"798795",15000
+15052,"ambrosia beetles","Platypus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",15000
+15053,"cottonwood borer","Plectrodera scalator",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:42,"798795",15000
+15054,"balsam shootboring sawfly","Pleroneura brunneicornis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:42,"798795",15000
+15055,"pine gall weevil","Podapion gallicola",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:43,"798795",15000
+15056,"ash borer","Podesesia syringae fraxini",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:43,"798795",15000
+15057,"lilac borer","Podosesia syringae",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:44,"798795",15000
+15058,"carpenterworm","Prionoxystus robiniae",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:44,"798795",15000
+15059,"maple shoot borers","Proterteras spp.",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:45,"798795",15000
+15060,"western subterranean termite","Reticulitermes hesperus",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:45,"798795",15000
+15061,"coconut trunk weevil","Rhabdoscelus asperipennis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:46,"798795",15000
+15062,"New Guinea sugarcane weevil","Rhabdoscelus obscurus",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:46,"798795",15000
+15063,"European pine shoot moth","Rhyacionia buoliana",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:47,"798795",15000
+15064,"western pine tip moth","Rhyacionia bushnelli",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:47,"798795",15000
+15065,"Nantucket pine tip moth","Rhyacionia frustrana",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",15000
+15066,"lodgepole pine tip moth","Rhyacionia montana",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:48,"798795",15000
+15067,"southwestern pine tip moth","Rhyacionia neomexicana",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:48,"798795",15000
+15068,"poplar borer","Saperda calcarata",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:49,"798795",15000
+15069,"roundheaded appletree borer","Saperda candida",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:49,"798795",15000
+15070,"Saperda shoot borer","Saperda spp.",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:50,"798795",15000
+15071,"clearwing moths","Sesiidae",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:50,"798795",15000
+15072,"dogwood borer","Synanthedon scitula",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:51,"798795",15000
+15073,"roundheaded fir borer","Tetropium abietis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:51,"798795",15000
+15074,"western larch borer","Tetropium velutinum",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:52,"798795",15000
+15075,"western cedar borer","Trachykele blondeli",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:52,"798795",15000
+15076,"Douglas-fir pitch moth","Vespamima novaroensis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:52,"798795",15000
+15077,"sequoia pitch moth","Vespamima sequoia",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:53,"798795",15000
+15078,"black twig borer","Xylosandrus compactus",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:53,"798795",15000
+15079,"Pacific dampwood termite","Zootermopsis angusticollis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:54,"798795",15000
+15080,"subtropical pine tip moth","Rhyacionia subtropica",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:54,"798795",15000
+15081,"Asian ambrosia beetle","Xylosandrus crassiusculus",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:55,"798795",15000
+15082,"Asian longhorned beetle","Anoplophora glabripennis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",15000
+15083,"cottonwood twig borer","Gypsonoma haimbachiana",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:56,"798795",15000
+15084,"southern pine sawyer","Monochamus titillator",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:56,"798795",15000
+15085,"banded ash borer","Neoclytus capraea",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:56,"798795",15000
+15086,"sitka spruce weevil","Pissodes sitchensis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:57,"798795",15000
+15087,"emerald ash borer","Agrilus planipennis","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:57,"798795",15000
+15088,"hemlock borer","Melanophila fulvoguttata","Any damage to the terminal leader; damage >20% of the roots, stems, or branches","FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",15000
+15089,"Formosan subterranean termite","Coptotermes formosanus",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:58,"798795",15000
+15090,"sirex woodwasp","Sirex noctilio",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:15:59,"798795",15000
+15091,"Oregon fir sawyer","Monochamus scutellatus oregonensis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:16:00,"798795",15000
+15092,"cypress weevil","Eudociminus mannerheimii",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:16:01,"798795",15000
+15093,"camphor shot borer","Xylosandrus mutilatus",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:16:01,"798795",15000
+15094,"goldenspotted oak borer","Agrilus coxalis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:16:02,"798795",15000
+15095,"European oak borer","Agrilus sulcicollis",,"FS_NIMS_NRS",2013-07-31 11:48:10,"440","FS_NIMS",2016-02-17 12:16:02,"798795",15000
+15096,"X. germanus ambrosia beetle","Xylosandrus germanus",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:02,"798795",15000
+15097,"Icosium tomentosum","Icosium tomentosum",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:03,"798795",15000
+15800,"other boring insect (known)","other boring insect (known)",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:04,"798795",15000
+15900,"unknown boring insect","unknown boring insect",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:04,"798795",15000
+16000,"Seed/Cone/Flower/Fruit Insects",,,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:04,"798795",16000
+16001,"Douglas-fir cone moth","Barbara colfaxiana",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:05,"798795",16000
+16002,"lodgepole cone beetle","Conophthorus contortae",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:05,"798795",16000
+16003,"limber pine cone beetle","Conophthorus flexilis",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:05,"798795",16000
+16004,"mountain pine cone beetle","Conophthorus monticolae",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:06,"798795",16000
+16005,"ponderosa pine cone beetle","Conophthorus ponderosae",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:06,"798795",16000
+16006,"Monterey pine cone beetle","Conophthorus radiatae",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:07,"798795",16000
+16007,"red pine cone beetle","Conophthorus resinosae",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:07,"798795",16000
+16008,"white pine cone beetle","Conopthorus coniperda",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:07,"798795",16000
+16009,"black walnut curculio","Conotrachelus retentus",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:08,"798795",16000
+16010,"Douglas-fir cone gall midge","Contarinia oregonensis",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:08,"798795",16000
+16011,"Douglas-fir cone scale midge","Contarinia washingtonensis",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:08,"798795",16000
+16012,"acorn/nut weevils","Curculio spp.",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:09,"798795",16000
+16013,"Caroline fruitfly","Dacus frauenfeldi",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:09,"798795",16000
+16014,"spruce bud midge","Dasineura swainei",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:09,"798795",16000
+16015,"fir coneworm","Dioryctria abietivorella",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:10,"798795",16000
+16016,"southern pine cone worm","Dioryctria amatella",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:10,"798795",16000
+16017,"ponderosa pine coneworm","Dioryctria auranticella",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:10,"798795",16000
+16018,"loblolly pine cone worm","Dioryctria merkeli",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:11,"798795",16000
+16019,"ponderosa twig moth","Dioryctria ponderosae",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:11,"798795",16000
+16020,"Dioryctria pseudotsugella","Dioryctria pseudotsugella",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:11,"798795",16000
+16021,"Dioryctria moths","Dioryctria spp.",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:12,"798795",16000
+16022,"lodgepole cone moth","Eucosma rescissoriana",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:12,"798795",16000
+16023,"seed chalcid","Eurytomidae",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:12,"798795",16000
+16024,"slash pine flower thrips","Gnophothrips fuscus",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:13,"798795",16000
+16025,"spruce cone maggot","Hylemya anthracina",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:13,"798795",16000
+16026,"longleaf pine seed worm or moth","Laspeyresia ingens",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:14,"798795",16000
+16027,"ponderosa pine seed moth","Laspeyresia piperana",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:14,"798795",16000
+16028,"spruce seed moth","Laspeyresia youngana",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:15,"798795",16000
+16029,"boxelder bug","Leptocoris trivittatus",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:15,"798795",16000
+16030,"leaffooted pine seed bug","Leptoglossus corculus",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:15,"798795",16000
+16031,"western conifer seed bug","Leptoglossus occidentalis",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:15,"798795",16000
+16032,"hollyhock thrips","Liothrips varicornis",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:16,"798795",16000
+16033,"Magastigmus lasiocarpae","Magastigmus lasiocarpae",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:16,"798795",16000
+16034,"spruce seed chalcid","Magastigmus piceae",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:17,"798795",16000
+16035,"ponderosa pine seed chalcid","Megastigmus albifrons",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:17,"798795",16000
+16036,"fir seed chalcid","Megastigmus pinus",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:17,"798795",16000
+16037,"Douglas-fir seed chalcid","Megastigmus spermotrophs",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:18,"798795",16000
+16038,"yellow poplar weevil","Odontopus calceatus",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:18,"798795",16000
+16039,"fruitpiercing moth","Othreis fullonia",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:18,"798795",16000
+16040,"roundheaded cone borer","Paratimia conicola",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:19,"798795",16000
+16041,"mango shoot caterpillar","Penicillaria jocosatrix",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:19,"798795",16000
+16042,"coneworm","Phycitidae",,"FS_NIMS_NRS",2013-07-31 11:48:11,"440","FS_NIMS",2016-02-17 12:16:19,"798795",16000
+16043,"harvester ants","Pogonomyrmex spp.",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:20,"798795",16000
+16044,"citrus flower moth","Prays citri",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:20,"798795",16000
+16045,"fir cone maggot","Strobilomyia abietis",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:20,"798795",16000
+16046,"spruce cone maggot","Strobilomyia anthracina",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:21,"798795",16000
+16047,"shieldbacked pine seed bug","Tetyra bipunctata",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:21,"798795",16000
+16048,"coneworm","Hylemia spp.",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:22,"798795",16000
+16049,"prairie tent caterpillar","Malacosoma lutescens",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:22,"798795",16000
+16050,"jack pine tip beetle","Conophthorus banksianae",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:22,"798795",16000
+16051,"webbing coneworm","Dioryctria disclusa",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:22,"798795",16000
+16052,"blister coneworm","Dioryctria clarioralis",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:23,"798795",16000
+16053,"southern cone gall midge","Cecidomyia bisetosa",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:23,"798795",16000
+16054,"seed bugs","Lygaeidae spp.",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:23,"798795",16000
+16800,"other seed/cone/flower insect (known)","other seed/cone/flower insect (known)",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:24,"798795",16000
+16900,"unknown seed/cone/ flower insects","unknown seed/cone/ flower insects ",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:24,"798795",16000
+17000,"Gallmaker Insects",,,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:25,"798795",17000
+17001,"birch budgall mite","Aceria rudis",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:25,"798795",17000
+17002,"eastern spruce gall adelgid","Adelges abietis",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:25,"798795",17000
+17003,"Cooley spruce gall adelgid","Adelges cooleyi",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:26,"798795",17000
+17004,"horned oak gall","Callirhytis cornigera",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:26,"798795",17000
+17005,"oak gall wasp","Callirhytis quercuspunctata",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:26,"798795",17000
+17006,"gall midge","Cecidomyiidae",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:27,"798795",17000
+17007,"Douglas-fir needle gall midge","Contarinia pseudotsugae",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:27,"798795",17000
+17008,"gall mite","Eriophyidae",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:27,"798795",17000
+17009,"spruce gall midge","Mayetiola piceae",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:28,"798795",17000
+17010,"hackberry nipplegall maker","Pachypsylla celtidismamma",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:28,"798795",17000
+17011,"balsam gall midge","Paradiplosis tumifex","Any damage to the terminal leader; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS_SRS",2021-05-05 10:00:49,"67572",17000
+17012,"hickory gall Phylloxera","Phylloxera caryaecaulis",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:29,"798795",17000
+17013,"gall aphid","Phylloxeridae",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:29,"798795",17000
+17014,"alder gall mite","Phytoptus laevis",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:29,"798795",17000
+17015,"psyllid","Psyllidae",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:30,"798795",17000
+17016,"sugarberry psyllid","Tetragonocephela flava",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:30,"798795",17000
+17017,"mountain apple psyllid","Trioza vitiensis",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:30,"798795",17000
+17018,"gouty pitch midge","Cedidomyia piniinopsis",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:31,"798795",17000
+17019,"spider mites","Oligonychus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:31,"798795",17000
+17020,"cypress gall midges","Taxodiomyia spp.",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:31,"798795",17000
+17021,"jumping oak gall wasp","Neuroterus saltatorius",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:32,"798795",17000
+17022,"erythrina gall wasp","Quadrastichus erythrinae",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:32,"798795",17000
+17800,"other gallmaking insect (known)","other gallmaking insect (known)",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:33,"798795",17000
+17900,"unknown gallmaking insect","unknown gallmaking insect",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:33,"798795",17000
+18000,"Insect Predators",,,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:33,"798795",18000
+18001,"lacewing",,,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:33,"798795",18000
+18002,"blackbellied clerid","Enoclerus lecontei",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:34,"798795",18000
+18003,"redbellied clerid","Enoclerus sphegeus",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:34,"798795",18000
+18004,"red wood ant","Formica rufa",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:35,"798795",18000
+18005,"western yellowjacket","Vespula pennsylvanica",,"FS_NIMS_NRS",2013-07-31 11:48:12,"440","FS_NIMS",2016-02-17 12:16:35,"798795",18000
+19000,"General Diseases",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",19000
+20000,"Biotic Damage",,,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:40,"798795",20000
+20001,"damping off",,,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:41,"798795",20000
+20002,"gray mold","Botrytis cinerea",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:41,"798795",20000
+20003,"Cassytha","Cassytha filiformis",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:41,"798795",20000
+20004,"hemlock fluting",,,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:42,"798795",20000
+21000,"Root/Butt Diseases",,"Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:42,"798795",21000
+21001,"Armillaria root disease","Armillaria spp.","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:42,"798795",21000
+21002,"yellow stringy rot","Corticium galactimum",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:43,"798795",21000
+21003,"Cylindrocladium root disease","Cylindrocladium spp.",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:43,"798795",21000
+21004,"brown crumbly rot","Fomitopsis pinicola",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:43,"798795",21000
+21005,"black root rot of pine","Fusarium oxysporum",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:44,"798795",21000
+21006,"Fusarium root rot","Fusarium spp.",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:44,"798795",21000
+21007,"white mottled rot","Ganoderma applanatum","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",21000
+21008,"Ganoderma rot of hardwoods","Ganoderma lucidum","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS_SRS",2021-05-05 10:00:47,"67572",21000
+21009,"Ganoderma rot of conifers","Ganoderma tsugae","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",21000
+21010,"Heterobasidion root disease","Heterobasidion annosum","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:45,"798795",21000
+21011,"circinatus root rot","Inonotus circinatus",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:47,"798795",21000
+21012,"tomentosus root rot/false velvet top fungus","Inonotus tomentosus",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:48,"798795",21000
+21013,"charcoal root rot","Macrophomina phaseolina",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:48,"798795",21000
+21014,"black stain root disease","Ophiostoma wageneri","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:48,"798795",21000
+21015,"Schweinitzii root and butt rot","Phaeolus schweinitzii","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:48,"798795",21000
+21016,"flame tree root disease","Phellinus noxious","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS_SRS",2021-05-05 10:00:47,"67572",21000
+21017,"laminated root rot","Phellinus weirii","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:49,"798795",21000
+21019,"littleleaf disease/ Phytophthora root rot","Phytophthora cinnamomi",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",21000
+21020,"Port-Orford-Cedar root disease","Phytophthora lateralis","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:50,"798795",21000
+21022,"Pythium root rot","Pythium spp.",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:50,"798795",21000
+21023,"procera root disease of conifers","Verticicladiella procera",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:51,"798795",21000
+21024,"crown gall","Agrobacterium tumefaciens",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:51,"798795",21000
+21025,"borealis conk","Climacocystis borealis",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:51,"798795",21000
+21026,"yellow pitted rot","Hericium abietis",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:52,"798795",21000
+21027,"brown cubical rot","Laetiporus sulphureus","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:52,"798795",21000
+21028,"sudden oak death","Phytophthora ramorum","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:52,"798795",21000
+21029,"Rhizina root disease","Rhizina undulata",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:53,"798795",21000
+21030,"yellow root rot","Perenniporia subacida",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:54,"798795",21000
+21031,"brown top rot","Fomitopsis cajanderi",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:54,"798795",21000
+21033,"pocket dry rot","Tyromyces amarus",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:54,"798795",21000
+21700,"root or butt decay (indicators present)","root or butt decay (indicators present)",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:55,"798795",21000
+21800,"other root or butt disease (known)","other root or butt disease (known)",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:55,"798795",21000
+21900,"unknown root or butt disease","unknown root or butt disease",,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:55,"798795",21000
+22000,"Cankers",,"Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:16:56,"798795",22000
+22001,"heart rot",,"Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS",2016-02-17 12:17:15,"798795",22500
+22002,"stem rot",,,"FS_NIMS_NRS",2013-07-31 11:48:13,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",22500
+22003,"sap rot",,,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",22500
+22004,"slime flux",,,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:16,"798795",22500
+22005,"viruses",,,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:16:56,"798795",22000
+22006,"black knot of cherry","Apiosporina morbosa","Any occurrence on the bole or on branches <1 foot from bole; damage to >50% of branches","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS_SRS",2021-05-05 10:00:54,"67572",22000
+22007,"Atropellis canker","Atropellis piniphila",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:16:57,"798795",22000
+22008,"Siberian elm canker","Botryodiplodia hypodermia",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:16:57,"798795",22000
+22009,"Botryosphaeria canker","Botryosphaeria ribis",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:16:57,"798795",22000
+22010,"black rot fungus","Botryosphaeria stevensii",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:16,"798795",22500
+22011,"Caliciopsis canker","Caliciopsis pinea","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS_SRS",2021-05-05 10:00:47,"67572",22000
+22012,"black canker of aspen","Ceratocystis fimbriata",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:16:58,"798795",22000
+22013,"sycamore canker stain","Ceratocystis fimbriata f.sp. plataini",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:16:59,"798795",22000
+22023,"chestnut blight","Cryphonectria parasitica","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:00,"798795",22000
+22024,"gray-brown sap rot","Cryptoporus volvatus",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:16,"798795",22500
+22025,"Cryptosphaeria canker of aspen","Cryptosphaeria populina",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:00,"798795",22000
+22026,"Cytospora canker of fir","Cytospora abietis",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:00,"798795",22000
+22027,"western red rot","Dichomitus squalens",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:17,"798795",22500
+22028,"Indian paint fungus","Echinodontium tinctorium","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:17,"798795",22500
+22029,"sooty-bark canker","Encoelia pruinosa",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:01,"798795",22000
+22030,"Eutypella canker","Eutypella parasitica","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:01,"798795",22000
+22031,"Fusarium cortical stem rot","Fusarium avenaceum",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:18,"798795",22500
+22032,"pitch canker of pines","Fusarium subglutinans","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:01,"798795",22000
+22033,"Fusicoccum canker","Fusicoccum spp.",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:02,"798795",22000
+22034,"Scleroderris canker","Gremmeniella abietina",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:02,"798795",22000
+22035,"amelanchier rust","Gymnosporangium harknessianum",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:02,"798795",22000
+22036,"cedar apple rust","Gymnosporangium juniperi-virginianae",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:03,"798795",22000
+22037,"Hypoxylon canker of oak","Hypoxylon atropunctatum",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",22000
+22038,"Hypoxylon canker of aspen","Hypoxylon mammatum","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:03,"798795",22000
+22039,"canker rot of oak","Inonotus hispidus",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:18,"798795",22500
+22040,"sterile conk trunk rot of birch, chaga","Inonotus obliquus","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",22500
+22041,"European larch canker","Lachnellula willkommii",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:04,"798795",22000
+22042,"beech bark disease","Nectria coccinea","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:04,"798795",22000
+22043,"Nectria canker","Nectria galligena","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:04,"798795",22000
+22044,"ash heart rot","Pereniporia fraxinophila",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:18,"798795",22500
+22047,"red heart rot","Phellinus pini","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:19,"798795",22500
+22048,"aspen trunk rot","Phellinus tremulae","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",22500
+22049,"stem decay of black walnut","Phellinus weirianus",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:20,"798795",22500
+22050,"Phomopsis canker","Phomopsis occulta",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:05,"798795",22000
+22051,"Phomopsis canker","Phomopsis spp.",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:05,"798795",22000
+22052,"cypress canker","Seiridium cardinale",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:06,"798795",22000
+22053,"butternut canker","Sirococcus clavigignenti-jugl.","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:06,"798795",22000
+22054,"maple canker","Steganosporium spp.",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:07,"798795",22000
+22055,"Thyronectria canker","Thyronectria austro-americana",,"FS_NIMS_NRS",2013-07-31 11:48:14,"440","FS_NIMS",2016-02-17 12:17:07,"798795",22000
+22056,"citrus canker","Xanthomonas citri",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:07,"798795",22000
+22057,"Cytospora canker of aspen","Cytospora chrysosperma",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:08,"798795",22000
+22058,"Dothichiza canker","Dothichiza populae",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:08,"798795",22000
+22059,"red belt fungus/brown crumbly rot","Fomitopsis pinicola","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",22500
+22060,"Leucocytospora canker of spruce","Leucocytospora kunzei",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:08,"798795",22000
+22062,"quinine fungus/brown trunk rot","Fomitopsis officinalis","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",22500
+22063,"brown cubical decay","Coniophora puteana",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:21,"798795",22500
+22064,"tinder fungus","Fomes fomentarius","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",22500
+22065,"purple conk","Hirschioporus abietinus",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:21,"798795",22500
+22066,"pinyon black stain","Leptographium wagnerii",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:22,"798795",22500
+22067,"Phellinus hartigii","Phellinus hartigii","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",22500
+22068,"false tinder fungus","Phellinus igniarius","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",22500
+22069,"robustus conk","Phellinus robustus",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:23,"798795",22500
+22070,"yellow cap fungus","Pholiota spp.","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",22500
+22071,"oyster mushroom","Pleurotus ostreatus",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:24,"798795",22500
+22072,"white ring rot","Poria albipellucida",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:24,"798795",22500
+22073,"hemlock canker","Xenomeris abietis",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:09,"798795",22000
+22074,"cedar brown pocket rot","Poria sericeomollis",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:24,"798795",22500
+22075,"Lachnellula canker","Lachnellula flavovirens","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:47,"67572",22000
+22076,"strumella canker","Strumella coryneoidea","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:47,"67572",22000
+22077,"phomopsis blight","Phomopsis juniperovora",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:10,"798795",22000
+22078,"fusarium canker of yellow poplar","Fusarium solani",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:10,"798795",22000
+22079,"sterile conk of maple and beech","Inonotus glomeratus",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:11,"798795",22000
+22080,"canker of spruce","Aleurodiscus spp.",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:11,"798795",22000
+22081,"birch conk","Piptoporus betulinus","Any visual evidence","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",22500
+22082,"Discocainia canker","Discocainia treleasei",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:12,"798795",22000
+22083,"red ring rot canker","Phellinus pini var. cancriformans",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:12,"798795",22000
+22084,"Douglas-fir cankers","Douglas-fir cankers",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:13,"798795",22000
+22085,"Scleroderris canker of western firs","Grovesiella abieticola",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:13,"798795",22000
+22086,"Thousand cankers disease","Geosmithia morbida",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",22000
+22087,"nonrust canker","unknown","Damage >20% of bole circumference (in a running 3-foot section) at point of occurrence","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:55,"67572",22000
+22300,"other canker disease (known)","other canker disease (known)",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:14,"798795",22000
+22400,"unknown canker disease","unknown canker disease",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:14,"798795",22000
+22500,"Stem Decay",,"Any visual evidence (conks; fruiting bodies; rotten wood)","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:25,"798795",22500
+22800,"other stem decay (known)","other stem decay (known)",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:25,"798795",22500
+22900,"unknown stem decay","unknown stem decay",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:26,"798795",22500
+23000,"Parasitic/Epiphytic Plants",,"Dwarf mistletoes with Hawksworth rating of 3+; true mistletoes or vines covering >50% of crown","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:55,"67572",23000
+23001,"mistletoe","mistletoe",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:26,"798795",23000
+23002,"parasitic plants","parasitic plants",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:27,"798795",23000
+23003,"vine damage","vine damage","Vines covering >50% of crown","FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS_SRS",2021-05-05 10:00:51,"67572",23000
+23005,"white fir dwarf mistletoe","Arceuthobium abietinum f. sp. concoloris",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:27,"798795",23000
+23006,"lodgepole pine dwarf mistletoe","Arceuthobium americanum",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:28,"798795",23000
+23007,"Apache dwarf mistletoe","Arceuthobium apachecum",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:28,"798795",23000
+23008,"western dwarf mistletoe","Arceuthobium campylopodum",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:29,"798795",23000
+23009,"limber pine dwarf mistletoe","Arceuthobium cyanocarpum",,"FS_NIMS_NRS",2013-07-31 11:48:15,"440","FS_NIMS",2016-02-17 12:17:29,"798795",23000
+23010,"pinyon dwarf mistletoe","Arceuthobium divaricatum",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:29,"798795",23000
+23011,"Douglas-fir dwarf mistletoe","Arceuthobium douglasii",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",23000
+23012,"Chihuahua pine dwarf mistletoe","Arceuthobium gillii",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:30,"798795",23000
+23013,"larch dwarf mistletoe","Arceuthobium laricis",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:31,"798795",23000
+23014,"western spruce dwarf mistletoe","Arceuthobium microcarpum",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:31,"798795",23000
+23015,"eastern dwarf mistletoe","Arceuthobium pusillum","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:32,"798795",23000
+23016,"hemlock dwarf mistletoe","Arceuthobium tsugense","Dwarf mistletoes with Hawksworth rating of 3+; true mistletoes or vines covering >50% of crown","FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:48,"67572",23000
+23017,"southwestern dwarf mistletoe","Arceuthobium vaginatum subsp. crytopodum",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",23000
+23018,"dodder","Cuscuta spp.",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:32,"798795",23000
+23019,"white fir mistletoe","Phoradendron bolleanum subsp. pauciflorum",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:33,"798795",23000
+23020,"true mistletoe (other)",,"True mistletoe covering >50% of crown","FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:52,"67572",23000
+23021,"red fir dwarf mistletoe","Arceuthobium abietinum f. sp. magnificae",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:33,"798795",23000
+23022,"juniper true mistletoe","Phoradendron juniperum",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:34,"798795",23000
+23023,"dwarf mistletoe","Arceuthobium spp.","Hawksworth rating of 3+","FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:50,"67572",23000
+23024,"Weins dwarf mistletoe","Arceuthobium abietinum f. sp magnificae",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:35,"798795",23000
+24000,"Decline Complexes/Dieback/Wilts",,"Damage >20% dieback of crown area","FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:53,"67572",24000
+24001,"Alaska-yellow cedar decline","Alaska-yellow cedar decline",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:35,"798795",24000
+24002,"Norfolk Island pine decline","Norfolk Island pine decline",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:36,"798795",24000
+24003,"Stillwell's syndrome","Stillwell's syndrome",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:36,"798795",24000
+24004,"ash decline/yellows","ash decline/yellows","Damage >20% dieback of crown area","FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:53,"67572",24000
+24005,"birch dieback","birch dieback",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:37,"798795",24000
+24006,"coconut cadang-cadang viroid","Cocadviroid coconut cadang-cadang viroid","Damage >20% dieback of crown area","FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:47,"67572",24000
+24007,"complex","complex",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:37,"798795",24000
+24008,"decline","decline",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:38,"798795",24000
+24009,"fall hardwood defoliator complex","fall hardwood defoliator complex",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:38,"798795",24000
+24010,"joga decline","joga decline","Damage >20% dieback of crown area","FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:47,"67572",24000
+24011,"larch decline","larch decline",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:39,"798795",24000
+24012,"looper abiotic complex","looper abiotic complex",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:39,"798795",24000
+24013,"maple decline","maple decline",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:39,"798795",24000
+24014,"oak decline","Hypoxylon spp.",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",24000
+24015,"pingelap disease","pingelap disease",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:40,"798795",24000
+24016,"sprout dieback","sprout dieback",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:40,"798795",24000
+24017,"true fir pest complex","true fir pest complex",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:41,"798795",24000
+24018,"western X disease","western X disease",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:41,"798795",24000
+24019,"pinewood nematode","Bursaphelenchus xylophilus",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:42,"798795",24000
+24020,"sapstreak disease of sugar maple","Ceratocystis coerulescens",,"FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS",2016-02-17 12:17:42,"798795",24000
+24021,"oak wilt","Ceratocystis fagacearum","Damage >20% dieback of crown area","FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:53,"67572",24000
+24022,"Dutch elm disease","Ceratocystis ulmi","Damage >20% dieback of crown area","FS_NIMS_NRS",2013-07-31 11:48:16,"440","FS_NIMS_SRS",2021-05-05 10:00:53,"67572",24000
+24023,"bacterial wetwood","Erwinia nimipressuralis",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:43,"798795",24000
+24024,"mimosa wilt","Fusarium oxysporum f. sp. perniciosum",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:44,"798795",24000
+24025,"Verticillium wilt","Verticilium albo-atrum",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:44,"798795",24000
+24026,"bacterial leaf scorch","Xylella fastidiosa",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:44,"798795",24000
+24027,"wetwood","wetwood",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:45,"798795",24000
+24028,"hemlock decline","hemlock decline",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:45,"798795",24000
+24029,"Pacific madrone decline","Pacific madrone decline",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:46,"798795",24000
+24030,"elm phloem necrosis","Mycoplasma spp.",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:46,"798795",24000
+24031,"laurel wilt","Raffaelea spp.",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS_SRS",2021-05-05 10:00:46,"67572",24000
+24032,"sudden aspen decline","sudden aspen decline",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:46,"798795",24000
+24800,"other decline/complex/wilt (known)","other decline/complex/ wilt (known)",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:47,"798795",24000
+24900,"unknown decline/complex/ wilt","unknown decline/complex/ wilt ",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:47,"798795",24000
+25000,"Foliage diseases",,"Damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS_SRS",2021-05-05 10:00:53,"67572",25000
+25001,"blight","blight",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:48,"798795",25000
+25003,"juniper blights","juniper blights",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:48,"798795",25000
+25004,"leaf spots","leaf spots",,"FS_NIMS_NRS",2013-07-31 11:48:17,"440","FS_NIMS",2016-02-17 12:17:49,"798795",25000
+90001,"broken top","Not recorded for multi-stemmed trees","When actual length is less than total length","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:19,"798795",90000
+90002,"dead top",,"Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:19,"798795",90000
+90003,"limby-wolf tree","Not recorded for non sawlog trees","Damage when board foot defect is >10%","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:53,"67572",90000
+90004,"forked top","Not recorded for non sawlog trees","Any occurrence","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS",2016-02-17 12:19:20,"798795",90000
+90005,"forked below merch top","Not recorded for non sawlog trees","Damage when board foot defect is >10%","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:53,"67572",90000
+90006,"crook or sweep","Not recorded for non sawlog trees","Damage when board foot defect is >10%","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:53,"67572",90000
+90007,"checks, bole cracks","Not recorded for non sawlog trees","Damage when board foot defect is >10%","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:53,"67572",90000
+90008,"foliage discoloration",,"Damage >20% of crown affected","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:52,"67572",90000
+90010,"dieback",,"Damage >20% of crown affected","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:52,"67572",90000
+90011,"open wound",,"Damage >20% of bole circumference (in a running 3-foot section) at point of occurrence","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:55,"67572",90000
+90012,"resinosis",,"Damage >20% of bole circumference (in a running 3-foot section) at point of origin; >20% of branches affected","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:55,"67572",90000
+90013,"broken branches",,"Damage >20% of branches affected","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:51,"67572",90000
+99000,"UNKNOWN",,"Any damage to the terminal leader; damage >20% of the roots or boles with >20% of the circumference affected; damage >20% of the multiple-stems (on multi-stemmed woodland species) with >20% of the circumference affected; >20% of the branches affected; damage >20% of the foliage with >50% of the leaf/needle affected","FS_NIMS_NRS",2013-07-31 11:48:21,"440","FS_NIMS_SRS",2021-05-05 10:00:56,"67572",99000

@@ -59,7 +59,7 @@ unzip('FIADB_REFERENCE.zip', exdir= 'FIADB_REFERENCE')
 # 3.0 download data tables (entire or state)-----------------------------------
 # use the state postal abbreviation or 'ENTIRE' for all states
 # tested for VA and DE
-state_abbr <- 'ENTIRE'
+state_abbr <- 'DE'
 
 dir.create('FIADB_DATA')
 
@@ -100,11 +100,23 @@ x <- lapply(tbl_list, getTable)
 dbDisconnect(sqlite_con); rm(sqlite_con)
 
 dir.create('CSV_DATA')
+file.remove(list.files('CSV_DATA', full.names= TRUE))
 
 file.copy(list.files("FIADB_REFERENCE/", full.names= TRUE), "CSV_DATA/", overwrite= TRUE)
 file.copy(list.files("FIADB_DATA/", full.names= TRUE),
           "CSV_DATA/",
           overwrite= TRUE)
+
+files_data <- list.files('CSV_DATA', pattern= ".csv")
+files_perm <- list.files('CSV_PERM', pattern= ".csv")
+
+files <- data.frame(file= c(files_data, files_perm))
+files$table <- gsub(".csv", "", files$file)
+
+oracle_info <- read.csv("../oracle_data_types.csv")
+
+files[!files$table %in% oracle_info$TABLE_NAME,]
+
 #
 # 3.1.1 check variable names---------------------------------------------------
 # this section checks the variable names in the current fiadb against
@@ -151,6 +163,41 @@ checkNames <- function(tbl) {
 var_check <- lapply(tables_to_update, checkNames)
 var_check <- do.call(rbind, var_check)
 var_check
+#
+# try modifying the sql scripts------------------------------------------------
+tbls_to_fix <- unique(var_check[var_check$Source == 'SQL', ]$Table)
+tbl= tbls_to_fix[2]
+modifyScript <- function(tbl) {
+  
+  # read the query in
+  fn <- file.path("TableScripts", paste0("Create", tbl, ".sql"))
+  query <- readChar(fn, file.info(fn)$size)
+  
+  # fields to drop
+  fields_to_drop <- var_check[var_check$Source == 'SQL' &
+                              var_check$Table == tbl,]
+  
+  # drop the comments
+  query <- strsplit(query, "\\;")[[1]][1]
+  
+  qS <- strsplit(query, "\\n")[[1]]
+  
+  for (field in fields_to_drop$Field) {
+    
+    qS <- qS[!grepl(tolower(field), qS)]
+    
+  }
+  
+  query_out <- paste0(qS, "\n")
+  query_out <- paste(query_out, collapse= "")
+  
+  return(query_out)
+  
+}
+
+updated <- modifyScript('COND')
+
+cat(updated)
 
 # 3.2 force correct data types-------------------------------------------------
 data_guide <- read.csv("files/table_column_types.csv")
