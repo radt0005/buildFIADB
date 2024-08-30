@@ -15,12 +15,12 @@ library(RPostgreSQL)
 # 1.1 make a database
 # 2.0 download ref tables
 # 2.1 extract ref tables to csv
-# 2.2 force correct data types
 # 3.0 download data tables (entire or state)
 # 3.1 extract data tables to csv
-# 3.2 force correct data types
-# 4.0 copy all ref and data tables to target directory
-# 4.1 upload csv to database
+# 4.0 create the import scripts
+# 4.1 create postgres tables
+# 5.0 force correct data types
+# 6.0 import the data into postgres
 
 setwd('/mnt/Main/FIADB/buildfiadb/')
 
