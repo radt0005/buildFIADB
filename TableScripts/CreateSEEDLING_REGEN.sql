@@ -29,5 +29,5 @@ create index SDLREGEN_SCD_FK_I on FS_FIADB.SEEDLING_REGEN (SCD_CN);
 alter table FS_FIADB.SEEDLING_REGEN add constraint SDLREGEN_PK primary key (CN);
 alter table FS_FIADB.SEEDLING_REGEN add constraint SDLREGEN_UK unique (STATECD, COUNTYCD, PLOT, SUBP, INVYR, SPCD, CONDID, SEEDLING_SOURCE_CD, LENGTH_CLASS_CD);
 alter table FS_FIADB.SEEDLING_REGEN add constraint SDLREGEN_SCD_FK foreign key (SCD_CN) references FS_FIADB.SUBP_COND (CN);
-alter table FS_FIADB.SEEDLING_REGEN add constraint SDLREGEN_CND_FK foreign key (CND_CN) references FS_FIADB.COND (CN);
 alter table FS_FIADB.SEEDLING_REGEN add constraint SDLREGEN_PLT_FK foreign key (PLT_CN) references FS_FIADB.PLOT (CN);
+alter table FS_FIADB.SEEDLING_REGEN add constraint SDLREGEN_CND_FK foreign key (CND_CN) references FS_FIADB.COND (CN);

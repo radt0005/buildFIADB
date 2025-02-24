@@ -114,6 +114,6 @@ alter table FS_FIADB.COND_DWM_CALC add constraint CDC_PK primary key (CN);
 alter table FS_FIADB.COND_DWM_CALC add constraint CDC_UK unique (PLT_CN, CONDID, EVALID, RSCD);
 alter table FS_FIADB.COND_DWM_CALC add constraint CDC_UK2 unique (STATECD, COUNTYCD, PLOT, INVYR, CONDID, EVALID, RSCD);
 alter table FS_FIADB.COND_DWM_CALC add constraint CDC_UK3 unique (STATECD, CYCLE, SUBCYCLE, COUNTYCD, PLOT, CONDID, EVALID, RSCD);
-alter table FS_FIADB.COND_DWM_CALC add constraint CDC_CND_FK foreign key (CND_CN) references FS_FIADB.COND (CN);
 alter table FS_FIADB.COND_DWM_CALC add constraint CDC_PSM_FK foreign key (STRATUM_CN) references FS_FIADB.POP_STRATUM (CN);
 alter table FS_FIADB.COND_DWM_CALC add constraint CDC_PLT_FK foreign key (PLT_CN) references FS_FIADB.PLOT (CN);
+alter table FS_FIADB.COND_DWM_CALC add constraint CDC_CND_FK foreign key (CND_CN) references FS_FIADB.COND (CN);

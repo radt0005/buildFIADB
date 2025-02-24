@@ -1,7 +1,7 @@
 # making fiadb on a postgres database
 
 # T/F flag for if you want to download the reference/data files
-data_downloaded <- TRUE
+data_downloaded <-TRUE 
 
 # download timeout limit set for 5 hours
 # should be sufficient for entire
@@ -22,12 +22,12 @@ library(RPostgreSQL)
 # 5.0 force correct data types
 # 6.0 import the data into postgres
 
-setwd('/mnt/Main/FIADB/buildfiadb/')
+setwd('/media/HDD5/fiadb/buildfiadb/')
 
 table_guide <- read.csv("table_guide.csv")
 
 # 1.1 - make a database--------------------------------------------------------
-dbname <- 'testdb'
+dbname <- 'fiadb2'
 
 # the -k flag requires a password with every sudo call
 # the -S flag to accept the pw from standard input

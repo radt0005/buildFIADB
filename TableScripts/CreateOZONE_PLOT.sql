@@ -27,5 +27,5 @@ create index NOP_CTY_FK_I on FS_FIADB.OZONE_PLOT (CTY_CN);
 create index NOP_SRV_FK_I on FS_FIADB.OZONE_PLOT (SRV_CN);
 alter table FS_FIADB.OZONE_PLOT add constraint NOP_PK primary key (CN);
 alter table FS_FIADB.OZONE_PLOT add constraint NOP_UK unique (STATECD, INVYR, COUNTYCD, O3PLOT, FIELD_ID, SPLIT_PLOTID);
-alter table FS_FIADB.OZONE_PLOT add constraint NOP_CTY_FK foreign key (CTY_CN) references FS_FIADB.COUNTY (CN);
 alter table FS_FIADB.OZONE_PLOT add constraint NOP_SRV_FK foreign key (SRV_CN) references FS_FIADB.SURVEY (CN);
+alter table FS_FIADB.OZONE_PLOT add constraint NOP_CTY_FK foreign key (CTY_CN) references FS_FIADB.COUNTY (CN);

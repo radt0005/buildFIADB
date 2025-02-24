@@ -55,3 +55,4 @@ FIADB_REFERENCE.zip
 FIADB_REFERENCE/*
 R/buildFIADB2.R
 R/nohup.out
+nohup.out

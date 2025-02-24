@@ -51,5 +51,5 @@ create index TGE_PLT_FK_I on FS_FIADB.TREE_GRM_ESTN (PLT_CN);
 create index TGE_STATECD_INVYR_I on FS_FIADB.TREE_GRM_ESTN (STATECD, INVYR);
 alter table FS_FIADB.TREE_GRM_ESTN add constraint TGE_PK primary key (CN);
 alter table FS_FIADB.TREE_GRM_ESTN add constraint TGE_UK unique (TRE_CN, LAND_BASIS, ESTIMATE, ESTN_TYPE, ESTN_UNITS);
-alter table FS_FIADB.TREE_GRM_ESTN add constraint TGE_PLT_FK foreign key (PLT_CN) references FS_FIADB.PLOT (CN);
 alter table FS_FIADB.TREE_GRM_ESTN add constraint TGE_TRE_FK foreign key (TRE_CN) references FS_FIADB.TREE (CN);
+alter table FS_FIADB.TREE_GRM_ESTN add constraint TGE_PLT_FK foreign key (PLT_CN) references FS_FIADB.PLOT (CN);

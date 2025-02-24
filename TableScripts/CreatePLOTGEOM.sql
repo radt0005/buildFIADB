@@ -21,7 +21,9 @@ fvs_variant   VARCHAR(2),
 fvs_loc_cd    INTEGER,
 fvs_region    INTEGER,
 fvs_forest    INTEGER,
-fvs_district  INTEGER
+fvs_district  INTEGER,
+eco_unit_pnw  VARCHAR(10),
+precipitation DOUBLE PRECISION
 );
 create index PLOTGEOM_IDX on FS_FIADB.PLOTGEOM (STATECD, INVYR, UNITCD, COUNTYCD, PLOT);
 alter table FS_FIADB.PLOTGEOM add constraint PLOTGEOM_PK primary key (CN);

@@ -23,5 +23,5 @@ subcycle        INTEGER NOT NULL
 create index P2VSSP_PLT_FK_I on FS_FIADB.P2VEG_SUBPLOT_SPP (PLT_CN);
 alter table FS_FIADB.P2VEG_SUBPLOT_SPP add constraint P2VSSP_PK primary key (CN);
 alter table FS_FIADB.P2VEG_SUBPLOT_SPP add constraint P2VSSP_UK unique (PLT_CN, VEG_FLDSPCD, UNIQUE_SP_NBR, SUBP, CONDID);
-alter table FS_FIADB.P2VEG_SUBPLOT_SPP add constraint P2VSSP_SCD_FK foreign key (CONDID, SUBP, PLT_CN) references FS_FIADB.SUBP_COND (CONDID, SUBP, PLT_CN);
+alter table FS_FIADB.P2VEG_SUBPLOT_SPP add constraint P2VSSP_SCD_FK foreign key (PLT_CN, CONDID, SUBP) references FS_FIADB.SUBP_COND (PLT_CN, CONDID, SUBP);
 alter table FS_FIADB.P2VEG_SUBPLOT_SPP add constraint P2VSSP_PLT_FK foreign key (PLT_CN) references FS_FIADB.PLOT (CN);

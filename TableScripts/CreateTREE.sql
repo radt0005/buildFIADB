@@ -142,10 +142,8 @@ treeclcd_31_ners               INTEGER,
 agentcd_ners                   INTEGER,
 bfsndcd_ners                   INTEGER,
 agechkcd_rmrs                  INTEGER,
-prev_actualht_rmrs             INTEGER,
 prev_agechkcd_rmrs             INTEGER,
 prev_bhage_rmrs                INTEGER,
-prev_ht_rmrs                   INTEGER,
 prev_totage_rmrs               INTEGER,
 prev_treeclcd_rmrs             INTEGER,
 radagecd_rmrs                  INTEGER,
@@ -196,7 +194,8 @@ drybio_branch                  DECIMAL(13,6),
 drybio_foliage                 DECIMAL(13,6),
 drybio_sawlog_bark             DECIMAL(13,6),
 prev_actualht_fld              INTEGER,
-prev_ht_fld                    INTEGER
+prev_ht_fld                    INTEGER,
+utilclcd                       INTEGER
 );
 create index TRE_NAT_I on FS_FIADB.TREE (STATECD, INVYR, UNITCD, COUNTYCD, PLOT, SUBP, TREE);
 create index TRE_SPGRPCD on FS_FIADB.TREE (SPGRPCD);

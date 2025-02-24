@@ -42,6 +42,3 @@ drywt_to_greenwt_conversion  DOUBLE PRECISION,
 created_date                 TIMESTAMP(0) NOT NULL,
 modified_date                TIMESTAMP(0)
 );
-create index RS_SPCD_I on FS_FIADB.REF_SPECIES (SPCD);
-create index RS_SPSYM_I on FS_FIADB.REF_SPECIES (SPECIES_SYMBOL);
-create index RS_COMMON_NAME_I on FS_FIADB.REF_SPECIES (COMMON_NAME);

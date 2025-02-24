@@ -25,6 +25,6 @@ create index SCD_CND_FK_I on FS_FIADB.SUBP_COND (PLT_CN, CONDID);
 create index SCD_PLT_FK_I on FS_FIADB.SUBP_COND (PLT_CN);
 alter table FS_FIADB.SUBP_COND add constraint SCD_PK primary key (CN);
 alter table FS_FIADB.SUBP_COND add constraint SCD_UK unique (PLT_CN, SUBP, CONDID);
+alter table FS_FIADB.SUBP_COND add constraint SCD_CND_FK foreign key (CONDID, PLT_CN) references FS_FIADB.COND (CONDID, PLT_CN);
 alter table FS_FIADB.SUBP_COND add constraint SCD_SBP_FK foreign key (PLT_CN, SUBP) references FS_FIADB.SUBPLOT (PLT_CN, SUBP);
-alter table FS_FIADB.SUBP_COND add constraint SCD_CND_FK foreign key (PLT_CN, CONDID) references FS_FIADB.COND (PLT_CN, CONDID);
 alter table FS_FIADB.SUBP_COND add constraint SCD_PLT_FK foreign key (PLT_CN) references FS_FIADB.PLOT (CN);

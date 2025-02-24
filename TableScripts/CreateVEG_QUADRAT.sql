@@ -22,4 +22,4 @@ create index VQT_VSB_FK_I on FS_FIADB.VEG_QUADRAT (PLT_CN, VVT_CN, VSB_CN);
 alter table FS_FIADB.VEG_QUADRAT add constraint VQT_PK primary key (CN);
 alter table FS_FIADB.VEG_QUADRAT add constraint VQT_UK unique (PLT_CN, VVT_CN, VSB_CN, QUADRAT);
 alter table FS_FIADB.VEG_QUADRAT add constraint VQT_UK2 unique (PLT_CN, VVT_CN, VSB_CN, CN);
-alter table FS_FIADB.VEG_QUADRAT add constraint VQT_VSB_FK foreign key (VVT_CN, PLT_CN, VSB_CN) references FS_FIADB.VEG_SUBPLOT (VVT_CN, PLT_CN, CN);
+alter table FS_FIADB.VEG_QUADRAT add constraint VQT_VSB_FK foreign key (VSB_CN, VVT_CN, PLT_CN) references FS_FIADB.VEG_SUBPLOT (CN, VVT_CN, PLT_CN);

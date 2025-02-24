@@ -30,5 +30,5 @@ create index VSS_VPS_FK_I on FS_FIADB.VEG_SUBPLOT_SPP (PLT_CN, VVT_CN, VPS_CN);
 create index VSS_VSB_FK_I on FS_FIADB.VEG_SUBPLOT_SPP (PLT_CN, VVT_CN, VSB_CN);
 alter table FS_FIADB.VEG_SUBPLOT_SPP add constraint VSS_PK primary key (CN);
 alter table FS_FIADB.VEG_SUBPLOT_SPP add constraint VSS_UK unique (PLT_CN, VVT_CN, VPS_CN, VSB_CN);
-alter table FS_FIADB.VEG_SUBPLOT_SPP add constraint VSS_VPS_FK foreign key (VPS_CN, PLT_CN, VVT_CN) references FS_FIADB.VEG_PLOT_SPECIES (CN, PLT_CN, VVT_CN);
-alter table FS_FIADB.VEG_SUBPLOT_SPP add constraint VSS_VSB_FK foreign key (PLT_CN, VVT_CN, VSB_CN) references FS_FIADB.VEG_SUBPLOT (PLT_CN, VVT_CN, CN);
+alter table FS_FIADB.VEG_SUBPLOT_SPP add constraint VSS_VPS_FK foreign key (VVT_CN, VPS_CN, PLT_CN) references FS_FIADB.VEG_PLOT_SPECIES (VVT_CN, CN, PLT_CN);
+alter table FS_FIADB.VEG_SUBPLOT_SPP add constraint VSS_VSB_FK foreign key (VSB_CN, VVT_CN, PLT_CN) references FS_FIADB.VEG_SUBPLOT (CN, VVT_CN, PLT_CN);

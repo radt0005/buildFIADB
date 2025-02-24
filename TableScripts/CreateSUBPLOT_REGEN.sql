@@ -23,5 +23,5 @@ create index SBPREGEN_PLT_FK_I on FS_FIADB.SUBPLOT_REGEN (PLT_CN);
 create index SBPREGEN_SBP_FK_I on FS_FIADB.SUBPLOT_REGEN (SBP_CN);
 alter table FS_FIADB.SUBPLOT_REGEN add constraint SBPREGEN_PK primary key (CN);
 alter table FS_FIADB.SUBPLOT_REGEN add constraint SBPREGEN_UK unique (STATECD, COUNTYCD, PLOT, SUBP, INVYR);
-alter table FS_FIADB.SUBPLOT_REGEN add constraint SBPREGEN_SBP_FK foreign key (SBP_CN) references FS_FIADB.SUBPLOT (CN);
 alter table FS_FIADB.SUBPLOT_REGEN add constraint SBPREGEN_PLT_FK foreign key (PLT_CN) references FS_FIADB.PLOT (CN);
+alter table FS_FIADB.SUBPLOT_REGEN add constraint SBPREGEN_SBP_FK foreign key (SBP_CN) references FS_FIADB.SUBPLOT (CN);

@@ -16,5 +16,5 @@ create index CMX_PLT_FK_I on FS_FIADB.SUBP_COND_CHNG_MTRX (PREV_PLT_CN);
 create index CMX_PLT_FK2_I on FS_FIADB.SUBP_COND_CHNG_MTRX (PLT_CN);
 alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_PK primary key (CN);
 alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_UK unique (PLT_CN, PREV_PLT_CN, SUBP, SUBPTYP, CONDID, PREVCOND);
-alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_PLT_FK foreign key (PREV_PLT_CN) references FS_FIADB.PLOT (CN);
 alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_PLT_FK2 foreign key (PLT_CN) references FS_FIADB.PLOT (CN);
+alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_PLT_FK foreign key (PREV_PLT_CN) references FS_FIADB.PLOT (CN);
