@@ -21,6 +21,46 @@ modified_in_instance VARCHAR(6),
 cycle                INTEGER NOT NULL,
 subcycle             INTEGER NOT NULL
 );
+comment on column fs_fiadb.p2veg_subp_structure.cn
+  is 'Sequence number (surrogate primary key';
+comment on column fs_fiadb.p2veg_subp_structure.plt_cn
+  is 'Foreign key to Plot table CN';
+comment on column fs_fiadb.p2veg_subp_structure.statecd
+  is 'State code';
+comment on column fs_fiadb.p2veg_subp_structure.unitcd
+  is 'Survey unit code';
+comment on column fs_fiadb.p2veg_subp_structure.countycd
+  is 'County code';
+comment on column fs_fiadb.p2veg_subp_structure.plot
+  is 'Plot number';
+comment on column fs_fiadb.p2veg_subp_structure.invyr
+  is 'Inventory year';
+comment on column fs_fiadb.p2veg_subp_structure.subp
+  is 'Subplot number';
+comment on column fs_fiadb.p2veg_subp_structure.condid
+  is 'Condition number';
+comment on column fs_fiadb.p2veg_subp_structure.growth_habit_cd
+  is 'Species growth habit code';
+comment on column fs_fiadb.p2veg_subp_structure.layer
+  is 'Species layer';
+comment on column fs_fiadb.p2veg_subp_structure.cover_pct
+  is 'Species percent canopy cover';
+comment on column fs_fiadb.p2veg_subp_structure.created_by
+  is 'Created by';
+comment on column fs_fiadb.p2veg_subp_structure.created_date
+  is 'Created Date';
+comment on column fs_fiadb.p2veg_subp_structure.created_in_instance
+  is 'Created in Instance';
+comment on column fs_fiadb.p2veg_subp_structure.modified_by
+  is 'Modified by';
+comment on column fs_fiadb.p2veg_subp_structure.modified_date
+  is 'Modified Date';
+comment on column fs_fiadb.p2veg_subp_structure.modified_in_instance
+  is 'Modified in Instance';
+comment on column fs_fiadb.p2veg_subp_structure.cycle
+  is 'Inventory cycle number';
+comment on column fs_fiadb.p2veg_subp_structure.subcycle
+  is 'Inventory subcycle number';
 create index P2VSS_PLT_CN_CONDID on FS_FIADB.P2VEG_SUBP_STRUCTURE (PLT_CN, CONDID);
 create index P2VSS_PLT_FK_I on FS_FIADB.P2VEG_SUBP_STRUCTURE (PLT_CN);
 alter table FS_FIADB.P2VEG_SUBP_STRUCTURE add constraint P2VSS_PK primary key (CN);

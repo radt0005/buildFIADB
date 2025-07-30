@@ -14,5 +14,31 @@ modified_by           VARCHAR(30),
 modified_date         TIMESTAMP(0),
 modified_in_instance  VARCHAR(6)
 );
+comment on column fs_fiadb.ref_nvcs_level_8_codes.cn
+  is 'Unique record identifier for the current hierarchy record';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.primary_class
+  is 'The primary classification of the algorithm [NATURAL|CULTURAL]';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.hierarchy_level
+  is 'An integer value indicating at what level in the National Vegetation Classification System hierarchy the current record exists';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.hierarchy_level_label
+  is 'A label assigned to the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.nvcs_code
+  is 'A code representing the classification at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.meaning
+  is 'The meaning of the code at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.note
+  is 'Any remark relevant to the hierarchy structure record.';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.created_by
+  is 'Created by';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.created_date
+  is 'Created date';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.created_in_instance
+  is 'Created in instance';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.modified_by
+  is 'Modified by';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.modified_date
+  is 'Modified date';
+comment on column fs_fiadb.ref_nvcs_level_8_codes.modified_in_instance
+  is 'Modified in instance';
 alter table FS_FIADB.REF_NVCS_LEVEL_8_CODES add constraint RNVCSHS8_PK primary key (CN);
 alter table FS_FIADB.REF_NVCS_LEVEL_8_CODES add constraint RNVCSHS8_UK unique (PRIMARY_CLASS, NVCS_CODE);

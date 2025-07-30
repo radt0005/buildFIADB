@@ -11,6 +11,26 @@ modified_by          VARCHAR(30),
 modified_date        TIMESTAMP(0),
 modified_in_instance VARCHAR(6)
 );
+comment on column fs_fiadb.pop_eval_typ.cn
+  is 'Sequence number (surrogate primary key)';
+comment on column fs_fiadb.pop_eval_typ.eval_grp_cn
+  is 'NA';
+comment on column fs_fiadb.pop_eval_typ.eval_cn
+  is 'NA';
+comment on column fs_fiadb.pop_eval_typ.eval_typ
+  is 'NA';
+comment on column fs_fiadb.pop_eval_typ.created_by
+  is 'NA';
+comment on column fs_fiadb.pop_eval_typ.created_date
+  is 'NA';
+comment on column fs_fiadb.pop_eval_typ.created_in_instance
+  is 'NA';
+comment on column fs_fiadb.pop_eval_typ.modified_by
+  is 'NA';
+comment on column fs_fiadb.pop_eval_typ.modified_date
+  is 'NA';
+comment on column fs_fiadb.pop_eval_typ.modified_in_instance
+  is 'NA';
 create index PET_PEG_FK_I on FS_FIADB.POP_EVAL_TYP (EVAL_GRP_CN);
 create index PET_PEV_FK_I on FS_FIADB.POP_EVAL_TYP (EVAL_CN);
 alter table FS_FIADB.POP_EVAL_TYP add constraint PET_PK primary key (CN);

@@ -1,7 +1,7 @@
 # making fiadb on a postgres database
 
 # T/F flag for if you want to download the reference/data files
-data_downloaded <- FALSE
+data_downloaded <- TRUE
 
 # download timeout limit set for 5 hours
 # should be sufficient for entire
@@ -458,3 +458,16 @@ for (row in 1:nrow(table_guide)) {
   dbExecute(postgres_con, command)
   
 }
+
+# simple forest area check
+area_query <- dbGetQuery(postgres_con,
+                         "SELECT sql_query FROM fs_fiadb.ref_pop_attribute
+                         WHERE attribute_nbr = 2")$sql_query
+area_query <- gsub("^SELECT", "SELECT peg.eval_grp,", area_query)
+area_query <- paste(area_query, " GROUP BY peg.eval_grp order by peg.eval_grp", collapse= "")
+area_query <- gsub("&FIADB_SCHEMA", "FS_FIADB", area_query)
+area_query <- gsub("= &EVAL_GRP",
+                   "IN (SELECT eval_grps::integer FROM fs_fiadb.datamart_most_recent_inv)",
+                   area_query)
+dbGetQuery(postgres_con, area_query)
+

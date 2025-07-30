@@ -15,9 +15,37 @@ stratumcd     INTEGER NOT NULL,
 created_date  TIMESTAMP(0),
 modified_date TIMESTAMP(0)
 );
-create index PPSA_PSM_FK_I on FS_FIADB.POP_PLOT_STRATUM_ASSGN (STRATUM_CN);
+comment on column fs_fiadb.pop_plot_stratum_assgn.cn
+  is 'NA';
+comment on column fs_fiadb.pop_plot_stratum_assgn.stratum_cn
+  is 'Stratum CN';
+comment on column fs_fiadb.pop_plot_stratum_assgn.plt_cn
+  is 'PLOT CN';
+comment on column fs_fiadb.pop_plot_stratum_assgn.statecd
+  is 'State code';
+comment on column fs_fiadb.pop_plot_stratum_assgn.invyr
+  is 'Inventory year';
+comment on column fs_fiadb.pop_plot_stratum_assgn.unitcd
+  is 'Survey unit code';
+comment on column fs_fiadb.pop_plot_stratum_assgn.countycd
+  is 'County code';
+comment on column fs_fiadb.pop_plot_stratum_assgn.plot
+  is 'Plot number';
+comment on column fs_fiadb.pop_plot_stratum_assgn.rscd
+  is 'Region or Station Code';
+comment on column fs_fiadb.pop_plot_stratum_assgn.evalid
+  is 'Evaluation ID';
+comment on column fs_fiadb.pop_plot_stratum_assgn.estn_unit
+  is 'Estimation unit';
+comment on column fs_fiadb.pop_plot_stratum_assgn.stratumcd
+  is 'Stratum code';
+comment on column fs_fiadb.pop_plot_stratum_assgn.created_date
+  is 'Created date';
+comment on column fs_fiadb.pop_plot_stratum_assgn.modified_date
+  is 'Modified date';
 create index PPSA_PLT_FK_I on FS_FIADB.POP_PLOT_STRATUM_ASSGN (PLT_CN);
+create index PPSA_PSM_FK_I on FS_FIADB.POP_PLOT_STRATUM_ASSGN (STRATUM_CN);
 alter table FS_FIADB.POP_PLOT_STRATUM_ASSGN add constraint PPSA_PK primary key (CN);
-alter table FS_FIADB.POP_PLOT_STRATUM_ASSGN add constraint PPSA_UK unique (RSCD, EVALID, STATECD, COUNTYCD, PLOT);
+alter table FS_FIADB.POP_PLOT_STRATUM_ASSGN add constraint PPSA_UK unique (RSCD, EVALID, COUNTYCD, STATECD, PLOT);
 alter table FS_FIADB.POP_PLOT_STRATUM_ASSGN add constraint PPSA_PSM_FK foreign key (STRATUM_CN) references FS_FIADB.POP_STRATUM (CN);
 alter table FS_FIADB.POP_PLOT_STRATUM_ASSGN add constraint PPSA_PLT_FK foreign key (PLT_CN) references FS_FIADB.PLOT (CN);

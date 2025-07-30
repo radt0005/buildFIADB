@@ -38,3 +38,77 @@ citation_nbr         INTEGER,
 created_date         TIMESTAMP(0) NOT NULL,
 modified_date        TIMESTAMP(0)
 );
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.hierarchy_version
+  is 'A version indicator for the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.primary_class
+  is 'The primary classification of the algorithm [NATURAL|CULTURAL]';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_1_label
+  is 'A label assigned to the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_1_cd
+  is 'A code representing the classification at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_2_label
+  is 'A label assigned to the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_2_cd
+  is 'A code representing the classification at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_3_label
+  is 'A label assigned to the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_3_cd
+  is 'A code representing the classification at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_4_label
+  is 'A label assigned to the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_4_cd
+  is 'A code representing the classification at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_5_label
+  is 'A label assigned to the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_5_cd
+  is 'A code representing the classification at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_6_label
+  is 'A label assigned to the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_6_cd
+  is 'A code representing the classification at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_7_label
+  is 'A label assigned to the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_7_cd
+  is 'A code representing the classification at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_8_label
+  is 'A label assigned to the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_8_cd
+  is 'A code representing the classification at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_1_meaning
+  is 'The meaning of the code at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_2_meaning
+  is 'The meaning of the code at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_3_meaning
+  is 'The meaning of the code at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_4_meaning
+  is 'The meaning of the code at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_5_meaning
+  is 'The meaning of the code at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_6_meaning
+  is 'The meaning of the code at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_7_meaning
+  is 'The meaning of the code at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_8_meaning
+  is 'The meaning of the code at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_1_note
+  is 'Any remark relevant to the hierarchy structure entry.';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_2_note
+  is 'Any remark relevant to the hierarchy structure record.';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_3_note
+  is 'Any remark relevant to the hierarchy structure record.';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_4_note
+  is 'Any remark relevant to the hierarchy structure record.';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_5_note
+  is 'Any remark relevant to the hierarchy structure record.';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_6_note
+  is 'Any remark relevant to the hierarchy structure record.';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_7_note
+  is 'Any remark relevant to the hierarchy structure record.';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.nvcs_level_8_note
+  is 'Any remark relevant to the hierarchy structure record.';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.citation_nbr
+  is 'Foreign key to the parent REF_CITATION record.';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.created_date
+  is 'Created date';
+comment on column fs_fiadb.ref_nvcs_hierarchy_strct.modified_date
+  is 'Modified date';

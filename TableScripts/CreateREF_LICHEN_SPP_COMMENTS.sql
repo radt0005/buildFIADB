@@ -9,5 +9,21 @@ cn            VARCHAR(34) NOT NULL,
 created_date  TIMESTAMP(0),
 modified_date TIMESTAMP(0)
 );
+comment on column fs_fiadb.ref_lichen_spp_comments.lich_sppcd
+  is 'NA';
+comment on column fs_fiadb.ref_lichen_spp_comments.spp_name
+  is 'NA';
+comment on column fs_fiadb.ref_lichen_spp_comments.yearend
+  is 'NA';
+comment on column fs_fiadb.ref_lichen_spp_comments.yearstart
+  is 'NA';
+comment on column fs_fiadb.ref_lichen_spp_comments.spp_comments
+  is 'NA';
+comment on column fs_fiadb.ref_lichen_spp_comments.cn
+  is 'NA';
+comment on column fs_fiadb.ref_lichen_spp_comments.created_date
+  is 'NA';
+comment on column fs_fiadb.ref_lichen_spp_comments.modified_date
+  is 'NA';
 alter table FS_FIADB.REF_LICHEN_SPP_COMMENTS add constraint LCM_PK primary key (CN);
-alter table FS_FIADB.REF_LICHEN_SPP_COMMENTS add constraint LCM_UK unique (LICH_SPPCD, SPP_NAME, YEARSTART);
+alter table FS_FIADB.REF_LICHEN_SPP_COMMENTS add constraint LCM_UK unique (SPP_NAME, LICH_SPPCD, YEARSTART);

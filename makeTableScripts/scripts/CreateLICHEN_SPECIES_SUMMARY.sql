@@ -19,5 +19,41 @@ modified_by          VARCHAR(30),
 modified_date        TIMESTAMP(0),
 modified_in_instance VARCHAR(6)
 );
+comment on column fs_fiadb.lichen_species_summary.cn
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.invyr
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.lichen_region
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.lich_sppcd
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.measyear
+  is 'measurement year';
+comment on column fs_fiadb.lichen_species_summary.lichen_region_descr
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.spp_acronym
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.genus
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.sum_abundance
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.frequency_pct
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.species
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.plots_in_region
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.created_by
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.created_date
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.created_in_instance
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.modified_by
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.modified_date
+  is 'NA';
+comment on column fs_fiadb.lichen_species_summary.modified_in_instance
+  is 'NA';
 alter table FS_FIADB.LICHEN_SPECIES_SUMMARY add constraint LSY_PK primary key (CN);
 alter table FS_FIADB.LICHEN_SPECIES_SUMMARY add constraint LSY_UK unique (INVYR, LICHEN_REGION, LICH_SPPCD);

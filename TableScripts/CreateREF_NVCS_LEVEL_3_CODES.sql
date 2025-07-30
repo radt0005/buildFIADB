@@ -10,5 +10,23 @@ note                  VARCHAR(1000),
 created_date          TIMESTAMP(0),
 modified_date         TIMESTAMP(0)
 );
+comment on column fs_fiadb.ref_nvcs_level_3_codes.cn
+  is 'Unique record identifier for the current hierarchy record';
+comment on column fs_fiadb.ref_nvcs_level_3_codes.primary_class
+  is 'The primary classification of the algorithm [NATURAL|CULTURAL]';
+comment on column fs_fiadb.ref_nvcs_level_3_codes.hierarchy_level
+  is 'An integer value indicating at what level in the National Vegetation Classification System hierarchy the current record exists';
+comment on column fs_fiadb.ref_nvcs_level_3_codes.hierarchy_level_label
+  is 'A label assigned to the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_level_3_codes.nvcs_code
+  is 'A code representing the classification at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_level_3_codes.meaning
+  is 'The meaning of the code at the current level of the National Vegetation Classification System hierarchy';
+comment on column fs_fiadb.ref_nvcs_level_3_codes.note
+  is 'Any remark relevant to the hierarchy structure record.';
+comment on column fs_fiadb.ref_nvcs_level_3_codes.created_date
+  is 'Created date';
+comment on column fs_fiadb.ref_nvcs_level_3_codes.modified_date
+  is 'Modified date';
 alter table FS_FIADB.REF_NVCS_LEVEL_3_CODES add constraint RNVCSHS3_PK primary key (CN);
 alter table FS_FIADB.REF_NVCS_LEVEL_3_CODES add constraint RNVCSHS3_UK unique (PRIMARY_CLASS, NVCS_CODE);

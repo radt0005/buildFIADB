@@ -12,9 +12,31 @@ subptyp_prop_chng DECIMAL(5,4),
 created_date      TIMESTAMP(0),
 modified_date     TIMESTAMP(0)
 );
-create index CMX_PLT_FK_I on FS_FIADB.SUBP_COND_CHNG_MTRX (PREV_PLT_CN);
+comment on column fs_fiadb.subp_cond_chng_mtrx.cn
+  is 'Sequence number (surrogate primary key)';
+comment on column fs_fiadb.subp_cond_chng_mtrx.statecd
+  is 'State Code ';
+comment on column fs_fiadb.subp_cond_chng_mtrx.subp
+  is 'Subplot number';
+comment on column fs_fiadb.subp_cond_chng_mtrx.subptyp
+  is 'Subplot type';
+comment on column fs_fiadb.subp_cond_chng_mtrx.plt_cn
+  is 'Foreign key to Time 2 Plot record';
+comment on column fs_fiadb.subp_cond_chng_mtrx.condid
+  is 'Condition number for Time 2 Plot record';
+comment on column fs_fiadb.subp_cond_chng_mtrx.prev_plt_cn
+  is 'Foreign key to Time 1 Plot record';
+comment on column fs_fiadb.subp_cond_chng_mtrx.prevcond
+  is 'Previous condition number for Time 1 Plot record';
+comment on column fs_fiadb.subp_cond_chng_mtrx.subptyp_prop_chng
+  is 'Percent change of subplot condition between previous to currrent inventory';
+comment on column fs_fiadb.subp_cond_chng_mtrx.created_date
+  is 'Created Date ';
+comment on column fs_fiadb.subp_cond_chng_mtrx.modified_date
+  is 'Modified Date';
 create index CMX_PLT_FK2_I on FS_FIADB.SUBP_COND_CHNG_MTRX (PLT_CN);
+create index CMX_PLT_FK_I on FS_FIADB.SUBP_COND_CHNG_MTRX (PREV_PLT_CN);
 alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_PK primary key (CN);
-alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_UK unique (PLT_CN, PREV_PLT_CN, SUBP, SUBPTYP, CONDID, PREVCOND);
-alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_PLT_FK2 foreign key (PLT_CN) references FS_FIADB.PLOT (CN);
+alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_UK unique (PREV_PLT_CN, PLT_CN, CONDID, SUBPTYP, SUBP, PREVCOND);
 alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_PLT_FK foreign key (PREV_PLT_CN) references FS_FIADB.PLOT (CN);
+alter table FS_FIADB.SUBP_COND_CHNG_MTRX add constraint CMX_PLT_FK2 foreign key (PLT_CN) references FS_FIADB.PLOT (CN);

@@ -20,7 +20,8 @@ makeTableScript <- function(table, data_type, trans) {
                     "\n(\n",
                     "%fields%",
                     "\n",
-                    ");")
+                    ");\n",
+                    "%comments%")
   
   # make the create table section
   dt <- data_type[data_type$TABLE_NAME == table,]
@@ -90,9 +91,17 @@ makeTableScript <- function(table, data_type, trans) {
   
   types <- paste(types, collapse= "\n")
   
-  formatted <- gsub("%fields%", types, outline)
+  # make the comments
+  dt$COMMENTS <- gsub("'", "", dt$COMMENTS)
+  comments <- paste0("comment on column fs_fiadb.",
+                     tolower(dt$TABLE_NAME), ".",
+                     tolower(dt$COLUMN_NAME), "\n",
+                     "  is '",
+                     dt$COMMENTS, "';")
+  comments <- paste(comments, collapse= "\n")
   
-  return(formatted)
+  formatted <- gsub("%fields%", types, outline)
+  formatted <- gsub("%comments%", comments, formatted)
   
 }
 

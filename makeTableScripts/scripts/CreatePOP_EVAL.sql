@@ -22,6 +22,48 @@ modified_by          VARCHAR(30),
 modified_date        TIMESTAMP(0),
 modified_in_instance VARCHAR(6)
 );
+comment on column fs_fiadb.pop_eval.cn
+  is 'NA';
+comment on column fs_fiadb.pop_eval.eval_grp_cn
+  is 'Foreign Key to POP_EVAL_GRP';
+comment on column fs_fiadb.pop_eval.rscd
+  is 'Region or Station Code';
+comment on column fs_fiadb.pop_eval.evalid
+  is 'Evaluation ID';
+comment on column fs_fiadb.pop_eval.eval_descr
+  is 'Evaluation description';
+comment on column fs_fiadb.pop_eval.statecd
+  is 'State Code of primary state being evaluated';
+comment on column fs_fiadb.pop_eval.location_nm
+  is 'Usually state name or super state';
+comment on column fs_fiadb.pop_eval.report_year_nm
+  is 'List of years in which panels were collected';
+comment on column fs_fiadb.pop_eval.start_invyr
+  is 'Starting year for evaluation';
+comment on column fs_fiadb.pop_eval.end_invyr
+  is 'Ending year for evaluation';
+comment on column fs_fiadb.pop_eval.land_only
+  is 'Y if only land is sampled (census water excluded), N otherwise';
+comment on column fs_fiadb.pop_eval.timberland_only
+  is 'Y if estimates are for timberland only, N if reserved lands sampled at t and t-1 for change est., or reserved sampled at t for current est.';
+comment on column fs_fiadb.pop_eval.growth_acct
+  is 'Y if evaluation can be used for growth accounting, N if evaluation cannot be used for growth accounting, null if evaluation type is not EXPGROW';
+comment on column fs_fiadb.pop_eval.estn_method
+  is 'Estimation method, e.g. post-stratification or simple random';
+comment on column fs_fiadb.pop_eval.notes
+  is 'Evaluation notes';
+comment on column fs_fiadb.pop_eval.created_by
+  is 'Created by';
+comment on column fs_fiadb.pop_eval.created_date
+  is 'Created date';
+comment on column fs_fiadb.pop_eval.created_in_instance
+  is 'Created in instance';
+comment on column fs_fiadb.pop_eval.modified_by
+  is 'Modified by';
+comment on column fs_fiadb.pop_eval.modified_date
+  is 'Modified date';
+comment on column fs_fiadb.pop_eval.modified_in_instance
+  is 'Modified in instance';
 create index PEV_PEG_FK_I on FS_FIADB.POP_EVAL (EVAL_GRP_CN);
 alter table FS_FIADB.POP_EVAL add constraint PEV_PK primary key (CN);
 alter table FS_FIADB.POP_EVAL add constraint PEV_UK unique (RSCD, EVALID);

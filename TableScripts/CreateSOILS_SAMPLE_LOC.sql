@@ -27,7 +27,59 @@ soils_statcd  INTEGER NOT NULL,
 created_date  TIMESTAMP(0),
 modified_date TIMESTAMP(0)
 );
-create index SSL_NAT_I on FS_FIADB.SOILS_SAMPLE_LOC (STATECD, INVYR, COUNTYCD, PLOT, SMPLNNBR);
+comment on column fs_fiadb.soils_sample_loc.cn
+  is 'Unique Index';
+comment on column fs_fiadb.soils_sample_loc.plt_cn
+  is 'Foreign Key to NIMS_PLOT';
+comment on column fs_fiadb.soils_sample_loc.invyr
+  is 'NA';
+comment on column fs_fiadb.soils_sample_loc.statecd
+  is 'state code';
+comment on column fs_fiadb.soils_sample_loc.countycd
+  is 'County Code';
+comment on column fs_fiadb.soils_sample_loc.plot
+  is 'P2 Plot Number';
+comment on column fs_fiadb.soils_sample_loc.smplnnbr
+  is 'Sample Line Number';
+comment on column fs_fiadb.soils_sample_loc.measyear
+  is 'Measurement Year';
+comment on column fs_fiadb.soils_sample_loc.forflthk
+  is 'Forest Floor Thickness';
+comment on column fs_fiadb.soils_sample_loc.ltrlrthk
+  is 'Litter Layer Thickness';
+comment on column fs_fiadb.soils_sample_loc.forflthkn
+  is 'Forest Floor Thickness at the North Edge of the Sampling Frame';
+comment on column fs_fiadb.soils_sample_loc.ltrlrthkn
+  is 'Litter Layer Thickness at the North Edge of the Sampling Frame';
+comment on column fs_fiadb.soils_sample_loc.forflthks
+  is 'Forest Floor Thickness at the South Edge of the Sampling Frame';
+comment on column fs_fiadb.soils_sample_loc.ltrlrthks
+  is 'Litter Layer Thickness at the South Edge of the Sampling Frame';
+comment on column fs_fiadb.soils_sample_loc.forflthke
+  is 'Forest Floor Thickness at the East Edge of the Sampling Frame';
+comment on column fs_fiadb.soils_sample_loc.ltrlrthke
+  is 'Litter Layer Thickness at the East Edge of the Sampling Frame';
+comment on column fs_fiadb.soils_sample_loc.forflthkw
+  is 'Forest Floor Thickness at the West Edge of the Sampling Frame';
+comment on column fs_fiadb.soils_sample_loc.ltrlrthkw
+  is 'Litter Layer Thickness at the West Edge of the Sampling Frame';
+comment on column fs_fiadb.soils_sample_loc.condid
+  is 'Forest condition class nbr';
+comment on column fs_fiadb.soils_sample_loc.vstnbr
+  is 'Visit Number';
+comment on column fs_fiadb.soils_sample_loc.txtrlyr1
+  is 'Soil Texture Layer';
+comment on column fs_fiadb.soils_sample_loc.txtrlyr2
+  is 'Soil Texture Layer';
+comment on column fs_fiadb.soils_sample_loc.dpthsbsl
+  is 'Depth to a Restricted Layer';
+comment on column fs_fiadb.soils_sample_loc.soils_statcd
+  is 'Soil Sampling Status';
+comment on column fs_fiadb.soils_sample_loc.created_date
+  is 'Created Date';
+comment on column fs_fiadb.soils_sample_loc.modified_date
+  is 'Modified Date';
+create index SSL_NAT_I on FS_FIADB.SOILS_SAMPLE_LOC (SMPLNNBR, COUNTYCD, PLOT, STATECD, INVYR);
 alter table FS_FIADB.SOILS_SAMPLE_LOC add constraint SSL_PK primary key (CN);
-alter table FS_FIADB.SOILS_SAMPLE_LOC add constraint SSL_UK unique (PLT_CN, SMPLNNBR);
+alter table FS_FIADB.SOILS_SAMPLE_LOC add constraint SSL_UK unique (SMPLNNBR, PLT_CN);
 alter table FS_FIADB.SOILS_SAMPLE_LOC add constraint SSL_PLT_FK foreign key (PLT_CN) references FS_FIADB.PLOT (CN);

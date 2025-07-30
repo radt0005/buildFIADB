@@ -23,9 +23,53 @@ modified_date TIMESTAMP(0),
 cycle         INTEGER,
 subcycle      INTEGER
 );
+comment on column fs_fiadb.ozone_plot.cn
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.srv_cn
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.cty_cn
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.invyr
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.statecd
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.unitcd
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.countycd
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.o3plot
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.field_id
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.split_plotid
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.measyear
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.measmon
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.measday
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.lat
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.lon
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.elevation
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.manual
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.qa_status
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.created_date
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.modified_date
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.cycle
+  is 'NA';
+comment on column fs_fiadb.ozone_plot.subcycle
+  is 'NA';
 create index NOP_CTY_FK_I on FS_FIADB.OZONE_PLOT (CTY_CN);
 create index NOP_SRV_FK_I on FS_FIADB.OZONE_PLOT (SRV_CN);
 alter table FS_FIADB.OZONE_PLOT add constraint NOP_PK primary key (CN);
-alter table FS_FIADB.OZONE_PLOT add constraint NOP_UK unique (STATECD, INVYR, COUNTYCD, O3PLOT, FIELD_ID, SPLIT_PLOTID);
-alter table FS_FIADB.OZONE_PLOT add constraint NOP_SRV_FK foreign key (SRV_CN) references FS_FIADB.SURVEY (CN);
+alter table FS_FIADB.OZONE_PLOT add constraint NOP_UK unique (INVYR, STATECD, FIELD_ID, COUNTYCD, SPLIT_PLOTID, O3PLOT);
 alter table FS_FIADB.OZONE_PLOT add constraint NOP_CTY_FK foreign key (CTY_CN) references FS_FIADB.COUNTY (CN);
+alter table FS_FIADB.OZONE_PLOT add constraint NOP_SRV_FK foreign key (SRV_CN) references FS_FIADB.SURVEY (CN);

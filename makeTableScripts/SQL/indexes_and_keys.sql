@@ -1,5 +1,6 @@
 --indices, keys
-SELECT
+SELECT DISTINCT * FROM
+(SELECT
 info1.table_name,
 info1.index_name, 
 info1.column_name,
@@ -33,4 +34,4 @@ AND cons.owner IN ('FS_FIADB', 'FS_FIA_REFERENCE')
 ORDER BY cons.constraint_type, cols.POSITION) info3
 ON (info1.table_name = info3.table_name AND
     info1.column_name = info3.column_name AND
-    info1.index_name = info3.constraint_name);
+    info1.index_name = info3.constraint_name)) result;

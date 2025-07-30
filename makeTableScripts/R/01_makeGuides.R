@@ -18,6 +18,11 @@ data_types <- dbGetQuery(con, readQuery("SQL/data_types.sql"))
 foreign_keys <- dbGetQuery(con, readQuery("SQL/foreign_keys.sql"))
 indexes <- dbGetQuery(con, readQuery("SQL/indexes_and_keys.sql"))
 
+data_types <- data_type[!(data_types$OWNER == 'FS_FIADB' &
+                          data_types$TABLE_NAME == 'REF_CITATION'), ]
+
+indexes <- unique(indexes)
+
 write.csv(data_types, "Data/data_types.csv", row.names= FALSE)
 write.csv(indexes, "Data/index_info.csv", row.names= FALSE)
 write.csv(foreign_keys, "Data/foreign_keys.csv", row.names= FALSE)

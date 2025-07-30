@@ -21,6 +21,46 @@ modified_by          VARCHAR(30),
 modified_date        TIMESTAMP(0),
 modified_in_instance VARCHAR(6)
 );
+comment on column fs_fiadb.soils_erosion.cn
+  is 'Unique Index';
+comment on column fs_fiadb.soils_erosion.plt_cn
+  is 'Foreign Key to NIMS_PLOT';
+comment on column fs_fiadb.soils_erosion.invyr
+  is 'NA';
+comment on column fs_fiadb.soils_erosion.statecd
+  is 'state code';
+comment on column fs_fiadb.soils_erosion.countycd
+  is 'County Code';
+comment on column fs_fiadb.soils_erosion.plot
+  is 'P2 Plot Number';
+comment on column fs_fiadb.soils_erosion.subp
+  is 'Subplot Number';
+comment on column fs_fiadb.soils_erosion.measyear
+  is 'Measurement Year';
+comment on column fs_fiadb.soils_erosion.soilspct
+  is '% Bare Soil';
+comment on column fs_fiadb.soils_erosion.compcpct
+  is '% Compacted Area';
+comment on column fs_fiadb.soils_erosion.typrtdcd
+  is 'Rutted trail';
+comment on column fs_fiadb.soils_erosion.typcmpcd
+  is 'Compacted Trail';
+comment on column fs_fiadb.soils_erosion.typareacd
+  is 'Compacted Area';
+comment on column fs_fiadb.soils_erosion.typothrcd
+  is 'Other Type of Compaction';
+comment on column fs_fiadb.soils_erosion.created_by
+  is 'Created by';
+comment on column fs_fiadb.soils_erosion.created_date
+  is 'Created Date';
+comment on column fs_fiadb.soils_erosion.created_in_instance
+  is 'Created in Instance';
+comment on column fs_fiadb.soils_erosion.modified_by
+  is 'Modified by';
+comment on column fs_fiadb.soils_erosion.modified_date
+  is 'Modified Date';
+comment on column fs_fiadb.soils_erosion.modified_in_instance
+  is 'Modified in Instance';
 create index SEN_NAT_I on FS_FIADB.SOILS_EROSION (STATECD, INVYR, COUNTYCD, PLOT, SUBP);
 alter table FS_FIADB.SOILS_EROSION add constraint SEN_PK primary key (CN);
 alter table FS_FIADB.SOILS_EROSION add constraint SEN_UK unique (PLT_CN, SUBP);
