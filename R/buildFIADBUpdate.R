@@ -1,7 +1,7 @@
 # making fiadb on a postgres database
 
 # T/F flag for if you want to download the reference/data files
-data_downloaded <-TRUE 
+data_downloaded <- FALSE
 
 # download timeout limit set for 5 hours
 # should be sufficient for entire
@@ -22,12 +22,12 @@ library(RPostgreSQL)
 # 5.0 force correct data types
 # 6.0 import the data into postgres
 
-setwd('/media/HDD5/fiadb/buildfiadb/')
+setwd('/mnt/Main/FIADB/buildfiadb/')
 
 table_guide <- read.csv("table_guide.csv")
 
 # 1.1 - make a database--------------------------------------------------------
-dbname <- 'fiadb2'
+dbname <- 'testdb2'
 
 # the -k flag requires a password with every sudo call
 # the -S flag to accept the pw from standard input
@@ -39,6 +39,7 @@ if (FALSE) {
   
   # only run this once
   # system(cmd,input=readline("Enter your password: "))
+  
   
 }
 
@@ -58,7 +59,7 @@ unzip('FIADB_REFERENCE.zip', exdir= 'FIADB_REFERENCE')
 # 3.0 download data tables (entire or state)-----------------------------------
 # use the state postal abbreviation or 'ENTIRE' for all states
 # tested for VA and DE
-state_abbr <- 'ENTIRE'
+state_abbr <- 'DE'
 
 dir.create('FIADB_DATA')
 
