@@ -115,7 +115,7 @@ ests_wide <- dcast(data= as.data.table(out),
                    STATECD+EVAL_GRP~short_name,
                    value.var= 'ESTIMATED_VALUE')
 
-fn <- paste0(dbname, "_estimates.csv")
+fn <- paste0("local_estimates.csv")
 
 write.csv(out,
           file.path("evalidator", fn),

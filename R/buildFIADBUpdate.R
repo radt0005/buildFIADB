@@ -1,7 +1,7 @@
 # making fiadb on a postgres database
 
 # T/F flag for if you want to download the reference/data files
-data_downloaded <- TRUE
+data_downloaded <- FALSE
 
 # download timeout limit set for 5 hours
 # should be sufficient for entire
@@ -418,7 +418,17 @@ updateCSV <- function(tbl) {
   
 }
 
-x <- lapply(table_list, updateCSV)
+# this section may not be necessary. sometimes the data from sqlite
+# doesn't match the type specifications that oracle/postgres expect.
+# if the import loop below fails try running the below line.
+# this will force all types to match what is specified in the schema.
+# can be memory intensive when working with the national dataset
+if (FALSE) {
+  
+  x <- lapply(table_list, updateCSV)
+  
+}
+
 #
 # 6.0 import the data into postgres--------------------------------------------
 # path to this repo/where the data files live
@@ -455,7 +465,17 @@ for (row in 1:nrow(table_guide)) {
   command <- gsub("&file", table_guide$file[row], command)
   
   cat("running import for", table_guide$table[row], "\n")
-  dbExecute(postgres_con, command)
+  result <- try(dbExecute(postgres_con, command))
+  
+  if (any(class(result) == 'try-error')) {
+    
+    stop('there was an error when copying data into table ',
+         table_guide$table[row],".\n",
+         "if this error was an invalid syntax or type error\n",
+         "try running the 'lapply(table_list, updateCSV)' line above\n",
+         "to force the correct types")
+    
+  }
   
 }
 

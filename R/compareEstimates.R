@@ -4,7 +4,7 @@ library(data.table)
 setwd("/mnt/Main/FIADB/buildfiadb/")
 
 evalidator <- read.csv('evalidator/evalidator_estimates.csv')
-fiadb <- read.csv('evalidator/testdb_estimates.csv')
+fiadb <- read.csv('evalidator/local_estimates.csv')
 
 attr <- unique(fiadb[,c('ATTRIBUTE_NBR', 'short_name')])
 attr <- attr[order(attr$ATTRIBUTE_NBR),]
