@@ -1,7 +1,9 @@
 # making fiadb on a postgres database
 
+pw <- as.character(commandArgs(trailingOnly= TRUE))
+
 # T/F flag for if you want to download the reference/data files
-data_downloaded <- FALSE
+data_downloaded <- TRUE
 
 # download timeout limit set for 5 hours
 # should be sufficient for entire
@@ -27,7 +29,7 @@ setwd('/mnt/Main/FIADB/buildfiadb/')
 table_guide <- read.csv("table_guide.csv")
 
 # 1.1 - make a database--------------------------------------------------------
-dbname <- 'testdb2'
+dbname <- 'fiadb01d'
 
 # the -k flag requires a password with every sudo call
 # the -S flag to accept the pw from standard input
@@ -38,7 +40,7 @@ cmd <- paste0('sudo -kS su - postgres -c "createdb ', dbname, '"')
 if (FALSE) {
   
   # only run this once
-  # system(cmd,input=readline("Enter your password: "))
+  system(cmd,input=readline("Enter your password: "))
   
   
 }
@@ -59,7 +61,7 @@ unzip('FIADB_REFERENCE.zip', exdir= 'FIADB_REFERENCE')
 # 3.0 download data tables (entire or state)-----------------------------------
 # use the state postal abbreviation or 'ENTIRE' for all states
 # tested for VA and DE
-state_abbr <- 'DE'
+state_abbr <- 'ENTIRE'
 
 dir.create('FIADB_DATA')
 
@@ -277,7 +279,8 @@ for (i in 1:length(table_scripts)) {
 # 4.1 create postgres tables---------------------------------------------------
 # connect to the postgres database
 postgres_con <- dbConnect(drv= dbDriver("PostgreSQL"),
-                          dbname= dbname)
+                          dbname= dbname,
+                          password= pw)
 
 # run each import script
 for (row in 1:nrow(table_guide)) {
@@ -423,7 +426,7 @@ updateCSV <- function(tbl) {
 # if the import loop below fails try running the below line.
 # this will force all types to match what is specified in the schema.
 # can be memory intensive when working with the national dataset
-if (FALSE) {
+if (TRUE) {
   
   x <- lapply(table_list, updateCSV)
   
@@ -491,3 +494,6 @@ area_query <- gsub("= &EVAL_GRP",
                    area_query)
 dbGetQuery(postgres_con, area_query)
 
+# if successful, copy to 'production' db
+# cmd <- paste0('sudo -kS su - postgres -c "createdb -T fiadb01d fiadb01p"')
+# system(cmd,input=readline("Enter your password: "))
