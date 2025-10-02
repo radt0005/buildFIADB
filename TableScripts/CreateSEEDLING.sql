@@ -27,7 +27,8 @@ pct_affected_damage_agent2_srs INTEGER,
 damage_agent_cd3_srs           INTEGER,
 pct_affected_damage_agent3_srs INTEGER,
 agecd_rmrs                     INTEGER,
-countchkcd_rmrs                INTEGER
+countchkcd_rmrs                INTEGER,
+spcd_id_cd                     INTEGER
 );
 comment on column fs_fiadb.seedling.cn
   is 'Unique index';
@@ -85,6 +86,8 @@ comment on column fs_fiadb.seedling.agecd_rmrs
   is 'age code';
 comment on column fs_fiadb.seedling.countchkcd_rmrs
   is 'count check code';
+comment on column fs_fiadb.seedling.spcd_id_cd
+  is 'Code indicating if the spcd was determined in the field or from lab analysis';
 create index SDL_NAT_I on FS_FIADB.SEEDLING (PLOT, SUBP, INVYR, SPCD, STATECD, CONDID, COUNTYCD, UNITCD);
 create index SDL_PLT_FK_I on FS_FIADB.SEEDLING (PLT_CN);
 alter table FS_FIADB.SEEDLING add constraint SDL_PK primary key (CN);

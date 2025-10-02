@@ -195,7 +195,9 @@ drybio_foliage                 DECIMAL(13,6),
 drybio_sawlog_bark             DECIMAL(13,6),
 prev_actualht_fld              INTEGER,
 prev_ht_fld                    INTEGER,
-utilclcd                       INTEGER
+utilclcd                       INTEGER,
+spcd_id_cd                     INTEGER,
+abnormal_termination           INTEGER
 );
 comment on column fs_fiadb.tree.cn
   is 'Unique index';
@@ -589,6 +591,10 @@ comment on column fs_fiadb.tree.prev_ht_fld
   is 'Previous inventory height';
 comment on column fs_fiadb.tree.utilclcd
   is 'New column to store new national utilization code';
+comment on column fs_fiadb.tree.spcd_id_cd
+  is 'Code indicating if the spcd was determined in the field or from lab analysis';
+comment on column fs_fiadb.tree.abnormal_termination
+  is 'Code indicating if the bole is abnormally terminated, 0 = no, 1 = yes';
 create index TRE_PLT_FK_I on FS_FIADB.TREE (PLT_CN);
 create index TRE_NAT_I on FS_FIADB.TREE (INVYR, UNITCD, PLOT, TREE, SUBP, STATECD, COUNTYCD);
 create index TRE_SPCD on FS_FIADB.TREE (SPCD);

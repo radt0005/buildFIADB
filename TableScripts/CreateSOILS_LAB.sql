@@ -49,99 +49,98 @@ modified_date                 TIMESTAMP(0),
 created_date                  TIMESTAMP(0)
 );
 comment on column fs_fiadb.soils_lab.cn
-  is 'NA';
+  is 'Sequence number (surrogate primary key';
 comment on column fs_fiadb.soils_lab.plt_cn
-  is 'NA';
+  is 'Foreign key to Plot table CN';
 comment on column fs_fiadb.soils_lab.invyr
-  is 'NA';
+  is 'Annual Inventory Year';
 comment on column fs_fiadb.soils_lab.statecd
-  is 'NA';
+  is 'State Code ';
 comment on column fs_fiadb.soils_lab.countycd
-  is 'NA';
+  is 'County Code ';
 comment on column fs_fiadb.soils_lab.plot
-  is 'NA';
+  is 'P2 Plot Number';
 comment on column fs_fiadb.soils_lab.smplnnbr
-  is 'NA';
+  is 'Sample line number. The number corresponding to the subplot where the sample was collected. Code 9 indicates that the exact subplot where the sample was collected is unknown.';
 comment on column fs_fiadb.soils_lab.vstnbr
-  is 'NA';
+  is 'Visit number. The number of the soil sampling location at which the soil sample was collected.';
 comment on column fs_fiadb.soils_lab.layer_type
-  is 'NA';
+  is 'Layer Type. Indicates the soil layer type';
 comment on column fs_fiadb.soils_lab.sampler_type
-  is 'NA';
+  is 'Sampler type. Indicates type of soil sampler used.';
 comment on column fs_fiadb.soils_lab.qastatcd
-  is 'NA';
+  is 'Quality assurance status';
 comment on column fs_fiadb.soils_lab.sample_date
-  is 'NA';
+  is 'Sample date';
 comment on column fs_fiadb.soils_lab.lab_id
-  is 'NA';
+  is 'Laboratory identification. Indicates the laboratory where the analyses were done.';
 comment on column fs_fiadb.soils_lab.sample_id
-  is 'NA';
+  is 'Sample identification. Internal lab sample identification number used to identify samples, match to plot identifier data, and track samples.';
 comment on column fs_fiadb.soils_lab.field_moist_soil_wt
-  is 'NA';
+  is 'Field moist soil weight. The weight of the soil sample as received from the field in g.';
 comment on column fs_fiadb.soils_lab.air_dry_soil_wt
-  is 'NA';
+  is 'Air-dry soil weight. The weight of the soil sample after air-drying at ambient temperature in g.';
 comment on column fs_fiadb.soils_lab.oven_dry_soil_wt
-  is 'NA';
+  is 'Oven-dry soil weight. The calculated weight of the soil sample based on an oven-dried subsample in g.';
 comment on column fs_fiadb.soils_lab.field_moist_water_content_pct
-  is 'NA';
+  is 'Field moist water content percent. The field-moist to air-dry water content in percent.';
 comment on column fs_fiadb.soils_lab.residual_water_content_pct
-  is 'NA';
+  is 'Residual water content percent. The air-dry to oven-dry water content in percent.';
 comment on column fs_fiadb.soils_lab.total_water_content_pct
-  is 'NA';
+  is 'Total water content in percent. The field-moist to air-dry + air-dry to oven-dry water contents in percent.';
 comment on column fs_fiadb.soils_lab.bulk_density
-  is 'NA';
+  is 'Bulk density. The soil bulk density calculated as weight per unit volume of soil, g/cm3.';
 comment on column fs_fiadb.soils_lab.coarse_fraction_pct
-  is 'NA';
+  is 'Coarse fraction percent. The percentage of mineral soil greater than 2-mm in size.';
 comment on column fs_fiadb.soils_lab.c_org_pct
-  is 'NA';
+  is 'Carbon organic percent. Organic carbon in percent';
 comment on column fs_fiadb.soils_lab.c_inorg_pct
-  is 'NA';
+  is 'Carbon inorganic percent. Inorganic carbon (carbonates) in percent.';
 comment on column fs_fiadb.soils_lab.c_total_pct
-  is 'NA';
+  is 'Carbon total percent. Total carbon (organic + inorganic) in percent.';
 comment on column fs_fiadb.soils_lab.n_total_pct
-  is 'NA';
+  is 'Nitrogen total percent. Total nitrogen in percent.';
 comment on column fs_fiadb.soils_lab.ph_h2o
-  is 'NA';
+  is 'pH in water. Soil pH in a 1:1 soil/water suspension';
 comment on column fs_fiadb.soils_lab.ph_cacl2
-  is 'NA';
+  is 'pH in calcium chloride. Soil pH in 0.01 M CaCl2 solution.';
 comment on column fs_fiadb.soils_lab.exchng_na
-  is 'NA';
+  is 'Exchangeable sodium in mg/kg.';
 comment on column fs_fiadb.soils_lab.exchng_k
-  is 'NA';
+  is 'Exchangeable potassium in mg/kg.';
 comment on column fs_fiadb.soils_lab.exchng_mg
-  is 'NA';
+  is 'Exchangeable magnesium in mg/kg.';
 comment on column fs_fiadb.soils_lab.exchng_ca
-  is 'NA';
+  is 'Exchangeable calcium in mg/kg.';
 comment on column fs_fiadb.soils_lab.exchng_al
-  is 'NA';
+  is 'Exchangeable aluminum in mg/kg';
 comment on column fs_fiadb.soils_lab.ecec
-  is 'NA';
+  is 'Effective cation exchange capacity. Exchangeable Na + K + Mg + Ca + Al) in cmolc/kg';
 comment on column fs_fiadb.soils_lab.exchng_mn
-  is 'NA';
+  is 'Exchangeable manganese in mg/kg';
 comment on column fs_fiadb.soils_lab.exchng_fe
-  is 'NA';
+  is 'Exchangeable iron in mg/kg.';
 comment on column fs_fiadb.soils_lab.exchng_ni
-  is 'NA';
+  is 'Exchangeable nickel in mg/kg.';
 comment on column fs_fiadb.soils_lab.exchng_cu
-  is 'NA';
+  is 'Exchangeable copper in mg/kg.';
 comment on column fs_fiadb.soils_lab.exchng_zn
-  is 'NA';
+  is 'Exchangeable zinc in mg/kg.';
 comment on column fs_fiadb.soils_lab.exchng_cd
-  is 'NA';
+  is 'Exchangeable cadmium in mg/kg';
 comment on column fs_fiadb.soils_lab.exchng_pb
-  is 'NA';
+  is 'Exchangeable lead in mg/kg.';
 comment on column fs_fiadb.soils_lab.exchng_s
-  is 'NA';
+  is 'Exchangeable sulfur in mg/kg.';
 comment on column fs_fiadb.soils_lab.bray1_p
-  is 'NA';
+  is 'Bray 1 phosphorus. Bray 1 extractable phosphorus in mg/kg.';
 comment on column fs_fiadb.soils_lab.olsen_p
-  is 'NA';
+  is 'Olsen phosphorus. Olsen extractable phosphorus in mg/kg.';
 comment on column fs_fiadb.soils_lab.measyear
-  is 'NA';
+  is 'Measurement Year ';
 comment on column fs_fiadb.soils_lab.modified_date
-  is 'NA';
+  is 'Modified Date';
 comment on column fs_fiadb.soils_lab.created_date
-  is 'NA';
-create index SLB_NAT_I on FS_FIADB.SOILS_LAB (COUNTYCD, PLOT, SMPLNNBR, LAYER_TYPE, STATECD, INVYR);
+  is 'Created Date ';
+create index SLB_SMPLNNBR_I on FS_FIADB.SOILS_LAB (VSTNBR, COUNTYCD, LAYER_TYPE, STATECD, PLOT, MEASYEAR);
 alter table FS_FIADB.SOILS_LAB add constraint SLB_PK primary key (CN);
-alter table FS_FIADB.SOILS_LAB add constraint SLB_UK unique (LAYER_TYPE, PLT_CN, SMPLNNBR);

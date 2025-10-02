@@ -596,6 +596,8 @@
 "FS_FIADB","TREE","PREV_ACTUALHT_FLD","NUMBER",22,3,0,"Y",200,"Previous inventory actual height"
 "FS_FIADB","TREE","PREV_HT_FLD","NUMBER",22,3,0,"Y",201,"Previous inventory height"
 "FS_FIADB","TREE","UTILCLCD","NUMBER",22,1,0,"Y",202,"New column to store new national utilization code"
+"FS_FIADB","TREE","SPCD_ID_CD","NUMBER",22,1,0,"Y",203,"Code indicating if the spcd was determined in the field or from lab analysis"
+"FS_FIADB","TREE","ABNORMAL_TERMINATION","NUMBER",22,1,0,"Y",204,"Code indicating if the bole is abnormally terminated, 0 = no, 1 = yes"
 "FS_FIADB","VEG_SUBPLOT_SPP","CN","VARCHAR2",34,NA,NA,"N",1,"CN partly identifies NIMS_VEG_SUBPLOT_SPECIES_TBL"
 "FS_FIADB","VEG_SUBPLOT_SPP","PLT_CN","VARCHAR2",34,NA,NA,"N",2,"PLT_CN is foreign key to parent NIMS_PLOT_TBL.CN"
 "FS_FIADB","VEG_SUBPLOT_SPP","VVT_CN","VARCHAR2",34,NA,NA,"N",3,"VVT_CN is foreign key to parent NIMS_VEG_VISIT_TBL.CN"
@@ -656,6 +658,7 @@
 "FS_FIADB","SEEDLING","PCT_AFFECTED_DAMAGE_AGENT3_SRS","NUMBER",22,3,0,"Y",30,NA
 "FS_FIADB","SEEDLING","AGECD_RMRS","NUMBER",22,1,0,"Y",31,"age code"
 "FS_FIADB","SEEDLING","COUNTCHKCD_RMRS","NUMBER",22,1,0,"Y",32,"count check code"
+"FS_FIADB","SEEDLING","SPCD_ID_CD","NUMBER",22,1,0,"Y",33,"Code indicating if the spcd was determined in the field or from lab analysis"
 "FS_FIADB","VEG_QUADRAT","CN","VARCHAR2",34,NA,NA,"N",1,"CN partly identifies NIMS_VEG_QUADRAT_TBL"
 "FS_FIADB","VEG_QUADRAT","PLT_CN","VARCHAR2",34,NA,NA,"N",2,"PLT_CN is foreign key to parent NIMS_PLOT_TBL.CN"
 "FS_FIADB","VEG_QUADRAT","VVT_CN","VARCHAR2",34,NA,NA,"N",3,"VVT_CN is foreign key to parent NIMS_VEG_VISIT_TBL.CN"
@@ -1848,57 +1851,57 @@
 "FS_FIADB","REF_LICHEN_SPP_COMMENTS","MODIFIED_BY","VARCHAR2",30,NA,NA,"Y",10,NA
 "FS_FIADB","REF_LICHEN_SPP_COMMENTS","MODIFIED_DATE","DATE",7,NA,NA,"Y",11,NA
 "FS_FIADB","REF_LICHEN_SPP_COMMENTS","MODIFIED_IN_INSTANCE","VARCHAR2",6,NA,NA,"Y",12,NA
-"FS_FIADB","SOILS_LAB","CN","VARCHAR2",34,NA,NA,"N",1,NA
-"FS_FIADB","SOILS_LAB","PLT_CN","VARCHAR2",34,NA,NA,"N",2,NA
-"FS_FIADB","SOILS_LAB","INVYR","NUMBER",22,4,0,"N",3,NA
-"FS_FIADB","SOILS_LAB","STATECD","NUMBER",22,4,0,"N",4,NA
-"FS_FIADB","SOILS_LAB","COUNTYCD","NUMBER",22,3,0,"N",5,NA
-"FS_FIADB","SOILS_LAB","PLOT","NUMBER",22,5,0,"N",6,NA
-"FS_FIADB","SOILS_LAB","SMPLNNBR","NUMBER",22,3,0,"N",7,NA
-"FS_FIADB","SOILS_LAB","VSTNBR","NUMBER",22,1,0,"Y",8,NA
-"FS_FIADB","SOILS_LAB","LAYER_TYPE","VARCHAR2",10,NA,NA,"Y",9,NA
-"FS_FIADB","SOILS_LAB","SAMPLER_TYPE","VARCHAR2",2,NA,NA,"Y",10,NA
-"FS_FIADB","SOILS_LAB","QASTATCD","NUMBER",22,1,0,"Y",11,NA
-"FS_FIADB","SOILS_LAB","SAMPLE_DATE","DATE",7,NA,NA,"Y",12,NA
-"FS_FIADB","SOILS_LAB","LAB_ID","VARCHAR2",10,NA,NA,"Y",13,NA
-"FS_FIADB","SOILS_LAB","SAMPLE_ID","VARCHAR2",12,NA,NA,"Y",14,NA
-"FS_FIADB","SOILS_LAB","FIELD_MOIST_SOIL_WT","NUMBER",22,7,2,"Y",15,NA
-"FS_FIADB","SOILS_LAB","AIR_DRY_SOIL_WT","NUMBER",22,7,2,"Y",16,NA
-"FS_FIADB","SOILS_LAB","OVEN_DRY_SOIL_WT","NUMBER",22,7,2,"Y",17,NA
-"FS_FIADB","SOILS_LAB","FIELD_MOIST_WATER_CONTENT_PCT","NUMBER",22,6,2,"Y",18,NA
-"FS_FIADB","SOILS_LAB","RESIDUAL_WATER_CONTENT_PCT","NUMBER",22,6,2,"Y",19,NA
-"FS_FIADB","SOILS_LAB","TOTAL_WATER_CONTENT_PCT","NUMBER",22,6,2,"Y",20,NA
-"FS_FIADB","SOILS_LAB","BULK_DENSITY","NUMBER",22,7,3,"Y",21,NA
-"FS_FIADB","SOILS_LAB","COARSE_FRACTION_PCT","NUMBER",22,7,3,"Y",22,NA
-"FS_FIADB","SOILS_LAB","C_ORG_PCT","NUMBER",22,7,3,"Y",23,NA
-"FS_FIADB","SOILS_LAB","C_INORG_PCT","NUMBER",22,7,3,"Y",24,NA
-"FS_FIADB","SOILS_LAB","C_TOTAL_PCT","NUMBER",22,7,3,"Y",25,NA
-"FS_FIADB","SOILS_LAB","N_TOTAL_PCT","NUMBER",22,7,3,"Y",26,NA
-"FS_FIADB","SOILS_LAB","PH_H2O","NUMBER",22,7,3,"Y",27,NA
-"FS_FIADB","SOILS_LAB","PH_CACL2","NUMBER",22,7,3,"Y",28,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_NA","NUMBER",22,9,3,"Y",29,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_K","NUMBER",22,9,3,"Y",30,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_MG","NUMBER",22,9,3,"Y",31,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_CA","NUMBER",22,9,3,"Y",32,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_AL","NUMBER",22,9,3,"Y",33,NA
-"FS_FIADB","SOILS_LAB","ECEC","NUMBER",22,9,3,"Y",34,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_MN","NUMBER",22,9,3,"Y",35,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_FE","NUMBER",22,9,3,"Y",36,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_NI","NUMBER",22,9,3,"Y",37,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_CU","NUMBER",22,9,3,"Y",38,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_ZN","NUMBER",22,9,3,"Y",39,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_CD","NUMBER",22,9,3,"Y",40,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_PB","NUMBER",22,9,3,"Y",41,NA
-"FS_FIADB","SOILS_LAB","EXCHNG_S","NUMBER",22,9,3,"Y",42,NA
-"FS_FIADB","SOILS_LAB","BRAY1_P","NUMBER",22,9,3,"Y",43,NA
-"FS_FIADB","SOILS_LAB","OLSEN_P","NUMBER",22,9,3,"Y",44,NA
-"FS_FIADB","SOILS_LAB","MEASYEAR","NUMBER",22,4,0,"N",45,NA
-"FS_FIADB","SOILS_LAB","MODIFIED_BY","VARCHAR2",30,NA,NA,"Y",46,NA
-"FS_FIADB","SOILS_LAB","MODIFIED_DATE","DATE",7,NA,NA,"Y",47,NA
-"FS_FIADB","SOILS_LAB","MODIFIED_IN_INSTANCE","VARCHAR2",6,NA,NA,"Y",48,NA
-"FS_FIADB","SOILS_LAB","CREATED_BY","VARCHAR2",30,NA,NA,"Y",49,NA
-"FS_FIADB","SOILS_LAB","CREATED_DATE","DATE",7,NA,NA,"Y",50,NA
-"FS_FIADB","SOILS_LAB","CREATED_IN_INSTANCE","VARCHAR2",6,NA,NA,"Y",51,NA
+"FS_FIADB","SOILS_LAB","CN","VARCHAR2",34,NA,NA,"N",1,"Sequence number (surrogate primary key"
+"FS_FIADB","SOILS_LAB","PLT_CN","VARCHAR2",34,NA,NA,"N",2,"Foreign key to Plot table CN"
+"FS_FIADB","SOILS_LAB","INVYR","NUMBER",22,4,0,"N",3,"Annual Inventory Year"
+"FS_FIADB","SOILS_LAB","STATECD","NUMBER",22,4,0,"N",4,"State Code "
+"FS_FIADB","SOILS_LAB","COUNTYCD","NUMBER",22,3,0,"N",5,"County Code "
+"FS_FIADB","SOILS_LAB","PLOT","NUMBER",22,5,0,"N",6,"P2 Plot Number"
+"FS_FIADB","SOILS_LAB","SMPLNNBR","NUMBER",22,3,0,"N",7,"Sample line number. The number corresponding to the subplot where the sample was collected. Code 9 indicates that the exact subplot where the sample was collected is unknown."
+"FS_FIADB","SOILS_LAB","VSTNBR","NUMBER",22,1,0,"Y",8,"Visit number. The number of the soil sampling location at which the soil sample was collected."
+"FS_FIADB","SOILS_LAB","LAYER_TYPE","VARCHAR2",10,NA,NA,"Y",9,"Layer Type. Indicates the soil layer type"
+"FS_FIADB","SOILS_LAB","SAMPLER_TYPE","VARCHAR2",2,NA,NA,"Y",10,"Sampler type. Indicates type of soil sampler used."
+"FS_FIADB","SOILS_LAB","QASTATCD","NUMBER",22,1,0,"Y",11,"Quality assurance status"
+"FS_FIADB","SOILS_LAB","SAMPLE_DATE","DATE",7,NA,NA,"Y",12,"Sample date"
+"FS_FIADB","SOILS_LAB","LAB_ID","VARCHAR2",10,NA,NA,"Y",13,"Laboratory identification. Indicates the laboratory where the analyses were done."
+"FS_FIADB","SOILS_LAB","SAMPLE_ID","VARCHAR2",12,NA,NA,"Y",14,"Sample identification. Internal lab sample identification number used to identify samples, match to plot identifier data, and track samples."
+"FS_FIADB","SOILS_LAB","FIELD_MOIST_SOIL_WT","NUMBER",22,7,2,"Y",15,"Field moist soil weight. The weight of the soil sample as received from the field in g."
+"FS_FIADB","SOILS_LAB","AIR_DRY_SOIL_WT","NUMBER",22,7,2,"Y",16,"Air-dry soil weight. The weight of the soil sample after air-drying at ambient temperature in g."
+"FS_FIADB","SOILS_LAB","OVEN_DRY_SOIL_WT","NUMBER",22,7,2,"Y",17,"Oven-dry soil weight. The calculated weight of the soil sample based on an oven-dried subsample in g."
+"FS_FIADB","SOILS_LAB","FIELD_MOIST_WATER_CONTENT_PCT","NUMBER",22,6,2,"Y",18,"Field moist water content percent. The field-moist to air-dry water content in percent."
+"FS_FIADB","SOILS_LAB","RESIDUAL_WATER_CONTENT_PCT","NUMBER",22,6,2,"Y",19,"Residual water content percent. The air-dry to oven-dry water content in percent."
+"FS_FIADB","SOILS_LAB","TOTAL_WATER_CONTENT_PCT","NUMBER",22,6,2,"Y",20,"Total water content in percent. The field-moist to air-dry + air-dry to oven-dry water contents in percent."
+"FS_FIADB","SOILS_LAB","BULK_DENSITY","NUMBER",22,7,3,"Y",21,"Bulk density. The soil bulk density calculated as weight per unit volume of soil, g/cm3."
+"FS_FIADB","SOILS_LAB","COARSE_FRACTION_PCT","NUMBER",22,7,3,"Y",22,"Coarse fraction percent. The percentage of mineral soil greater than 2-mm in size."
+"FS_FIADB","SOILS_LAB","C_ORG_PCT","NUMBER",22,7,3,"Y",23,"Carbon organic percent. Organic carbon in percent"
+"FS_FIADB","SOILS_LAB","C_INORG_PCT","NUMBER",22,7,3,"Y",24,"Carbon inorganic percent. Inorganic carbon (carbonates) in percent."
+"FS_FIADB","SOILS_LAB","C_TOTAL_PCT","NUMBER",22,7,3,"Y",25,"Carbon total percent. Total carbon (organic + inorganic) in percent."
+"FS_FIADB","SOILS_LAB","N_TOTAL_PCT","NUMBER",22,7,3,"Y",26,"Nitrogen total percent. Total nitrogen in percent."
+"FS_FIADB","SOILS_LAB","PH_H2O","NUMBER",22,7,3,"Y",27,"pH in water. Soil pH in a 1:1 soil/water suspension"
+"FS_FIADB","SOILS_LAB","PH_CACL2","NUMBER",22,7,3,"Y",28,"pH in calcium chloride. Soil pH in 0.01 M CaCl2 solution."
+"FS_FIADB","SOILS_LAB","EXCHNG_NA","NUMBER",22,9,3,"Y",29,"Exchangeable sodium in mg/kg."
+"FS_FIADB","SOILS_LAB","EXCHNG_K","NUMBER",22,9,3,"Y",30,"Exchangeable potassium in mg/kg."
+"FS_FIADB","SOILS_LAB","EXCHNG_MG","NUMBER",22,9,3,"Y",31,"Exchangeable magnesium in mg/kg."
+"FS_FIADB","SOILS_LAB","EXCHNG_CA","NUMBER",22,9,3,"Y",32,"Exchangeable calcium in mg/kg."
+"FS_FIADB","SOILS_LAB","EXCHNG_AL","NUMBER",22,9,3,"Y",33,"Exchangeable aluminum in mg/kg"
+"FS_FIADB","SOILS_LAB","ECEC","NUMBER",22,9,3,"Y",34,"Effective cation exchange capacity. Exchangeable Na + K + Mg + Ca + Al) in cmolc/kg"
+"FS_FIADB","SOILS_LAB","EXCHNG_MN","NUMBER",22,9,3,"Y",35,"Exchangeable manganese in mg/kg"
+"FS_FIADB","SOILS_LAB","EXCHNG_FE","NUMBER",22,9,3,"Y",36,"Exchangeable iron in mg/kg."
+"FS_FIADB","SOILS_LAB","EXCHNG_NI","NUMBER",22,9,3,"Y",37,"Exchangeable nickel in mg/kg."
+"FS_FIADB","SOILS_LAB","EXCHNG_CU","NUMBER",22,9,3,"Y",38,"Exchangeable copper in mg/kg."
+"FS_FIADB","SOILS_LAB","EXCHNG_ZN","NUMBER",22,9,3,"Y",39,"Exchangeable zinc in mg/kg."
+"FS_FIADB","SOILS_LAB","EXCHNG_CD","NUMBER",22,9,3,"Y",40,"Exchangeable cadmium in mg/kg"
+"FS_FIADB","SOILS_LAB","EXCHNG_PB","NUMBER",22,9,3,"Y",41,"Exchangeable lead in mg/kg."
+"FS_FIADB","SOILS_LAB","EXCHNG_S","NUMBER",22,9,3,"Y",42,"Exchangeable sulfur in mg/kg."
+"FS_FIADB","SOILS_LAB","BRAY1_P","NUMBER",22,9,3,"Y",43,"Bray 1 phosphorus. Bray 1 extractable phosphorus in mg/kg."
+"FS_FIADB","SOILS_LAB","OLSEN_P","NUMBER",22,9,3,"Y",44,"Olsen phosphorus. Olsen extractable phosphorus in mg/kg."
+"FS_FIADB","SOILS_LAB","MEASYEAR","NUMBER",22,4,0,"N",45,"Measurement Year "
+"FS_FIADB","SOILS_LAB","MODIFIED_BY","VARCHAR2",30,NA,NA,"Y",46,"Modified by "
+"FS_FIADB","SOILS_LAB","MODIFIED_DATE","DATE",7,NA,NA,"Y",47,"Modified Date"
+"FS_FIADB","SOILS_LAB","MODIFIED_IN_INSTANCE","VARCHAR2",6,NA,NA,"Y",48,"Modified in Instance "
+"FS_FIADB","SOILS_LAB","CREATED_BY","VARCHAR2",30,NA,NA,"Y",49,"Created by"
+"FS_FIADB","SOILS_LAB","CREATED_DATE","DATE",7,NA,NA,"Y",50,"Created Date "
+"FS_FIADB","SOILS_LAB","CREATED_IN_INSTANCE","VARCHAR2",6,NA,NA,"Y",51,"Created in Instance "
 "FS_FIADB","SOILS_VISIT","CN","VARCHAR2",34,NA,NA,"N",1,"Unique Index"
 "FS_FIADB","SOILS_VISIT","PLT_CN","VARCHAR2",34,NA,NA,"N",2,"Foreign Key to NIMS_PLOT"
 "FS_FIADB","SOILS_VISIT","INVYR","NUMBER",22,4,0,"N",3,NA
