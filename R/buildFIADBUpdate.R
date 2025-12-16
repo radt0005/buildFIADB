@@ -1,9 +1,24 @@
 # making fiadb on a postgres database
 
-pw <- as.character(commandArgs(trailingOnly= TRUE))
+# if db requires password use keyring package to store/access safely
+# library(keyring)
+#
+# the below is an example where "my_user_name"
+# should be changed to the user with access to the postgres db
+# 
+# can also change the service name if desired
+# keyring::key_set(service = "postgres_database", 
+#                  username = "my_user_name")
+
+service_name <- "postgres_database"
+
+
+# these will be supplied to the dbConnect call for postgres
+# keyring::key_list(service_name)$username # username
+# keyring::key_get(service_name, keyring::key_list(service_name)$username) # pw
 
 # T/F flag for if you want to download the reference/data files
-data_downloaded <- TRUE
+data_downloaded <- FALSE
 
 # download timeout limit set for 5 hours
 # should be sufficient for entire
@@ -24,7 +39,7 @@ library(RPostgreSQL)
 # 5.0 force correct data types
 # 6.0 import the data into postgres
 
-setwd('/mnt/Main/FIADB/buildfiadb/')
+setwd('~/buildfiadb/')
 
 table_guide <- read.csv("table_guide.csv")
 
@@ -61,7 +76,7 @@ unzip('FIADB_REFERENCE.zip', exdir= 'FIADB_REFERENCE')
 # 3.0 download data tables (entire or state)-----------------------------------
 # use the state postal abbreviation or 'ENTIRE' for all states
 # tested for VA and DE
-state_abbr <- 'ENTIRE'
+state_abbr <- 'DE'
 
 dir.create('FIADB_DATA')
 
@@ -280,7 +295,9 @@ for (i in 1:length(table_scripts)) {
 # connect to the postgres database
 postgres_con <- dbConnect(drv= dbDriver("PostgreSQL"),
                           dbname= dbname,
-                          password= pw)
+                          user= keyring::key_list(service_name)$username,
+                          password= keyring::key_get(service_name,
+                                                     keyring::key_list(service_name)$username))
 
 # run each import script
 for (row in 1:nrow(table_guide)) {
