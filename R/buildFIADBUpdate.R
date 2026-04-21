@@ -8,7 +8,7 @@
 # 
 # can also change the service name if desired
 # keyring::key_set(service = "postgres_database", 
-#                  username = "my_user_name")
+#                  username = "dwalker")
 
 service_name <- "postgres_database"
 
@@ -18,7 +18,7 @@ service_name <- "postgres_database"
 # keyring::key_get(service_name, keyring::key_list(service_name)$username) # pw
 
 # T/F flag for if you want to download the reference/data files
-data_downloaded <- FALSE
+data_downloaded <- TRUE
 
 # download timeout limit set for 5 hours
 # should be sufficient for entire
@@ -39,7 +39,7 @@ library(RPostgreSQL)
 # 5.0 force correct data types
 # 6.0 import the data into postgres
 
-setwd('~/buildfiadb/')
+setwd('/mnt/Main/FIADB/buildfiadb/')
 
 table_guide <- read.csv("table_guide.csv")
 
@@ -76,7 +76,7 @@ unzip('FIADB_REFERENCE.zip', exdir= 'FIADB_REFERENCE')
 # 3.0 download data tables (entire or state)-----------------------------------
 # use the state postal abbreviation or 'ENTIRE' for all states
 # tested for VA and DE
-state_abbr <- 'DE'
+state_abbr <- 'ENTIRE'
 
 dir.create('FIADB_DATA')
 

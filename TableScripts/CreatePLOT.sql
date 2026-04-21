@@ -191,6 +191,7 @@ comment on column fs_fiadb.plot.grnd_lyr_sampling_status_cd
 comment on column fs_fiadb.plot.grnd_lyr_sampling_method_cd
   is 'Ground Layer sampling method code';
 create index PLT_CTY_FK_I on FS_FIADB.PLOT (CTY_CN);
+create index PLOT_PREV_PLT_CN on FS_FIADB.PLOT (PREV_PLT_CN, CN);
 create index PLT_SRV_FK_I on FS_FIADB.PLOT (SRV_CN);
 alter table FS_FIADB.PLOT add constraint PLT_PK primary key (CN);
 alter table FS_FIADB.PLOT add constraint PLT_UK unique (STATECD, UNITCD, COUNTYCD, INVYR, PLOT);

@@ -79,6 +79,7 @@ comment on column fs_fiadb.pop_stratum.adj_factor_grndlyr_microquad
   is 'For plots that implement the optional Ground Layer indicator this is the ratio of the total area of the micro-quad footprint to the area of the micro-quad footprint that was actually sampled. This value will be equal to or greater than 1.';
 comment on column fs_fiadb.pop_stratum.adj_factor_soil
   is 'Ratio of points that were sampled for soil to target number of points for all partially and fully sampled plots in stratum.';
+create index POP_STRATUM_EVALID_RSCD on FS_FIADB.POP_STRATUM (RSCD, EVALID);
 create index PSM_PEU_FK_I on FS_FIADB.POP_STRATUM (ESTN_UNIT_CN);
 alter table FS_FIADB.POP_STRATUM add constraint PSM_PK primary key (CN);
 alter table FS_FIADB.POP_STRATUM add constraint PSM_UK unique (ESTN_UNIT, EVALID, RSCD, STRATUMCD);

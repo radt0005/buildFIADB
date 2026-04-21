@@ -237,6 +237,7 @@ comment on column fs_fiadb.tree_grm_component.modified_date
   is 'Modified Date';
 create index TRE_GRM_CMP_IND1 on FS_FIADB.TREE_GRM_COMPONENT (PLT_CN);
 create index TRE_GRM_CMP_IND3 on FS_FIADB.TREE_GRM_COMPONENT (STATECD);
+create index TREE_GRM_COMPONENT_IDX1 on FS_FIADB.TREE_GRM_COMPONENT (TRE_CN, SUBP_COMPONENT_AL_FOREST);
 create index TRE_GRM_CMP_IND2 on FS_FIADB.TREE_GRM_COMPONENT (PREV_TRE_CN);
 alter table FS_FIADB.TREE_GRM_COMPONENT add constraint TRE_GRM_CMP_PK primary key (TRE_CN);
 alter table FS_FIADB.TREE_GRM_COMPONENT add constraint TRE_GRM_CMP_FK foreign key (TRE_CN) references FS_FIADB.TREE (CN);

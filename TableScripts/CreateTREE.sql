@@ -597,6 +597,7 @@ comment on column fs_fiadb.tree.abnormal_termination
   is 'Code indicating if the bole is abnormally terminated, 0 = no, 1 = yes';
 create index TRE_PLT_FK_I on FS_FIADB.TREE (PLT_CN);
 create index TRE_NAT_I on FS_FIADB.TREE (INVYR, UNITCD, PLOT, TREE, SUBP, STATECD, COUNTYCD);
+create index TREE_PREV_IDX1 on FS_FIADB.TREE (CN, SPCD, PLT_CN, PREVCOND, CONDID, PREV_TRE_CN, VOLCFSND);
 create index TRE_SPCD on FS_FIADB.TREE (SPCD);
 create index TRE_SPGRPCD on FS_FIADB.TREE (SPGRPCD);
 create index TRE_PLT_CN_CONDID on FS_FIADB.TREE (PLT_CN, CONDID);

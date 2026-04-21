@@ -1,26 +1,25 @@
 CREATE TABLE fs_fiadb.ref_species
 (
 spcd                         DOUBLE PRECISION,
-common_name                  VARCHAR(100) NOT NULL,
+common_name                  VARCHAR(100),
 shared_common_name_ind       CHAR(1),
-genus                        VARCHAR(4000),
-species                      VARCHAR(4000),
-variety                      VARCHAR(4000),
-subspecies                   VARCHAR(4000),
-scientific_name              VARCHAR(4000),
+genus                        VARCHAR(400),
+species                      VARCHAR(400),
+variety                      VARCHAR(400),
+subspecies                   VARCHAR(400),
+scientific_name              VARCHAR(2842),
 species_symbol               VARCHAR(10),
-e_spgrpcd                    DOUBLE PRECISION,
-w_spgrpcd                    DOUBLE PRECISION,
-c_spgrpcd                    DOUBLE PRECISION,
-p_spgrpcd                    DOUBLE PRECISION,
-major_spgrpcd                DOUBLE PRECISION,
-stocking_spgrpcd             DOUBLE PRECISION,
-forest_type_spgrpcd          DOUBLE PRECISION,
-jenkins_spgrpcd              DOUBLE PRECISION,
+e_spgrpcd                    INTEGER,
+w_spgrpcd                    INTEGER,
+c_spgrpcd                    INTEGER,
+p_spgrpcd                    INTEGER,
+major_spgrpcd                INTEGER,
+stocking_spgrpcd             INTEGER,
+forest_type_spgrpcd          INTEGER,
+jenkins_spgrpcd              INTEGER,
 jenkins_sapling_adjustment   DOUBLE PRECISION,
-sitetree                     VARCHAR(1),
-sftwd_hrdwd                  VARCHAR(1),
-woodland                     VARCHAR(1),
+sftwd_hrdwd                  VARCHAR(10),
+woodland                     VARCHAR(10),
 wood_spgr_greenvol_drywt     DOUBLE PRECISION,
 wood_spgr_greenvol_drywt_cit DOUBLE PRECISION,
 bark_spgr_greenvol_drywt     DOUBLE PRECISION,
@@ -78,8 +77,6 @@ comment on column fs_fiadb.ref_species.jenkins_spgrpcd
   is 'A grouping code used for reporting the Jenkins species group.';
 comment on column fs_fiadb.ref_species.jenkins_sapling_adjustment
   is 'Jenkins sapling adjusment factor for estimation of sapling biomass (Heath et al. 2009)';
-comment on column fs_fiadb.ref_species.sitetree
-  is 'A Y/N flag indicating if the species serves as a valid site tree within the FIA program';
 comment on column fs_fiadb.ref_species.sftwd_hrdwd
   is 'A high-level classification of a species as either hardwood (angiosperm) or softwood (gynmosperm)';
 comment on column fs_fiadb.ref_species.woodland
@@ -124,3 +121,4 @@ comment on column fs_fiadb.ref_species.created_date
   is 'The date on which the TAXA record was originally created.';
 comment on column fs_fiadb.ref_species.modified_date
   is 'The date on which the TAXA record was last modified.';
+create index RS_SPCD on FS_FIADB.REF_SPECIES (SPCD);

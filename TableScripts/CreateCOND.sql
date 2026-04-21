@@ -462,6 +462,7 @@ comment on column fs_fiadb.cond.forest_cond_status_change_cd
   is 'Forest land condition status change code';
 create index CND_NAT_I on FS_FIADB.COND (INVYR, PLOT, COUNTYCD, UNITCD, CONDID, STATECD);
 create index CND_PLT_FK_I on FS_FIADB.COND (PLT_CN);
+create index IDX$$_10CBE0001 on FS_FIADB.COND (COND_STATUS_CD);
 alter table FS_FIADB.COND add constraint CND_PK primary key (CN);
 alter table FS_FIADB.COND add constraint CND_UK unique (CONDID, PLT_CN);
 alter table FS_FIADB.COND add constraint CND_PLT_FK foreign key (PLT_CN) references FS_FIADB.PLOT (CN);
