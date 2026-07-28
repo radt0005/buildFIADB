@@ -121,4 +121,5 @@ comment on column fs_fiadb.ref_species.created_date
   is 'The date on which the TAXA record was originally created.';
 comment on column fs_fiadb.ref_species.modified_date
   is 'The date on which the TAXA record was last modified.';
+create index RS_WOODLAND on FS_FIADB.REF_SPECIES (WOODLAND);
 create index RS_SPCD on FS_FIADB.REF_SPECIES (SPCD);
