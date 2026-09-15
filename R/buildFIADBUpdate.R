@@ -1,21 +1,9 @@
 # making fiadb on a postgres database
 
-# if db requires password use keyring package to store/access safely
-# library(keyring)
-#
-# the below is an example where "my_user_name"
-# should be changed to the user with access to the postgres db
-# 
-# can also change the service name if desired
-# keyring::key_set(service = "postgres_database", 
-#                  username = "dwalker")
-
-service_name <- "postgres_database"
-
-
-# these will be supplied to the dbConnect call for postgres
-# keyring::key_list(service_name)$username # username
-# keyring::key_get(service_name, keyring::key_list(service_name)$username) # pw
+# Postgres admin connection is handled by pg_admin_connect() (R/pg_admin_connect.R):
+# Unix-socket peer auth using the OS user when available (no password needed),
+# else TCP + FIADB_ADMIN_USER/FIADB_ADMIN_PASSWORD env vars. Replaces the old
+# keyring-based approach -- see R/pg_admin_connect.R for details.
 
 # T/F flag for if you want to download the reference/data files
 data_downloaded <- TRUE
@@ -26,7 +14,9 @@ options(timeout = max(60*60*5, getOption("timeout")))
 
 library(RSQLite)
 library(data.table)
-library(RPostgreSQL)
+library(RPostgres)
+
+source("R/pg_admin_connect.R")
 
 # 1.0 install postgres
 # 1.1 make a database
@@ -293,11 +283,9 @@ for (i in 1:length(table_scripts)) {
 #
 # 4.1 create postgres tables---------------------------------------------------
 # connect to the postgres database
-postgres_con <- dbConnect(drv= dbDriver("PostgreSQL"),
-                          dbname= dbname,
-                          user= keyring::key_list(service_name)$username,
-                          password= keyring::key_get(service_name,
-                                                     keyring::key_list(service_name)$username))
+# uses pg_admin_connect(): Unix-socket peer auth (OS user, no password) when
+# available, else TCP + FIADB_ADMIN_USER/FIADB_ADMIN_PASSWORD env vars.
+postgres_con <- pg_admin_connect(dbname = dbname)
 
 # run each import script
 for (row in 1:nrow(table_guide)) {
