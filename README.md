@@ -24,10 +24,15 @@ source("R/buildFIADB.R")
 buildFIADB(dbname = "fiadb", state_abbr = "DE", download = TRUE)
 ```
 
-* `dbname` -- the target Postgres database (must already exist, see above).
+* `dbname` -- the target Postgres database (must already exist, see above). Lower-cased automatically (an unquoted `CREATE DATABASE` folds its name, but the connection itself doesn't, so a mixed-case name would otherwise silently fail to connect).
 * `state_abbr` -- a single two-letter postal abbreviation, or `'ENTIRE'` for all states and territories. (A vector of multiple states is not supported -- call `buildFIADB()` once per state instead.)
-* `download` -- `TRUE` to fetch fresh reference/data zips from the DataMart, `FALSE` to reuse zips already in `root_dir` (e.g. retrying after a failure without re-downloading).
+* `download` -- `TRUE` to fetch fresh reference/data zips from the DataMart, `FALSE` to reuse zips already in `root_dir` (e.g. retrying after a failure without re-downloading -- note the file must be named exactly `FIADB_DATA.zip`/`FIADB_REFERENCE.zip` regardless of what DataMart itself called it).
 * `root_dir` -- the buildFIADB repo root (contains `table_guide.csv`, `makeTableScripts/`, etc.); defaults to the current working directory.
+* `prompt` -- whether to interactively confirm before refreshing the permanent `REF_PERM/REF_POP_ATTRIBUTE.csv` copy (see below). Defaults to `interactive()`; pass `prompt = FALSE` explicitly for an unattended/scripted run (e.g. a long `ENTIRE` build you don't want blocking on input) even from an interactive session.
+* `log_file` -- path to append timestamped log messages to, in addition to the console. Defaults to `"buildFIADB.log"`; `NULL` disables file logging.
+* `notify_email` -- an email address (or vector of addresses) to notify via the system `mail` command for loud warnings raised during the run. `NULL` (default) disables. Useful paired with `prompt = FALSE` for an unattended run. Best-effort -- depends on this machine's mail transport actually being configured to deliver; test with `echo "test" | mail -s "test" you@example.com` first if you're relying on it.
+
+**`REF_POP_ATTRIBUTE` drift guard:** `REF_POP_ATTRIBUTE.SQL_QUERY`/`SQL_QUERY_SE` are hand-authored SQL templates that FIADB.diRect's `GB_est()`/`TREE_obs()`/`PLOT_obs()` execute directly, and DataMart's public export of this table has previously vanished entirely -- so it's permanently pinned to `REF_PERM/REF_POP_ATTRIBUTE.csv` rather than sourced fresh each run. Every run still checks the live download against the pin, and if it's a validated superset (same-or-more `ATTRIBUTE_NBR`s, none newly blank, same columns), offers to refresh the pin -- interactively with `prompt = TRUE`, or only logging/warning/emailing (never auto-applying) with `prompt = FALSE`. A dated backup is always taken first.
 
 After downloading the reference and data files, the script:
 
