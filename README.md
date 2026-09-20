@@ -4,11 +4,30 @@ This repository is designed to allow a user to build a local copy of FIADB in Po
 
 ### How do I get set up? ###
 
-Almost everything is run via R. Assumes destination computer already has PostgreSQL installed. The creation of the database is set up to work on Linux. Other platforms will need an alternate method.
+Almost everything is run via R, through the `buildFIADB()` function in `R/buildFIADB.R`. (`R/buildFIADBUpdate.R` is an older, pre-`buildFIADB()` script kept only for reference -- don't start there.)
 
-To start, open the script 'R/buildFIADBUpdate.R'. Section 1.1 will have a variable ('dbname') that the user needs to set. This should be the name of the postgres database where you want to put FIADB. If you're on Linux you can create a database in the R script. Otherwise, an external tool (pgAdmin, psql) should be used.
+Assumes destination computer already has PostgreSQL installed, with two roles already set up by a Postgres admin (one-time, not done by this function):
 
-You can specify which state to download and build by setting the 'state_abbr' variable (in section 3.0) to the two-digit postal abbrevation (or 'ENTIRE' for all states and territories).
+* A `NOLOGIN` admin role (e.g. `fiadb_admin`) that owns the target database, and that your own Postgres role has been granted membership in (`GRANT fiadb_admin TO <you>;`).
+* The target database itself, owned by that admin role. Since neither the admin role nor a regular per-user role has `CREATEDB` (by design -- see `R/pg_admin_connect.R`), creating a new database is a one-time step run as the Postgres superuser:
+
+  ```bash
+  sudo -u postgres psql -c "CREATE DATABASE <dbname> OWNER fiadb_admin;"
+  ```
+
+See `R/pg_admin_connect.R` for the full connection-resolution details (Unix-socket peer auth + `SET ROLE` on Linux/Mac, `FIADB_ADMIN_USER`/`FIADB_ADMIN_PASSWORD` env vars over TCP elsewhere, e.g. Windows).
+
+Once that's done, from the repo root in R:
+
+```r
+source("R/buildFIADB.R")
+buildFIADB(dbname = "fiadb", state_abbr = "DE", download = TRUE)
+```
+
+* `dbname` -- the target Postgres database (must already exist, see above).
+* `state_abbr` -- a single two-letter postal abbreviation, or `'ENTIRE'` for all states and territories. (A vector of multiple states is not supported -- call `buildFIADB()` once per state instead.)
+* `download` -- `TRUE` to fetch fresh reference/data zips from the DataMart, `FALSE` to reuse zips already in `root_dir` (e.g. retrying after a failure without re-downloading).
+* `root_dir` -- the buildFIADB repo root (contains `table_guide.csv`, `makeTableScripts/`, etc.); defaults to the current working directory.
 
 After downloading the reference and data files, the script:
 

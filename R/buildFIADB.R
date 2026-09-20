@@ -54,6 +54,196 @@ sqliteTypeToOracleRow <- function(sqlite_type) {
   }
 }
 
+# Prints/warns msg (so it's visible the normal R way) and, if log_file isn't
+# NULL, also appends a timestamped copy to it -- so a non-interactive run
+# (cron, a wrapper script) leaves a record even if nobody was watching the
+# console. Never lets a logging problem (e.g. an unwritable path) stop the
+# build: a failure to write the log file is itself just a message().
+logMsg <- function(msg, log_file) {
+  line <- paste0("[", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), "] ", msg)
+  message(line)
+  if (!is.null(log_file)) {
+    ok <- tryCatch({
+      cat(line, "\n", file = log_file, append = TRUE)
+      TRUE
+    }, error = function(e) FALSE)
+    if (!ok) message("(could not write to log_file '", log_file, "')")
+  }
+  invisible(line)
+}
+
+# Best-effort email via the system 'mail' command -- never fatal, and a
+# no-op if 'to' is NULL. Whether it actually delivers depends on this
+# machine's mail transport being configured; not verified here.
+notifyEmail <- function(subject, body, to) {
+  if (is.null(to)) return(invisible(FALSE))
+  ok <- tryCatch({
+    system2("mail", c("-s", shQuote(subject), to), input = body) == 0
+  }, error = function(e) FALSE)
+  if (!ok) {
+    message("Note: could not send notification email to ",
+            paste(to, collapse = ", "),
+            " (is 'mail'/'mailx' installed and configured to deliver?)")
+  }
+  invisible(ok)
+}
+
+# See the "REF_POP_ATTRIBUTE drift guard" section of buildFIADB()'s Details
+# for the full rationale. Compares this run's freshly-downloaded
+# FIADB_REFERENCE/REF_POP_ATTRIBUTE.csv against the permanently-pinned
+# REF_PERM/REF_POP_ATTRIBUTE.csv that the actual import always reads from
+# (table_guide.csv routes this table's csv_location to REF_PERM, and that
+# is deliberately NOT changed here -- see the buildFIADB() call site for
+# why retargeting csv_location itself would be both unnecessary and unsafe
+# for this particular table). If the live download looks like a strictly
+# safe upgrade (same-or-more ATTRIBUTE_NBRs, none newly blank, same
+# columns), offers to promote it into REF_PERM; if not run interactively,
+# only logs/warns/emails -- it never rewrites REF_PERM on its own.
+# Wrapped in tryCatch at the call site so a bug in this guard can never
+# break the main build.
+checkRefPopAttributeDrift <- function(prompt, log_file, notify_email) {
+  perm_file <- file.path("REF_PERM", "REF_POP_ATTRIBUTE.csv")
+  live_file <- file.path("FIADB_REFERENCE", "REF_POP_ATTRIBUTE.csv")
+
+  if (!file.exists(live_file)) {
+    logMsg("REF_POP_ATTRIBUTE.csv not present in this DataMart download -- staying on the permanent REF_PERM copy.", log_file)
+    return(invisible(FALSE))
+  }
+  if (!file.exists(perm_file)) {
+    logMsg("No permanent REF_PERM/REF_POP_ATTRIBUTE.csv found to compare against -- skipping the drift guard.", log_file)
+    return(invisible(FALSE))
+  }
+
+  perm <- read.csv(perm_file, stringsAsFactors = FALSE)
+  live <- read.csv(live_file, stringsAsFactors = FALSE)
+
+  sql_cols <- c("SQL_QUERY", "SQL_QUERY_SE")
+  if (!all(c("ATTRIBUTE_NBR", sql_cols) %in% names(live))) {
+    logMsg("This download's REF_POP_ATTRIBUTE.csv is missing expected column(s) -- staying on the permanent REF_PERM copy.", log_file)
+    return(invisible(FALSE))
+  }
+
+  # Precondition: a straight CSV swap only makes sense if the column set
+  # still matches what TableScriptsPerm/CreateREF_POP_ATTRIBUTE.sql
+  # declares (a *column*-level change is a bigger deal than a data refresh
+  # and needs a human to update that script too).
+  if (!setequal(names(perm), names(live))) {
+    msg <- paste0(
+      "REF_POP_ATTRIBUTE's live DataMart export now has a different column set ",
+      "than the permanent REF_PERM copy -- added: [",
+      paste(setdiff(names(live), names(perm)), collapse = ", "), "], removed: [",
+      paste(setdiff(names(perm), names(live)), collapse = ", "), "]. This needs ",
+      "manual review (and likely an update to ",
+      "TableScriptsPerm/CreateREF_POP_ATTRIBUTE.sql) -- not auto-refreshing."
+    )
+    logMsg(msg, log_file)
+    warning(msg, call. = FALSE)
+    notifyEmail("buildFIADB: REF_POP_ATTRIBUTE column drift needs manual review", msg, notify_email)
+    return(invisible(FALSE))
+  }
+
+  blank <- function(x) is.na(x) | trimws(x) == ""
+  live_blank_attrs <- live$ATTRIBUTE_NBR[blank(live$SQL_QUERY) | blank(live$SQL_QUERY_SE)]
+
+  # No regression: every ATTRIBUTE_NBR already trusted (in the permanent
+  # copy) must still be present in the live download, and non-blank there.
+  missing_attrs <- setdiff(perm$ATTRIBUTE_NBR, live$ATTRIBUTE_NBR)
+  regressed_attrs <- intersect(perm$ATTRIBUTE_NBR, live_blank_attrs)
+
+  if (length(missing_attrs) > 0 || length(regressed_attrs) > 0) {
+    msg <- paste0(
+      "REF_POP_ATTRIBUTE in this DataMart download looks WORSE than the permanent ",
+      "REF_PERM copy -- staying pinned.",
+      if (length(missing_attrs) > 0) paste0(
+        " ", length(missing_attrs), " previously-known ATTRIBUTE_NBR(s) missing entirely: ",
+        paste(head(missing_attrs, 10), collapse = ", "),
+        if (length(missing_attrs) > 10) ", ..." else "", "."
+      ) else "",
+      if (length(regressed_attrs) > 0) paste0(
+        " ", length(regressed_attrs), " previously-known ATTRIBUTE_NBR(s) now have blank ",
+        "SQL_QUERY/SQL_QUERY_SE: ", paste(head(regressed_attrs, 10), collapse = ", "),
+        if (length(regressed_attrs) > 10) ", ..." else "", "."
+      ) else ""
+    )
+    logMsg(msg, log_file)
+    warning(msg, call. = FALSE)
+    notifyEmail("buildFIADB: REF_POP_ATTRIBUTE regression detected in DataMart export", msg, notify_email)
+    return(invisible(FALSE))
+  }
+
+  # Don't promote a copy whose *new* rows are half-populated either -- only
+  # the previously-known set was checked above.
+  new_attrs <- setdiff(live$ATTRIBUTE_NBR, perm$ATTRIBUTE_NBR)
+  new_blank_attrs <- intersect(new_attrs, live_blank_attrs)
+
+  if (length(new_blank_attrs) > 0) {
+    msg <- paste0(
+      length(new_blank_attrs), " new ATTRIBUTE_NBR(s) in this download have blank ",
+      "SQL_QUERY/SQL_QUERY_SE: ", paste(head(new_blank_attrs, 10), collapse = ", "),
+      if (length(new_blank_attrs) > 10) ", ..." else "",
+      ". Staying on the permanent REF_PERM copy rather than promoting a partially-blank set."
+    )
+    logMsg(msg, log_file)
+    warning(msg, call. = FALSE)
+    notifyEmail("buildFIADB: REF_POP_ATTRIBUTE new rows incomplete", msg, notify_email)
+    return(invisible(FALSE))
+  }
+
+  # Everything checks out. Also surface *changed* (but non-blank) SQL text
+  # for attributes present in both -- not unsafe the way a blank is, but
+  # useful information about what a refresh would actually change.
+  common_attrs <- intersect(perm$ATTRIBUTE_NBR, live$ATTRIBUTE_NBR)
+  p <- perm[match(common_attrs, perm$ATTRIBUTE_NBR), ]
+  l <- live[match(common_attrs, live$ATTRIBUTE_NBR), ]
+  changed_attrs <- common_attrs[p$SQL_QUERY != l$SQL_QUERY | p$SQL_QUERY_SE != l$SQL_QUERY_SE]
+
+  summary_msg <- paste0(
+    "REF_POP_ATTRIBUTE in this DataMart download validates cleanly against the permanent ",
+    "REF_PERM copy: all ", length(common_attrs), " previously-known ATTRIBUTE_NBR(s) still ",
+    "present and non-blank; ", length(new_attrs), " new one(s)",
+    if (length(new_attrs) > 0) paste0(" (", paste(head(new_attrs, 15), collapse = ", "),
+                                       if (length(new_attrs) > 15) ", ..." else "", ")") else "",
+    "; ", length(changed_attrs), " existing one(s) with changed (still non-blank) SQL text",
+    if (length(changed_attrs) > 0) paste0(" (", paste(head(changed_attrs, 15), collapse = ", "),
+                                           if (length(changed_attrs) > 15) ", ..." else "", ")") else "",
+    "."
+  )
+  logMsg(summary_msg, log_file)
+
+  do_refresh <- FALSE
+  if (isTRUE(prompt)) {
+    cat("\n", summary_msg, "\n\n",
+        "Refresh the permanent copy (REF_PERM/REF_POP_ATTRIBUTE.csv) with this ",
+        "validated download? A dated backup is kept first. [y/N]: ", sep = "")
+    ans <- tolower(trimws(readline()))
+    do_refresh <- identical(ans, "y") || identical(ans, "yes")
+  } else {
+    msg <- paste0(
+      "Running non-interactively: NOT auto-refreshing REF_PERM/REF_POP_ATTRIBUTE.csv, even ",
+      "though this download validated cleanly. Re-run with prompt = TRUE (interactively) to ",
+      "review and apply it. ", summary_msg
+    )
+    logMsg(msg, log_file)
+    warning(msg, call. = FALSE)
+    notifyEmail("buildFIADB: validated REF_POP_ATTRIBUTE refresh available", msg, notify_email)
+  }
+
+  if (do_refresh) {
+    bak_file <- file.path("REF_PERM", paste0("REF_POP_ATTRIBUTE_", format(Sys.Date(), "%Y%m%d"), ".bak.csv"))
+    if (file.exists(bak_file)) {
+      stop(
+        "Backup '", bak_file, "' already exists -- refusing to overwrite an existing ",
+        "backup. Remove or rename it first if you really want to refresh again today."
+      )
+    }
+    file.copy(perm_file, bak_file)
+    file.copy(live_file, perm_file, overwrite = TRUE)
+    logMsg(paste0("Refreshed REF_PERM/REF_POP_ATTRIBUTE.csv from this download (backup: ", bak_file, ")."), log_file)
+  }
+
+  invisible(do_refresh)
+}
+
 #' Build or refresh the FIADB PostgreSQL database from the FIA DataMart
 #'
 #' Downloads the FIADB reference and data tables from the FIA DataMart
@@ -64,7 +254,11 @@ sqliteTypeToOracleRow <- function(sqlite_type) {
 #' refresh, since both do the same full rebuild.
 #'
 #' @param dbname Character. Target PostgreSQL database name. Default
-#'   \code{"fiadb"}.
+#'   \code{"fiadb"}. Lower-cased automatically: an unquoted
+#'   \code{CREATE DATABASE} folds its name to lowercase, but the connection
+#'   parameter used to reach it is not folded, so a mixed-case name here
+#'   would otherwise silently fail to connect ("database does not exist")
+#'   even though the database is really there.
 #' @param state_abbr Character scalar. A single state postal abbreviation
 #'   (e.g. \code{"DE"}) or \code{"ENTIRE"} for the whole country. Multiple
 #'   states in one call are not yet supported (see Details).
@@ -77,6 +271,25 @@ sqliteTypeToOracleRow <- function(sqlite_type) {
 #'   \code{makeTableScripts/}, \code{TableScripts/}, etc. (i.e. the
 #'   buildFIADB repo root). Default is the current working directory. The
 #'   caller's working directory is restored on exit either way.
+#' @param prompt Logical. Whether to interactively ask before refreshing
+#'   the permanent \code{REF_PERM/REF_POP_ATTRIBUTE.csv} copy when this
+#'   download's version validates cleanly (see Details). Default
+#'   \code{interactive()} -- \code{FALSE} in a non-interactive/scripted run,
+#'   which logs and warns loudly instead of prompting (and emails
+#'   \code{notify_email}, if set) rather than blocking on input.
+#' @param log_file Character or \code{NULL}. Path (relative to
+#'   \code{root_dir} unless absolute) to append timestamped log messages
+#'   to, in addition to \code{message()}/\code{warning()}. Default
+#'   \code{"buildFIADB.log"}. \code{NULL} disables file logging.
+#' @param notify_email Character vector of email addresses, or \code{NULL}
+#'   (the default) to disable. When set, a notification is sent via the
+#'   system \code{mail} command for loud, actionable warnings raised during
+#'   the run (currently just the \code{REF_POP_ATTRIBUTE} drift guard, see
+#'   Details) -- most useful combined with \code{prompt = FALSE} for an
+#'   unattended/cron-style run, so a sysadmin finds out even though nobody
+#'   was watching the console. Best-effort: a failure to send never stops
+#'   the build, it just prints a note. Depends on this machine's \code{mail}
+#'   command actually being configured to deliver (not verified here).
 #'
 #' @details
 #' \strong{Multiple states:} passing a vector like \code{c("DE","VA")}
@@ -91,6 +304,23 @@ sqliteTypeToOracleRow <- function(sqlite_type) {
 #' and, if applicable, a reader role for regular query access
 #' (\code{fiadb_reader}). See \code{R/pg_admin_connect.R} and the
 #' project README.
+#'
+#' \strong{REF_POP_ATTRIBUTE drift guard:} \code{REF_POP_ATTRIBUTE}'s
+#' \code{SQL_QUERY}/\code{SQL_QUERY_SE} columns are hand-authored SQL query
+#' templates that FIADB.diRect's \code{GB_est()}/\code{TREE_obs()}/
+#' \code{PLOT_obs()} execute directly -- not just reference metadata. This
+#' table has previously vanished from DataMart's public export entirely
+#' (see \code{table_guide.csv}'s \code{REF_PERM} routing for it), so it's
+#' permanently pinned to \code{REF_PERM/REF_POP_ATTRIBUTE.csv} rather than
+#' sourced from each live download like other reference tables. Every run
+#' still checks the freshly-downloaded copy (if DataMart has one) against
+#' the pinned copy: if it has every \code{ATTRIBUTE_NBR} the pin has (with
+#' non-blank SQL), plus any new ones also non-blank, and the same column
+#' set, it's treated as a validated upgrade candidate. Interactively, you're
+#' asked before the pin is touched; non-interactively, it's only logged/
+#' warned/emailed -- never refreshed automatically. A dated backup is
+#' always taken first. See \code{ref_perm_csv_perm_purpose} in project
+#' memory for the full investigation.
 #'
 #' @return Invisibly, \code{TRUE} on success.
 #'
@@ -107,7 +337,10 @@ sqliteTypeToOracleRow <- function(sqlite_type) {
 buildFIADB <- function(dbname = "fiadb",
                         state_abbr = "ENTIRE",
                         download = TRUE,
-                        root_dir = getwd()) {
+                        root_dir = getwd(),
+                        prompt = interactive(),
+                        log_file = "buildFIADB.log",
+                        notify_email = NULL) {
 
   if (length(state_abbr) != 1) {
     stop(
@@ -117,6 +350,11 @@ buildFIADB <- function(dbname = "fiadb",
       "once per state instead."
     )
   }
+
+  # An unquoted CREATE DATABASE folds its name to lowercase, but the dbname
+  # connection parameter is not folded -- so a mixed-case name here would
+  # otherwise silently fail to connect even though the database exists.
+  dbname <- tolower(dbname)
 
   old_wd <- getwd()
   on.exit(setwd(old_wd), add = TRUE)
@@ -138,13 +376,12 @@ buildFIADB <- function(dbname = "fiadb",
   )
   if (inherits(postgres_con, "error")) {
     stop(
-      "Could not open the admin connection to PostgreSQL database '", dbname, "'.\n",
-      "This requires one-time setup by a Postgres admin: the '", dbname, "' database ",
-      "and a NOLOGIN admin role (e.g. 'fiadb_admin') must already exist, and your own ",
-      "Postgres role must be a member of it (GRANT fiadb_admin TO <you>;). If your ",
-      "admin role isn't named 'fiadb_admin', set the FIADB_ADMIN_USER environment ",
-      "variable (and FIADB_ADMIN_PASSWORD if not using Unix-socket peer auth).\n",
-      "Original error: ", conditionMessage(postgres_con)
+      "Can't connect to Postgres database '", dbname, "' as fiadb_admin.\n",
+      "Postgres says: ", conditionMessage(postgres_con), "\n\n",
+      "Most common fix -- the database doesn't exist yet; create it as the ",
+      "Postgres superuser, owned by fiadb_admin:\n",
+      "  sudo -u postgres psql -c \"CREATE DATABASE ", dbname, " OWNER fiadb_admin;\"\n\n",
+      "If that doesn't fix it, see R/pg_admin_connect.R."
     )
   }
   on.exit(try(DBI::dbDisconnect(postgres_con), silent = TRUE), add = TRUE)
@@ -160,6 +397,17 @@ buildFIADB <- function(dbname = "fiadb",
   #
   # 2.1 extract ref tables-------------------------------------------------------
   unzip("FIADB_REFERENCE.zip", exdir = "FIADB_REFERENCE")
+
+  # See "REF_POP_ATTRIBUTE drift guard" above. Never allowed to break the
+  # actual build -- a bug here should degrade to "left the permanent copy
+  # alone", not to a failed rebuild.
+  tryCatch(
+    checkRefPopAttributeDrift(prompt = prompt, log_file = log_file, notify_email = notify_email),
+    error = function(e) {
+      logMsg(paste0("REF_POP_ATTRIBUTE drift guard itself errored (leaving REF_PERM untouched): ",
+                     conditionMessage(e)), log_file)
+    }
+  )
   #
   # 3.0 download data tables (entire or state)-----------------------------------
   dir.create("FIADB_DATA", showWarnings = FALSE)
