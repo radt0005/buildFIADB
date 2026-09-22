@@ -44,6 +44,22 @@ After downloading the reference and data files, the script:
 
 There are also generic SQL scripts for generating population estimates ('pop_scripts/'), making plot/tree datasets ('R/makeDatasetExamples.R'), and comparing estimates from the local installation of FIADB to EVALIDator estimates ('R/makeFIADBEstimates.R', 'makeEVALIDatorEstimates.R', and 'compareEstimates.R')
 
+### RPA modeling add-on (`extendFiadbForRpa()`) ###
+
+Optional, separate from `buildFIADB()` itself -- only needed if you want a database ready for RPA (Resource Planning Act) modeling, not for FIADB in general.
+
+`R/extendFiadbForRpa.R` extends a database `buildFIADB()` already built (normally a full `state_abbr = "ENTIRE"` build) with the materialized views and lookup tables the RPA_FDM modeling pipeline expects. It reads the actual SQL/CSV content it needs **live from an existing RPA_FDM checkout** at run time (default path `/media/rstudio/RPA/RPA_FDM/`), rather than bundling a copy -- so it always uses whatever's currently in RPA_FDM (its `eval_grps.csv` needs periodic updates as new inventory cycles complete), with no separate copy to remember to keep in sync. It does not modify RPA_FDM itself, only reads from it.
+
+```r
+source("R/extendFiadbForRpa.R")
+extendFiadbForRpa(dbname = "fiadb")
+```
+
+* `dbname` -- the already-built target database.
+* `rpa_fdm_path` -- path to an RPA_FDM checkout, if not at its default charcoal2 location.
+
+Creates 3 lookup tables (`rpa_subregions`, `rpa_subregions_islands`, `rpa_subregions_sunit`) and 8 materialized views (`condition`, `condition_change`, `inventory`, `remeasured`, `qmd`, `t1_tree`, `t2_tree`, `tree_cond`) in the `public` schema. Safe to re-run -- existing lookup tables are left alone, and the materialized views are dropped and recreated each time. See the comment block at the top of `R/extendFiadbForRpa.R` for the full investigation, including why two further materialized views present in the original `fiadbnew` database (`t1_qmd`, `t2_qmd`) are deliberately not recreated (confirmed vestigial, not part of the current RPA_FDM pipeline).
+
 ### Who do I talk to? ###
 
 David Walker (walkedm@vt.edu)

@@ -244,6 +244,174 @@ checkRefPopAttributeDrift <- function(prompt, log_file, notify_email) {
   invisible(do_refresh)
 }
 
+# Chunked large-table import -------------------------------------------------
+# Added 2026-09-20 after buildFIADB()'s national (state_abbr="ENTIRE") build
+# twice OOM-killed the R session on the same tables (TREE, then TREE_GRM_ESTN)
+# -- confirmed via kernel logs, see project memory. Root cause: TREE's CSV is
+# "only" 13.3GB but 198 columns wide, so fully materializing it as an R
+# data.frame took ~101.7GB (about a 7.6x raw-bytes-to-memory expansion) --
+# more than a much-taller-but-narrower table like POP_PLOT_STRATUM_ASSGN
+# (23.5M rows, 14 columns, 2.6GB) ever needed despite a similar row count.
+# File size (proportional to rows * columns) is what predicts the risk, not
+# row count alone.
+
+# Total system memory in bytes (Linux: /proc/meminfo; a conservative fixed
+# fallback elsewhere -- this is aimed at charcoal2-scale Linux deployments,
+# not a general cross-platform memory profiler).
+detectTotalMemoryBytes <- function() {
+  meminfo <- "/proc/meminfo"
+  if (file.exists(meminfo)) {
+    line <- grep("^MemTotal:", readLines(meminfo, n = 5), value = TRUE)
+    kb <- suppressWarnings(as.numeric(gsub("[^0-9]", "", line)))
+    if (length(kb) == 1 && !is.na(kb)) return(kb * 1024)
+  }
+  NA_real_
+}
+
+# Target raw CSV bytes per chunk: aim for each chunk's *expanded* in-memory
+# size (raw bytes * mem_expansion) to stay under mem_frac of TOTAL system
+# memory -- not momentarily-available memory, which swings with whatever else
+# is running on a shared machine (observed firsthand the night this was
+# added) and would make chunk-count decisions unpredictable and hard to test.
+# mem_expansion = 8 is a conservative rounding of the ~7.6x TREE expansion
+# above; narrower tables expand less, so this errs safe rather than tight.
+# A machine with half the RAM gets a proportionally smaller target, and so
+# roughly twice as many chunks for the same table -- no manual retuning
+# needed per machine.
+computeChunkTargetBytes <- function(mem_frac = 0.10, mem_expansion = 8,
+                                     fallback_bytes = 2e9) {
+  total_mem <- detectTotalMemoryBytes()
+  if (is.na(total_mem)) return(fallback_bytes)
+  (total_mem * mem_frac) / mem_expansion
+}
+
+# The same per-table data-cleaning updateCSV() used to apply, factored out so
+# it can run once per chunk. Operates on already-uppercase column names (the
+# CSV/Postgres-metadata convention used throughout this file) and returns the
+# cleaned chunk.
+# NOTE: LICHEN_SPECIES_SUMMARY's dedup-by-CN only catches duplicates within
+# a single chunk -- a duplicate CN split across two different chunks would
+# slip through. Not a real risk today (that table is far too small to ever
+# be chunked -- only file-size-triggered chunking applies here), but worth
+# knowing if that ever changed.
+cleanTableChunk <- function(tbl, d) {
+  if (tbl == "LICHEN_SPECIES_SUMMARY" && "CN" %in% names(d)) {
+    d <- d[!duplicated(d$CN), ]
+  }
+  if (tbl == "REF_HABTYP_DESCRIPTION" && "HABTYPCD" %in% names(d)) {
+    d[is.na(d$HABTYPCD), "HABTYPCD"] <- "NA"
+  }
+  if (tbl == "REF_LICHEN_SPP_COMMENTS") {
+    if ("YEAREND" %in% names(d)) d$YEAREND <- as.integer(d$YEAREND)
+    if ("YEARSTART" %in% names(d)) d$YEARSTART <- as.integer(d$YEARSTART)
+  }
+  if (any(names(d) == "modified_date")) {
+    d$modified_date <- as.IDate("2004-03-10 12:05:53 UTC")
+  }
+  d
+}
+
+# Reads, cleans, and imports ONE table (table_guide row `row`) into Postgres.
+# Replaces both the old updateCSV()/Section 5.0 rewrite-to-CSV step and the
+# Section 6.0 import-loop body -- previously every table was fread() twice
+# (once to force types and fwrite() back to CSV_DATA, again to actually
+# import) purely so the import step had something to read; nothing else ever
+# consumed the rewritten CSV, so that round-trip is dropped entirely here.
+# Tables at or under chunk_target_bytes are read in one pass (n_chunks == 1
+# is just the single-chunk case of the same code path below, not a separate
+# branch); larger tables are read/cleaned/imported in row-range chunks via
+# fread()'s skip=/nrows=, with an explicit gc() between chunks -- confirmed
+# the same night that R's own incremental GC does not reliably reclaim a
+# chunk's memory before the next one is read.
+processAndImportTable <- function(row, table_guide, data_guide, postgres_con,
+                                   import_trans, chunk_target_bytes,
+                                   log_file = NULL) {
+  if (is.na(table_guide$file[row])) return(invisible(NULL))
+
+  tbl <- toupper(table_guide$table[row])
+  file_name <- file.path(table_guide$csv_location[row], table_guide$file[row])
+
+  if (!file.exists(file_name)) {
+    stop(paste0("file ", table_guide$file[row], " not found"))
+  }
+
+  sql_recs <- data_guide[data_guide$table_name == tbl, ]
+  var_types <- as.vector(import_trans[sql_recs$data_type])
+  names(var_types) <- toupper(sql_recs$column_name)
+
+  # True on-disk column order/names, via fread's own (quote-aware) header
+  # parsing rather than a manual split -- used for positional colClasses
+  # below, which is unambiguous regardless of whether a given read relies on
+  # the file's real header (header = TRUE) or an explicit col.names= (the
+  # chunked reads, which skip past the header row).
+  header_names <- toupper(names(fread(file_name, nrows = 0)))
+  colclasses_pos <- unname(var_types[header_names])
+
+  if (anyNA(colclasses_pos)) {
+    stop(
+      tbl, ": column(s) in ", file_name, " not found in the live Postgres ",
+      "schema: ", paste(header_names[is.na(colclasses_pos)], collapse = ", "),
+      ". This is the schema-drift case Section 4.0's sqliteTypeToOracleRow() ",
+      "fallback is meant to catch upstream -- if it's showing up here instead, ",
+      "something in that fallback didn't cover this table/column."
+    )
+  }
+
+  file_size <- file.size(file_name)
+  n_chunks <- max(1L, ceiling(file_size / chunk_target_bytes))
+
+  rows_per_chunk <- NA_integer_
+  if (n_chunks > 1) {
+    # wc -l with a filename argument prints "<count> <filename>", not just
+    # the bare number -- extract the leading digits rather than coercing the
+    # whole line (which silently produced NA here during testing, and NA
+    # ends up meaning "no limit" to fread()'s nrows=, defeating chunking
+    # entirely without any visible error).
+    wc_out <- system2("wc", c("-l", shQuote(file_name)), stdout = TRUE)
+    total_rows <- as.integer(sub("^\\s*([0-9]+).*$", "\\1", wc_out)) - 1L
+    rows_per_chunk <- ceiling(total_rows / n_chunks)
+    logMsg(paste0(tbl, ": ", round(file_size / 1e9, 1), "GB -- chunking into ",
+                   n_chunks, " pieces of ~", rows_per_chunk, " rows each"), log_file)
+  }
+
+  cat("running import for", tbl, "\n")
+
+  for (i in seq_len(n_chunks)) {
+    if (n_chunks == 1) {
+      d <- fread(file = file_name, data.table = FALSE, header = TRUE,
+                 colClasses = colclasses_pos)
+    } else {
+      skip_rows <- 1L + (i - 1L) * rows_per_chunk
+      d <- fread(file = file_name, data.table = FALSE, header = FALSE,
+                 skip = skip_rows, nrows = rows_per_chunk,
+                 col.names = header_names, colClasses = colclasses_pos)
+      if (nrow(d) == 0) break  # ran past EOF on the (rounded-up) last chunk
+    }
+
+    names(d) <- toupper(names(d))
+    d <- cleanTableChunk(tbl, d)
+    names(d) <- tolower(names(d))
+
+    result <- try(DBI::dbAppendTable(
+      postgres_con,
+      DBI::Id(schema = "fs_fiadb", table = tolower(tbl)),
+      d
+    ))
+
+    if (inherits(result, "try-error")) {
+      stop("there was an error when copying data into table ", tbl,
+           if (n_chunks > 1) paste0(" (chunk ", i, " of ", n_chunks, ")") else "",
+           ".\nif this error was an invalid syntax or type error, check that ",
+           "colclasses_pos/header_names line up with the file's real columns.")
+    }
+
+    rm(d)
+    if (n_chunks > 1) gc(full = TRUE)
+  }
+
+  invisible(NULL)
+}
+
 #' Build or refresh the FIADB PostgreSQL database from the FIA DataMart
 #'
 #' Downloads the FIADB reference and data tables from the FIA DataMart
@@ -290,6 +458,21 @@ checkRefPopAttributeDrift <- function(prompt, log_file, notify_email) {
 #'   was watching the console. Best-effort: a failure to send never stops
 #'   the build, it just prints a note. Depends on this machine's \code{mail}
 #'   command actually being configured to deliver (not verified here).
+#' @param reimport_only Logical, default \code{FALSE}. \strong{Temporary/
+#'   experimental switch, added 2026-09-20} for quickly re-testing just the
+#'   import step against a run that already got as far as extracting
+#'   \code{FIADB_REFERENCE}/\code{FIADB_DATA}/\code{CSV_DATA} and generating
+#'   \code{TableScripts/*.sql} (e.g. after a crash during import, or while
+#'   iterating on the chunked-import logic itself). When \code{TRUE}, skips
+#'   downloading/extracting entirely (Sections 2 and 3, and the
+#'   \code{REF_POP_ATTRIBUTE} guard) and skips regenerating the CREATE TABLE
+#'   scripts (Section 4.0) -- runs only: \code{pg_admin_connect()}, Section
+#'   4.1 (\code{DROP SCHEMA fs_fiadb CASCADE} + re-run the \emph{existing}
+#'   \code{TableScripts/*.sql} files as-is), and the combined, chunked
+#'   import. Requires \code{FIADB_REFERENCE}, \code{CSV_DATA}, and
+#'   \code{TableScripts} from a prior run to already be present and still
+#'   valid (nothing about the schema/data changed since) -- \code{download}
+#'   and \code{state_abbr} are ignored when this is \code{TRUE}.
 #'
 #' @details
 #' \strong{Multiple states:} passing a vector like \code{c("DE","VA")}
@@ -340,7 +523,8 @@ buildFIADB <- function(dbname = "fiadb",
                         root_dir = getwd(),
                         prompt = interactive(),
                         log_file = "buildFIADB.log",
-                        notify_email = NULL) {
+                        notify_email = NULL,
+                        reimport_only = FALSE) {
 
   if (length(state_abbr) != 1) {
     stop(
@@ -367,6 +551,48 @@ buildFIADB <- function(dbname = "fiadb",
 
   table_guide <- read.csv("table_guide.csv")
 
+  # reimport_only skips straight to Section 4.1 + the chunked import, reusing
+  # a prior normal run's extracted CSVs and generated scripts -- fail fast,
+  # before even trying to connect to Postgres, if that prior output isn't
+  # actually there (or isn't there anymore). Without this, a stale/missing
+  # prior run surfaces as a confusing low-level "file not found" deep inside
+  # Section 4.1 or the import loop instead of a clear, actionable message.
+  if (reimport_only) {
+    missing <- character(0)
+
+    if (!dir.exists("FIADB_REFERENCE") ||
+        length(list.files("FIADB_REFERENCE", pattern = "\\.csv$")) == 0) {
+      missing <- c(missing, "FIADB_REFERENCE/ -- no .csv files found")
+    }
+    if (!dir.exists("CSV_DATA") ||
+        length(list.files("CSV_DATA", pattern = "\\.csv$")) == 0) {
+      missing <- c(missing, "CSV_DATA/ -- no .csv files found")
+    }
+    if (!dir.exists("TableScripts")) {
+      missing <- c(missing, "TableScripts/ -- directory doesn't exist")
+    } else {
+      missing_scripts <- table_guide[!file.exists(file.path(table_guide$script_location, table_guide$oracle)), ]
+      if (nrow(missing_scripts) > 0) {
+        missing <- c(missing, paste0(
+          "TableScripts/ -- ", nrow(missing_scripts), " script(s) referenced by table_guide.csv not ",
+          "found (e.g. ", paste(head(missing_scripts$oracle, 3), collapse = ", "), ")"
+        ))
+      }
+    }
+
+    if (length(missing) > 0) {
+      stop(
+        "reimport_only = TRUE requires FIADB_REFERENCE/, CSV_DATA/, and TableScripts/ from a prior ",
+        "normal run to already be present -- but:\n",
+        paste0("  - ", missing, collapse = "\n"), "\n",
+        "Run buildFIADB() normally at least once first (reimport_only = FALSE, the default), or fix ",
+        "the gap(s) above, before retrying with reimport_only = TRUE. Note this does NOT check that ",
+        "prior output still matches the current table_guide.csv/data_types.csv -- only that the ",
+        "expected files exist."
+      )
+    }
+  }
+
   # 1.0 confirm Postgres access ------------------------------------------------
   # Fail fast, before any downloading, if the one-time database/role setup
   # hasn't been done -- rather than discovering it after a multi-hour pull.
@@ -386,6 +612,13 @@ buildFIADB <- function(dbname = "fiadb",
   }
   on.exit(try(DBI::dbDisconnect(postgres_con), silent = TRUE), add = TRUE)
 
+  # reimport_only skips Sections 2/3 (download/extract) and 4.0 (script
+  # generation) entirely -- see @param reimport_only. Everything in this
+  # block populates objects (sql_tables, type_guide, comp, type_to_run,
+  # TableScripts/*.sql) that only Section 4.0/4.1 itself consumes; nothing
+  # downstream in the combined 5.0/6.0 import needs them (it re-derives
+  # data_guide fresh from Postgres's live schema instead).
+  if (!reimport_only) {
   #
   # 2.0 download ref tables------------------------------------------------------
   ref_loc <- "https://apps.fs.usda.gov/fia/datamart/CSV/FIADB_REFERENCE.zip"
@@ -645,6 +878,7 @@ buildFIADB <- function(dbname = "fiadb",
     cat(info[[1]])
     sink()
   }
+  } # end if (!reimport_only) -- Sections 2, 3, 4.0
   #
   # 4.1 create postgres tables---------------------------------------------------
   # run each import script. Split on statement-terminating ';' (handling both
@@ -668,10 +902,14 @@ buildFIADB <- function(dbname = "fiadb",
     lapply(qLines, function(x) dbExecute(postgres_con, x))
   }
   #
-  # 5.0 force correct data types-------------------------------------------------
-  # the data types from sqlite don't always match what postgres needs, so grab
-  # all the data types from postgres, then use data.table::fread to force the
-  # correct types
+  # 5.0/6.0 force correct data types AND import into postgres, one table at a
+  # time (chunked for large ones) ------------------------------------------
+  # Was two separate full passes over every table (5.0 force-types + rewrite
+  # CSV_DATA, then 6.0 re-read + import) -- merged into one pass per table
+  # 2026-09-20, since nothing ever consumed 5.0's rewritten CSV; that was
+  # pure double I/O and double memory churn. See processAndImportTable()'s
+  # own comment above for the chunking rationale (this run OOM-killed twice
+  # on TREE/TREE_GRM_ESTN at national scale before this was added).
   table_descriptions <- dbGetQuery(postgres_con,
                                    "select
                                    table_name,
@@ -693,69 +931,6 @@ buildFIADB <- function(dbname = "fiadb",
 
   data_guide <- table_descriptions[table_descriptions$table_name %in% table_guide$table, ]
 
-  table_list <- sort(unique(data_guide$table_name))
-
-  has_csv <- table_guide[!is.na(table_guide$csv_location), ]$table
-
-  table_list <- table_list[table_list %in% has_csv]
-
-  # this function reads in each data files, forces the correct data type
-  # then writes back to csv. somewhat memory intensive.
-  updateCSV <- function(tbl) {
-    cat(tbl, "\n")
-
-    # table variables and their types
-    sql_recs <- data_guide[data_guide$table_name == tbl, ]
-
-    trans <- c("integer64", "character", "character", "double", "double",
-               "double", "double", "POSIXct")
-
-    names(trans) <- c("bigint", "character", "character varying", "double precision",
-                      "integer", "numeric", "smallint", "timestamp without time zone")
-
-    var_types <- as.vector(trans[sql_recs$data_type])
-    names(var_types) <- toupper(sql_recs$column_name)
-
-    # read, update and write the files
-    file <- file.path("CSV_DATA", paste0(tbl, ".csv"))
-
-    if (!file.exists(file)) return(NULL)
-
-    d <- fread(file = file, data.table = FALSE, colClasses = var_types)
-
-    # file currently has duplicate rows
-    if (tbl == "LICHEN_SPECIES_SUMMARY") {
-      d <- d[!duplicated(d$CN), ]
-    }
-
-    if (tbl == "REF_HABTYP_DESCRIPTION") {
-      d[is.na(d$HABTYPCD), "HABTYPCD"] <- "NA"
-    }
-
-    if (tbl == "REF_LICHEN_SPP_COMMENTS") {
-      d$YEAREND <- as.integer(d$YEAREND)
-      d$YEARSTART <- as.integer(d$YEARSTART)
-    }
-
-    if (any(names(d) == "modified_date")) {
-      d$modified_date <- as.IDate("2004-03-10 12:05:53 UTC")
-    }
-
-    fwrite(d, file, quote = TRUE, na = "")
-
-    NULL
-  }
-
-  # sometimes the data from sqlite doesn't match the type specifications that
-  # oracle/postgres expect -- force all types to match what's in the schema.
-  # can be memory intensive when working with the national dataset.
-  invisible(lapply(table_list, updateCSV))
-
-  #
-  # 6.0 import the data into postgres--------------------------------------------
-  # 'table_guide.csv' has the csv directory listed for each file
-  # csv_data, csv_perm, ref_perm
-  #
   # Loaded via dbAppendTable() rather than a server-side `COPY table FROM
   # '<path>'`: the latter requires the connecting role to hold the
   # pg_read_server_files privilege (Postgres won't let a non-superuser have
@@ -764,41 +939,27 @@ buildFIADB <- function(dbname = "fiadb",
   # streams the data through the client connection instead (RPostgres
   # implements this via COPY ... FROM STDIN under the hood), so Postgres
   # never touches the filesystem itself and no extra privilege is needed.
+  # Includes text/bytea (missing from this vector pre-2026-09-21 in both the
+  # old updateCSV() and the old Section 6.0 loop this replaced) -- REF_PERM/
+  # CSV_PERM tables like REF_POP_ATTRIBUTE (SQL_QUERY_SE is Postgres `text`)
+  # are the only ones that hit this, and every run before tonight crashed on
+  # TREE/TREE_GRM_ESTN before ever reaching row 29 in the import order, so
+  # the gap was never actually exercised until now. Caught by the anyNA()
+  # guard in processAndImportTable() rather than silently mis-typing data.
   import_trans <- c("integer64", "character", "character", "double", "double",
-                    "double", "double", "POSIXct")
+                    "double", "double", "POSIXct", "character", "character")
   names(import_trans) <- c("bigint", "character", "character varying", "double precision",
-                           "integer", "numeric", "smallint", "timestamp without time zone")
+                           "integer", "numeric", "smallint", "timestamp without time zone",
+                           "text", "bytea")
+
+  chunk_target_bytes <- computeChunkTargetBytes()
+  logMsg(paste0("Chunk target: ", round(chunk_target_bytes / 1e9, 2),
+                 "GB raw CSV per chunk (based on detected total system memory)."),
+         log_file)
 
   for (row in seq_len(nrow(table_guide))) {
-    if (is.na(table_guide$file[row])) next
-
-    file_name <- file.path(table_guide$csv_location[row], table_guide$file[row])
-
-    if (!file.exists(file_name)) {
-      stop(paste0("file ", table_guide$file[row], " not found"))
-    }
-
-    sql_recs <- data_guide[data_guide$table_name == toupper(table_guide$table[row]), ]
-    var_types <- as.vector(import_trans[sql_recs$data_type])
-    names(var_types) <- toupper(sql_recs$column_name)
-
-    cat("running import for", table_guide$table[row], "\n")
-
-    d <- fread(file = file_name, data.table = FALSE, colClasses = var_types)
-    names(d) <- tolower(names(d))
-
-    result <- try(DBI::dbAppendTable(
-      postgres_con,
-      DBI::Id(schema = "fs_fiadb", table = tolower(table_guide$table[row])),
-      d
-    ))
-
-    if (inherits(result, "try-error")) {
-      stop("there was an error when copying data into table ",
-           table_guide$table[row], ".\n",
-           "if this error was an invalid syntax or type error\n",
-           "try re-running -- updateCSV() above should force the correct types")
-    }
+    processAndImportTable(row, table_guide, data_guide, postgres_con,
+                           import_trans, chunk_target_bytes, log_file)
   }
 
   # simple forest area check -- sanity-checks the build actually worked
